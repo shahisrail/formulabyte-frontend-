@@ -20,7 +20,7 @@ export default function Navbar() {
             Home
           </Link>
 
-          <div className="nav-dropdown">
+          {/* <div className="nav-dropdown">
             <Link className={pathname?.startsWith('/') ? 'active' : ''} href="/tools">
               Tools
               <span className="dropdown-caret">⌄</span>
@@ -39,7 +39,7 @@ export default function Navbar() {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
 
           <Link href="/#pricing">Pricing</Link>
           <Link className={pathname === '/about' ? 'active' : ''} href="/about">

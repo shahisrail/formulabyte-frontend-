@@ -22,7 +22,7 @@ export default function Footer() {
             <ul>
               {tools.slice(0, 6).map((tool) => (
                 <li key={tool.slug}>
-                  <Link href={`/tools/${tool.slug}`}>{tool.name}</Link>
+                  <Link href={`/${tool.slug}`}>{tool.name}</Link>
                 </li>
               ))}
             </ul>
