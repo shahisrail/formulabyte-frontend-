@@ -1,6 +1,72 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 
 export default function HomePage() {
+  useEffect(() => {
+    // Pricing toggle functionality
+    const monthlyBtn = document.getElementById('monthly-btn');
+    const yearlyBtn = document.getElementById('yearly-btn');
+    const pricingAmounts = document.querySelectorAll('.pricing-amount');
+
+    const handleMonthlyClick = () => {
+      if (monthlyBtn && yearlyBtn) {
+        monthlyBtn.classList.add('active');
+        yearlyBtn.classList.remove('active');
+        pricingAmounts.forEach(amount => {
+          const monthlyPrice = amount.getAttribute('data-monthly');
+          amount.textContent = `$${monthlyPrice}`;
+        });
+      }
+    };
+
+    const handleYearlyClick = () => {
+      if (monthlyBtn && yearlyBtn) {
+        yearlyBtn.classList.add('active');
+        monthlyBtn.classList.remove('active');
+        pricingAmounts.forEach(amount => {
+          const yearlyPrice = amount.getAttribute('data-yearly');
+          amount.textContent = `$${yearlyPrice}`;
+        });
+      }
+    };
+
+    monthlyBtn?.addEventListener('click', handleMonthlyClick);
+    yearlyBtn?.addEventListener('click', handleYearlyClick);
+
+    // Scroll animation functionality
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const handleScrollAnimation = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Only animate once
+        }
+      });
+    };
+
+    const scrollObserver = new IntersectionObserver(handleScrollAnimation, observerOptions);
+
+    // Add scroll animation classes to elements
+    const animatedElements = document.querySelectorAll('.section-wrap, .benefit-card, .feature-tile, .tool-card, .pricing-card, .review, .industry-card');
+    animatedElements.forEach((el, index) => {
+      el.classList.add('animate-on-scroll', 'animate-fade-up');
+      el.classList.add(`stagger-${(index % 6) + 1}`);
+      scrollObserver.observe(el);
+    });
+
+    return () => {
+      monthlyBtn?.removeEventListener('click', handleMonthlyClick);
+      yearlyBtn?.removeEventListener('click', handleYearlyClick);
+      scrollObserver.disconnect();
+    };
+  }, []);
+
   return (
     <>
       <link rel="stylesheet" href="/page-styles/home.css" />
@@ -61,15 +127,27 @@ export default function HomePage() {
     </section>
     <div className={"logo-strip"}>
       <div className={"logo-strip-label"}>{"Trusted by data teams at"}</div>
-      <div className={"logo-row"}>
-        <span className={"logo-item sans"}>{"Google"}</span>
-        <span className={"logo-item"}>{"Microsoft"}</span>
-        <span className={"logo-item mono"}>{"amazon"}</span>
-        <span className={"logo-item sans"}>{"Apple"}</span>
-        <span className={"logo-item"}>{"Spotify"}</span>
-        <span className={"logo-item sans"}>{"Slack"}</span>
-        <span className={"logo-item"}>{"Salesforce"}</span>
-        <span className={"logo-item mono"}>{"shopify"}</span>
+      <div className={"logo-marquee-container"}>
+        <div className={"logo-marquee"}>
+          <div className={"logo-track"}>
+            <span className={"logo-item sans"}>{"Google"}</span>
+            <span className={"logo-item"}>{"Microsoft"}</span>
+            <span className={"logo-item mono"}>{"amazon"}</span>
+            <span className={"logo-item sans"}>{"Apple"}</span>
+            <span className={"logo-item"}>{"Spotify"}</span>
+            <span className={"logo-item sans"}>{"Slack"}</span>
+            <span className={"logo-item"}>{"Salesforce"}</span>
+            <span className={"logo-item mono"}>{"shopify"}</span>
+            <span className={"logo-item sans"}>{"Google"}</span>
+            <span className={"logo-item"}>{"Microsoft"}</span>
+            <span className={"logo-item mono"}>{"amazon"}</span>
+            <span className={"logo-item sans"}>{"Apple"}</span>
+            <span className={"logo-item"}>{"Spotify"}</span>
+            <span className={"logo-item sans"}>{"Slack"}</span>
+            <span className={"logo-item"}>{"Salesforce"}</span>
+            <span className={"logo-item mono"}>{"shopify"}</span>
+          </div>
+        </div>
       </div>
     </div>
     <div className={"section-wrap"}>
@@ -424,69 +502,83 @@ export default function HomePage() {
               <span className={"serif-accent"}>{"transparent"}</span>
               {" pricing."}
             </h2>
-            <p className={"intro"}>{"Start free, upgrade when you need more power. No hidden fees, no surprise charges."}</p>
+            <p className={"intro"}>{"Choose the perfect plan for your needs. Save 30% with yearly billing."}</p>
           </div>
           <div className={"row-body"} style={{"display": "flex", "flexDirection": "column", "alignItems": "center"}}>
             <div className={"pricing-toggle"}>
-              <button className={"active"}>{"Monthly"}</button>
-              <button>
+              <button id={"monthly-btn"} className={"active"}>{"Monthly"}</button>
+              <button id={"yearly-btn"}>
                 {"Yearly "}
                 <span className={"save-pill"}>{"Save 30%"}</span>
               </button>
             </div>
             <div className={"pricing-grid"} style={{"width": "100%"}}>
               <div className={"pricing-card"}>
-                <div className={"pricing-name"}>{"Starter"}</div>
+                <div className={"pricing-name"}>{"Unlimited"}</div>
                 <div className={"pricing-price"}>
-                  <span className={"pricing-amount"}>{"$0"}</span>
+                  <span className={"pricing-amount"} data-monthly={"12.99"} data-yearly={"9.09"}>{"$12.99"}</span>
                   <span className={"pricing-period"}>{"/ month"}</span>
                 </div>
-                <p className={"pricing-desc"}>{"Perfect for individuals getting started with AI data analysis."}</p>
+                <p className={"pricing-desc"}>{"Perfect for individuals getting started with unlimited AI analysis."}</p>
                 <ul className={"pricing-features"}>
-                  <li>{"250 messages per month"}</li>
-                  <li>{"2 automated dashboards"}</li>
-                  <li>{"2,500 AI actions"}</li>
-                  <li>{"Premium AI models"}</li>
-                  <li>{"Excel & Sheets add-ons"}</li>
-                  <li>{"Community support"}</li>
+                  <li>{"Unlimited Chat Message"}</li>
+                  <li>{"Unlimited Formulas (Excel & DAX)"}</li>
+                  <li>{"Unlimited DAX Code Generator"}</li>
+                  <li>{"50 Regex Generator"}</li>
+                  <li>{"20 R-Code Generator"}</li>
+                  <li>{"20 Python Data Operation"}</li>
+                  <li>{"50 SQL operation"}</li>
+                  <li>{"20 File Upload"}</li>
+                  <li>{"25 Sentiment Enrichment"}</li>
+                  <li>{"50 MB file upload limit"}</li>
+                  <li>{"5 File upload / Chat"}</li>
+                  <li>{"Unlimited PDF to Excel Conversion"}</li>
+                  <li>{"Unlimited Excel to PDF Conversion"}</li>
+                  <li>{"Unlimited Word to PDF Conversion"}</li>
+                  <li>{"Unlimited PDF to Word Conversion"}</li>
+                  <li>{"1 Device at a time"}</li>
+                  <li>{"14 days chat history"}</li>
                 </ul>
                 <a href={"/auth"} className={"btn btn-outline pricing-cta"}>{"Get started"}</a>
               </div>
               <div className={"pricing-card featured"}>
                 <span className={"pricing-tag"}>{"Most popular"}</span>
-                <div className={"pricing-name"}>{"Max"}</div>
+                <div className={"pricing-name"}>{"Unlimited Plus"}</div>
                 <div className={"pricing-price"}>
-                  <span className={"pricing-amount"}>{"$29"}</span>
-                  <span className={"pricing-period"}>{"/ user / month"}</span>
+                  <span className={"pricing-amount"} data-monthly={"22.99"} data-yearly={"16.09"}>{"$22.99"}</span>
+                  <span className={"pricing-period"}>{"/ month"}</span>
                 </div>
-                <p className={"pricing-desc"}>{"For teams who need unlimited messages and collaboration."}</p>
+                <p className={"pricing-desc"}>{"For professionals who need advanced unlimited features."}</p>
                 <ul className={"pricing-features"}>
-                  <li>{"Unlimited messages"}</li>
-                  <li>{"Shared workspace"}</li>
-                  <li>{"10 automated dashboards"}</li>
-                  <li>{"5,000 AI actions per user"}</li>
-                  <li>{"Enhanced computing power"}</li>
-                  <li>{"Team collaboration"}</li>
-                  <li>{"Priority support"}</li>
+                  <li>{"Everything in Unlimited"}</li>
+                  <li>{"Unlimited Python Data Operation"}</li>
+                  <li>{"Unlimited SQL Operation"}</li>
+                  <li>{"Unlimited R Code Generator"}</li>
+                  <li>{"Unlimited Regex Generator"}</li>
+                  <li>{"5,000 Sentiment Analysis / Month"}</li>
+                  <li>{"75 MB File upload limit"}</li>
+                  <li>{"10 file upload / chat"}</li>
+                  <li>{"Use on 3 device at once"}</li>
+                  <li>{"30 days chat history"}</li>
                 </ul>
                 <a href={"/auth"} className={"btn btn-primary pricing-cta"}>{"Start free trial"}</a>
               </div>
               <div className={"pricing-card"}>
-                <div className={"pricing-name"}>{"Enterprise"}</div>
+                <div className={"pricing-name"}>{"Unlimited Pro"}</div>
                 <div className={"pricing-price"}>
-                  <span className={"pricing-amount"}>{"Custom"}</span>
+                  <span className={"pricing-amount"} data-monthly={"32.99"} data-yearly={"23.09"}>{"$32.99"}</span>
+                  <span className={"pricing-period"}>{"/ month"}</span>
                 </div>
-                <p className={"pricing-desc"}>{"Maximum power and security for large organizations."}</p>
+                <p className={"pricing-desc"}>{"Maximum power for teams and heavy users."}</p>
                 <ul className={"pricing-features"}>
-                  <li>{"Unlimited everything"}</li>
-                  <li>{"20 automated dashboards"}</li>
-                  <li>{"15,000 AI actions per user"}</li>
-                  <li>{"White-label embeds"}</li>
-                  <li>{"Dedicated support"}</li>
-                  <li>{"Custom integrations"}</li>
-                  <li>{"SOC 2 & SSO"}</li>
+                  <li>{"Everything in Unlimited Plus"}</li>
+                  <li>{"Unlimited R Expressions"}</li>
+                  <li>{"15,000 Sentiment Analysis / Month"}</li>
+                  <li>{"250 MB file upload limit"}</li>
+                  <li>{"Use on multiple device at once"}</li>
+                  <li>{"60 days chat history"}</li>
                 </ul>
-                <a href={"/contact"} className={"btn btn-outline pricing-cta"}>{"Contact sales"}</a>
+                <a href={"/auth"} className={"btn btn-outline pricing-cta"}>{"Get started"}</a>
               </div>
             </div>
           </div>
