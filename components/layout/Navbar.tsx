@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { tools } from '@/data/tools';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { tools } from "@/data/tools";
+import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -10,13 +11,13 @@ export default function Navbar() {
   return (
     <header className="nav">
       <div className="container nav-inner">
-        <Link href="/" className="logo" aria-label="Formula Byte home">
-          <span className="logo-mark">f</span>
-          <span>Formula Byte</span>
+        <Link href="/" className="" aria-label="Formula Byte home">
+        
+           <Image src="/Formulabyte-logo.svg" width={200} height={90} alt="dss" />
         </Link>
 
         <nav className="nav-links" aria-label="Main navigation">
-          <Link className={pathname === '/' ? 'active' : ''} href="/">
+          <Link className={pathname === "/" ? "active" : ""} href="/">
             Home
           </Link>
 
@@ -42,10 +43,13 @@ export default function Navbar() {
           </div> */}
 
           <Link href="/#pricing">Pricing</Link>
-          <Link className={pathname === '/about' ? 'active' : ''} href="/about">
+          <Link className={pathname === "/about" ? "active" : ""} href="/about">
             About
           </Link>
-          <Link className={pathname === '/contact' ? 'active' : ''} href="/contact">
+          <Link
+            className={pathname === "/contact" ? "active" : ""}
+            href="/contact"
+          >
             Contact
           </Link>
         </nav>

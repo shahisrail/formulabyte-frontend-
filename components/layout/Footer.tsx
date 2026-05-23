@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { tools } from '@/data/tools';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,10 +8,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link href="/" className="logo">
-              <span className="logo-mark">f</span>
-              <span>Formula Byte</span>
-            </Link>
+          <Image src="/Formulabyte-logo.svg" width={200} height={90} alt="logo" />
             <p>
               AI-powered data analysis for teams that work with data. Ask anything, get instant answers, formulas,
               charts, and reports, all from plain English.
