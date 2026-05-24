@@ -1,4 +1,3 @@
-"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -55,10 +54,10 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-cta">
-          <Link href="/auth" className="btn btn-ghost">
+          <Link href="https://dashboard.formulabyte.com" className="btn btn-ghost">
             Log in
           </Link>
-          <Link href="/auth" className="btn btn-primary">
+          <Link href=" https://dashboard.formulabyte.com" className="btn btn-primary">
             Try free
           </Link>
         </div>
