@@ -188,7 +188,7 @@ export default function AboutPage() {
                 <h3>{"Start using Formula Byte today"}</h3>
                 <p>{"Ready to simplify your data workflow? Turn complex tasks into simple conversations."}</p>
               </div>
-              <a href={"/auth"} className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
+              <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
             </div>
           </div>
         </div>
@@ -436,7 +436,7 @@ export default function AboutPage() {
           </h2>
           <p>{"No credit card required. Free forever plan included. Join thousands of professionals already using Formula Byte."}</p>
           <div className={"btn-row"}>
-            <a href={"/auth"} className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
+            <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
             <a href={"/#tools"} className={"btn btn-outline btn-lg"}>{"Browse all tools"}</a>
           </div>
         </div>

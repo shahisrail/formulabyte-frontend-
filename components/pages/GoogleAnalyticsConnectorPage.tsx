@@ -23,7 +23,7 @@ export default function GoogleAnalyticsConnectorPage() {
         </h1>
         <p className={"lede"}>{" Connect Google Analytics 4 to Formula Byte and ask questions about your website traffic, user behavior, and conversions \u2014 in plain English. No exports, no SQL, no dashboards to maintain. "}</p>
         <div className={"hero-ctas"}>
-          <a href={"/auth"} className={"btn btn-primary btn-lg"}>{"Connect Google Analytics \u2192"}</a>
+          <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary btn-lg"}>{"Connect Google Analytics \u2192"}</a>
           <a href={"#setup"} className={"btn btn-outline btn-lg"}>{"Read setup guide"}</a>
         </div>
         <div className={"hero-trustline"}>
@@ -479,8 +479,8 @@ export default function GoogleAnalyticsConnectorPage() {
           </h2>
           <p>{"Free to try. No credit card. Connect in under a minute and start asking questions immediately."}</p>
           <div className={"btn-row"}>
-            <a href={"/auth"} className={"btn btn-primary btn-lg"}>{"Connect Google Analytics \u2192"}</a>
-            <a href={"/auth"} className={"btn btn-outline btn-lg"}>{"Sign in to existing account"}</a>
+            <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary btn-lg"}>{"Connect Google Analytics \u2192"}</a>
+            <a href="https://dashboard.formulabyte.com/" className={"btn btn-outline btn-lg"}>{"Sign in to existing account"}</a>
           </div>
         </div>
       </section>

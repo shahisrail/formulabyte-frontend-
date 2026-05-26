@@ -1,35 +1,89 @@
-import type { Metadata } from 'next';
-import Footer from '@/components/layout/Footer';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'Bank Statement Converter | Formula Byte',
-  description: 'Parse bank statement PDFs into clean Excel-ready tables with Formula Byte.',
-};
+import React, { useEffect } from 'react';
 
 export default function BankStatementConverterPage() {
+  useEffect(() => {
+    const uploadZone = document.querySelector('.upload-zone');
+    const fileInput = document.getElementById('file-input');
+
+    if (!uploadZone || !fileInput) return;
+
+    // Handle drag and drop events
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      uploadZone?.addEventListener(eventName, preventDefaults, false);
+      document.body?.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e: Event) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    // Highlight drop zone when item is dragged over it
+    ['dragenter', 'dragover'].forEach(eventName => {
+      uploadZone?.addEventListener(eventName, () => {
+        uploadZone.classList.add('drag-over');
+      }, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      uploadZone?.addEventListener(eventName, () => {
+        uploadZone.classList.remove('drag-over');
+      }, false);
+    });
+
+    // Handle dropped files
+    uploadZone?.addEventListener('drop', (e: Event) => {
+      const dt = e as DragEvent;
+      const files = dt.dataTransfer?.files;
+      handleFiles(files);
+    }, false);
+
+    // Handle clicked upload
+    fileInput?.addEventListener('change', function(this: HTMLInputElement) {
+      handleFiles(this.files);
+    }, false);
+
+    function handleFiles(files: FileList | null | undefined) {
+      if (!files || files.length === 0) return;
+
+      // Redirect to login page when files are uploaded
+      window.location.href = 'https://dashboard.formulabyte.com/';
+    }
+
+    // Cleanup event listeners
+    return () => {
+      ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        uploadZone?.removeEventListener(eventName, preventDefaults);
+        document.body?.removeEventListener(eventName, preventDefaults);
+      });
+    };
+  }, []);
+
   return (
     <>
       <link rel="stylesheet" href="/page-styles/bank-statement-converter.css" />
     <section className="hero">
     <div className="hero-inner">
       <div className="eyebrow">
-        AI Excel Spreadsheet Generator
+        AI Bank Statement Converter
       </div>
       <h1>
-        Create Excel files
+        Convert bank statements to Excel
         <span className="accent">
           instantly
         </span>
         <br />
-        from a single prompt.
+        with AI precision.
       </h1>
       <p className="lede">
-        Generate downloadable Excel spreadsheets using AI. No formatting hassle. No formula confusion. Just ready-to-use files built from text instructions.
+        Parse bank statement PDFs into clean Excel-ready tables with Formula Byte. No copy-paste. No formatting errors. Just accurate, analysis-ready data in seconds.
       </p>
       <div className="hero-trust">
         <span className="trust-pill">
           <span className="dot"></span>
-          No signup needed
+          No copy-paste needed
         </span>
         <span className="trust-pill">
           <span className="dot"></span>
@@ -37,7 +91,7 @@ export default function BankStatementConverterPage() {
         </span>
         <span className="trust-pill">
           <span className="dot"></span>
-          Excel &amp; Google Sheets
+          Works with any bank
         </span>
       </div>
       <div className="upload-card">
@@ -51,7 +105,7 @@ export default function BankStatementConverterPage() {
             </svg>
           </div>
           <h3 className="upload-title">
-            Drop your file here
+            Drop your bank statement here
           </h3>
           <p className="upload-desc">
             or
@@ -63,15 +117,6 @@ export default function BankStatementConverterPage() {
           <input type="file" id="file-input" hidden />
         </label>
         <div className="upload-formats">
-          <span className="format-pill">
-            XLSX
-          </span>
-          <span className="format-pill">
-            XLS
-          </span>
-          <span className="format-pill">
-            CSV
-          </span>
           <span className="format-pill">
             PDF
           </span>
@@ -85,16 +130,16 @@ export default function BankStatementConverterPage() {
       </div>
       <div className="example-prompts">
         <span>
-          Try a sample:
+          Try samples from:
         </span>
-        <button className="chip">
-          Bank statement PDF
+        <button className="chip" onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}>
+          Chase Bank
         </button>
-        <button className="chip">
-          Budget template
+        <button className="chip" onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}>
+          Bank of America
         </button>
-        <button className="chip">
-          Sales data CSV
+        <button className="chip" onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}>
+          Wells Fargo
         </button>
       </div>
     </div>
@@ -107,43 +152,70 @@ export default function BankStatementConverterPage() {
             The problem
           </div>
           <h2>
-            Why creating spreadsheets from scratch
+            Why traditional PDF to Excel tools
             <span className="serif-accent">
-              fails.
+              fail with bank statements.
             </span>
           </h2>
           <p className="intro">
-            Manual spreadsheet creation is slow and error-prone. AI removes the busywork completely.
+            Bank statement layouts vary by bank, making traditional converters inaccurate and time-consuming.
           </p>
         </div>
         <div className="row-body">
           <ul className="bulleted">
             <li>
-              Incorrect formulas that quietly break downstream
+              Different table layouts across banks
             </li>
             <li>
-              Broken layouts that take longer to fix than to redo
+              Merged cells and inconsistent formatting
             </li>
             <li>
-              Missing summaries, totals, or input validations
+              Transaction rows split across pages
             </li>
             <li>
-              Repeating the same setup from scratch every time
+              Dates and amounts in different formats
             </li>
             <li>
-              Formatting that takes longer than the actual work
+              Running balances that don't export correctly
             </li>
           </ul>
           <blockquote className="pull-quote">
-            "I wasted 4 hours fixing spreadsheet formulas yesterday."
+            "I spent 6 hours manually converting a 50-page bank statement to Excel and still had errors."
             <cite>
-              — Finance Manager, Fortune 500 Company
+              — Bookkeeper, Accounting Firm
             </cite>
           </blockquote>
         </div>
       </div>
     </section>
   </div>
+    <div className={"section-wrap"}>
+      <section className={"card"}>
+        <div className={"row"}>
+          <div className={"row-header"}>
+            <div className={"eyebrow"}>{"The problem"}</div>
+            <h2>
+              {"Why manual bank statement conversion "}
+              <span className={"serif-accent"}>{"fails."}</span>
+            </h2>
+            <p className={"intro"}>{"Bank statements are not simple documents. They contain hundreds of transactions, running balances, mixed date and currency formats, and different layouts per bank. Manual conversion leads to missing rows, decimal errors, broken formulas, and hours of wasted time. AI removes human error completely."}</p>
+          </div>
+          <div className={"row-body"}>
+            <ul className={"bulleted"}>
+              <li>{"Hundreds of transactions"}</li>
+              <li>{"Running balances"}</li>
+              <li>{"Mixed date and currency formats"}</li>
+              <li>{"Different layouts per bank"}</li>
+              <li>{"Manual conversion leads to missing rows, decimal errors, broken formulas, and hours of wasted time"}</li>
+            </ul>
+            <blockquote className={"pull-quote"}>
+              {" \"I spent 6 hours manually converting a 50-page bank statement to Excel and still had errors.\" "}
+              <cite>{"— Bookkeeper, Accounting Firm"}</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </div>
   <div className="section-wrap">
     <section className="card">
       <div className="row">
@@ -152,10 +224,10 @@ export default function BankStatementConverterPage() {
             How it works
           </div>
           <h2>
-            No dragging cells. No formula debugging. No setup.
+            No manual data entry. No formula fixes. No cleanup.
           </h2>
           <p className="intro">
-            Using AI for Excel doesn't require plugins, macros, or a Microsoft 365 subscription. Four steps from a sentence to a working file.
+            AI-powered bank statement conversion that understands financial documents, not just tables.
           </p>
         </div>
         <div className="row-body">
@@ -166,10 +238,10 @@ export default function BankStatementConverterPage() {
               </div>
               <div>
                 <h3>
-                  Describe your spreadsheet in plain English
+                  Upload your bank statement PDF
                 </h3>
                 <p>
-                  Tell the AI what you need — budgets, reports, trackers, schedules, or any other spreadsheet type.
+                  Simply upload your bank statement in PDF format — any bank, any length, multi-page files supported.
                 </p>
               </div>
             </div>
@@ -179,10 +251,10 @@ export default function BankStatementConverterPage() {
               </div>
               <div>
                 <h3>
-                  AI understands structure, formulas, and layout
+                  AI reads transactions, dates, balances, and descriptions
                 </h3>
                 <p>
-                  The model analyzes your description and creates the right structure with appropriate formulas and formatting.
+                  The model analyzes the document structure and extracts all transaction data accurately, understanding bank-specific formats.
                 </p>
               </div>
             </div>
@@ -192,10 +264,10 @@ export default function BankStatementConverterPage() {
               </div>
               <div>
                 <h3>
-                  A complete Excel file is generated instantly
+                  Data is structured into clean Excel columns
                 </h3>
                 <p>
-                  Get a professional spreadsheet with correct formulas, clean layout, and proper formatting in seconds.
+                  Information is organized into proper columns: dates, descriptions, debits, credits, and running balances.
                 </p>
               </div>
             </div>
@@ -205,10 +277,10 @@ export default function BankStatementConverterPage() {
               </div>
               <div>
                 <h3>
-                  Download and use it in Excel or Google Sheets
+                  Download a ready-to-use Excel file
                 </h3>
                 <p>
-                  Your spreadsheet is ready immediately. Works perfectly in both Excel and Google Sheets.
+                  Get a perfectly formatted Excel spreadsheet ready for analysis, reporting, or accounting software import.
                 </p>
               </div>
             </div>
@@ -225,10 +297,10 @@ export default function BankStatementConverterPage() {
             Capabilities
           </div>
           <h2>
-            What the generator actually does.
+            What the AI Bank Statement Converter actually does.
           </h2>
           <p className="intro">
-            More than a template gallery — a complete spreadsheet-building system that adapts to your use case.
+            This is not a basic PDF to Excel converter. The AI works in multiple layers to handle real-world bank statements.
           </p>
         </div>
         <div className="row-body">
@@ -238,10 +310,10 @@ export default function BankStatementConverterPage() {
                 01
               </span>
               <h3>
-                Structure Creation
+                Transaction-Level Data Extraction
               </h3>
               <p>
-                Proper rows, columns, headers, and sections built around your use case.
+                The AI detects every transaction row — dates, descriptions, debit, credit, and balances — even when layouts differ across pages.
               </p>
             </div>
             <div className="capability">
@@ -249,10 +321,10 @@ export default function BankStatementConverterPage() {
                 02
               </span>
               <h3>
-                Template Generation
+                Multi-Page & Large Statement Handling
               </h3>
               <p>
-                Reusable templates for budgets, reports, schedules, and trackers.
+                Whether your statement is 5 pages or 100 pages long, the AI processes all pages without breaking transaction order.
               </p>
             </div>
             <div className="capability">
@@ -260,10 +332,10 @@ export default function BankStatementConverterPage() {
                 03
               </span>
               <h3>
-                Formula &amp; Logic
+                Debit and Credit Separation
               </h3>
               <p>
-                The right formulas inserted automatically for calculations and validations.
+                Incoming and outgoing amounts are automatically classified into proper Excel columns, removing manual fixes.
               </p>
             </div>
             <div className="capability">
@@ -271,10 +343,10 @@ export default function BankStatementConverterPage() {
                 04
               </span>
               <h3>
-                Formatting &amp; Layout
+                Running Balance Recognition
               </h3>
               <p>
-                Clean formatting, spacing, and organization without manual design work.
+                The AI identifies and aligns balances per transaction to maintain financial accuracy.
               </p>
             </div>
             <div className="capability">
@@ -282,10 +354,10 @@ export default function BankStatementConverterPage() {
                 05
               </span>
               <h3>
-                Data-Ready Output
+                Bank-Specific Layout Normalization
               </h3>
               <p>
-                Sheets ready for data entry, reporting, charts, and downstream analysis.
+                Different banks use different formats. The AI standardizes them into one clean, consistent Excel structure.
               </p>
             </div>
             <div className="capability">
@@ -293,44 +365,44 @@ export default function BankStatementConverterPage() {
                 06
               </span>
               <h3>
-                Excel &amp; Google Sheets
+                Excel-Ready Formatting
               </h3>
               <p>
-                Files work seamlessly across Excel and Google Sheets with full compatibility.
+                The output is optimized for formulas, pivot tables, reports, and dashboards — no reformatting needed.
               </p>
             </div>
           </div>
           <div className="benefits-strip">
             <div className="benefit-item">
               <h4>
-                Ready-to-download files
+                Complete transaction data
               </h4>
               <p>
-                Complete spreadsheets in seconds.
+                Every row, every amount, every balance captured accurately
               </p>
             </div>
             <div className="benefit-item">
               <h4>
-                Professional templates
+                Clean Excel formatting
               </h4>
               <p>
-                Clean layouts for real-world use.
+                Perfect columns for date, description, debit, credit, and balance
               </p>
             </div>
             <div className="benefit-item">
               <h4>
-                Error-free formulas
+                Analysis-ready output
               </h4>
               <p>
-                No broken logic or syntax issues.
+                Apply formulas, build reports, or import into accounting tools
               </p>
             </div>
             <div className="benefit-item">
               <h4>
-                Time savings
+                Fast processing
               </h4>
               <p>
-                Hours of setup, reduced to seconds.
+                Even large bank statement PDFs convert in seconds
               </p>
             </div>
           </div>
@@ -346,60 +418,60 @@ export default function BankStatementConverterPage() {
             Who it's for
           </div>
           <h2>
-            When people use an AI spreadsheet generator.
+            Who should use this bank statement converter.
           </h2>
           <p className="intro">
-            If spreadsheets are part of your work, this tool simplifies everything.
+            If you work with bank statements, this tool saves hours every week.
           </p>
         </div>
         <div className="row-body">
           <div className="audience-grid">
             <div className="audience-cell">
               <h4>
-                Finance Teams
+                Small Business Owners
               </h4>
               <p>
-                Budgets and forecasts
+                Managing expenses and cash flow
               </p>
             </div>
             <div className="audience-cell">
               <h4>
-                Project Managers
+                Bookkeepers & Accountants
               </h4>
               <p>
-                Tasks and timelines
+                Handling multiple clients efficiently
               </p>
             </div>
             <div className="audience-cell">
               <h4>
-                Sales Teams
+                Financial Analysts
               </h4>
               <p>
-                Reports and dashboards
+                Building reports and forecasts
               </p>
             </div>
             <div className="audience-cell">
               <h4>
-                HR Teams
+                Auditors & Consultants
               </h4>
               <p>
-                Schedules and payroll
+                Validating transactions quickly
               </p>
             </div>
             <div className="audience-cell">
               <h4>
-                Small Businesses
+                Real Estate Professionals
               </h4>
               <p>
-                Inventory and invoices
+                Reviewing payment records
               </p>
             </div>
             <div className="audience-cell">
               <h4>
-                Freelancers
+                Tax Preparers
               </h4>
               <p>
-                Client-ready reports
+                Organizing client financial data
               </p>
             </div>
           </div>
@@ -410,7 +482,7 @@ export default function BankStatementConverterPage() {
             </em>
             to
             <em>
-              Fortune 500 teams.
+              accounting firms.
             </em>
           </p>
         </div>
@@ -425,33 +497,33 @@ export default function BankStatementConverterPage() {
             Comparison
           </div>
           <h2>
-            Why Formula Byte beats traditional templates.
+            Why Formula Byte beats traditional PDF to Excel tools.
           </h2>
           <p className="intro">
-            Static templates were never built for how work actually changes. Here's the difference.
+            Most PDF to Excel converters fail where it matters. Here's the difference.
           </p>
         </div>
         <div className="row-body">
           <div className="compare">
             <div className="compare-col">
               <div className="compare-label">
-                Traditional templates
+                Traditional PDF to Excel
               </div>
               <h3>
-                Static. Rigid.
+                Basic. Limited.
               </h3>
               <ul>
                 <li>
-                  Built for one use case and break when needs change
+                  Only extract visible tables
                 </li>
                 <li>
-                  Require manual edits for every variation
+                  Break when layouts change
                 </li>
                 <li>
-                  Outdated formulas and broken references
+                  Require manual cleanup
                 </li>
                 <li>
-                  One-size-fits-none formatting
+                  Don't understand financial data
                 </li>
               </ul>
             </div>
@@ -460,20 +532,20 @@ export default function BankStatementConverterPage() {
                 Formula Byte AI
               </div>
               <h3>
-                Adaptive. Generated.
+                Intelligent. Complete.
               </h3>
               <ul>
                 <li>
-                  Adapts spreadsheets to your specific workflow
+                  Understands bank-specific formats
                 </li>
                 <li>
-                  Generates logic and formulas automatically
+                  Standardizes transaction data
                 </li>
                 <li>
-                  Delivers complete, usable files in seconds
+                  Eliminates formatting fixes
                 </li>
                 <li>
-                  Clean layouts tuned to the data you described
+                  Delivers analysis-ready Excel files
                 </li>
               </ul>
             </div>
@@ -497,26 +569,26 @@ export default function BankStatementConverterPage() {
             means here.
           </h2>
           <p className="intro">
-            Test the output instantly. No credit card, no signup gate — and your data never leaves your browser.
+            Convert bank statements to Excel for free. Test the output quality instantly. No credit card, no signup gate — and your data never leaves your browser.
           </p>
         </div>
         <div className="row-body">
           <ul className="bulleted">
             <li>
               <strong>
-                Generate Excel spreadsheets
+                Upload bank statement PDFs
               </strong>
-              from any text prompt
+              from any bank
             </li>
             <li>
               <strong>
-                Download .xlsx files
+                Convert to Excel
               </strong>
-              ready for Excel or Google Sheets
+              with accurate transaction extraction
             </li>
             <li>
               <strong>
-                Review accuracy and structure
+                Review output quality
               </strong>
               before committing to anything
             </li>
@@ -524,10 +596,10 @@ export default function BankStatementConverterPage() {
           <div className="free-block">
             <div>
               <h3>
-                Start generating in seconds.
+                Start converting in seconds.
               </h3>
               <p>
-                No card. No download. Just a prompt.
+                No card. No signup. Just upload your PDF.
               </p>
             </div>
             <div className="stats-inline">
@@ -541,10 +613,10 @@ export default function BankStatementConverterPage() {
               </div>
               <div className="stat-inline">
                 <div className="stat-num">
-                  50k+
+                  30k+
                 </div>
                 <div className="stat-label">
-                  Sheets
+                  Statements
                 </div>
               </div>
               <div className="stat-inline">
@@ -563,7 +635,7 @@ export default function BankStatementConverterPage() {
                 01
               </span>
               <span>
-                No spreadsheet data stored permanently
+                Secure file handling
               </span>
             </div>
             <div className="security-item">
@@ -571,7 +643,7 @@ export default function BankStatementConverterPage() {
                 02
               </span>
               <span>
-                Works with Microsoft Excel
+                No manual access to your data
               </span>
             </div>
             <div className="security-item">
@@ -579,7 +651,7 @@ export default function BankStatementConverterPage() {
                 03
               </span>
               <span>
-                Compatible with Google Sheets
+                Works with statements from most banks worldwide
               </span>
             </div>
             <div className="security-item">
@@ -587,7 +659,7 @@ export default function BankStatementConverterPage() {
                 04
               </span>
               <span>
-                Secure and private usage
+                Your financial data stays protected
               </span>
             </div>
           </div>
@@ -606,7 +678,7 @@ export default function BankStatementConverterPage() {
             What our users say.
           </h2>
           <p className="intro">
-            Teams that have replaced template hunting with one prompt.
+            Finance professionals who have stopped manual data entry.
           </p>
         </div>
         <div className="row-body">
@@ -616,15 +688,36 @@ export default function BankStatementConverterPage() {
                 ★★★★★
               </div>
               <p className="review-quote">
-                "A game-changer. I used to spend hours building templates from scratch. Now I just describe what I need and it's done in seconds."
+                "This tool saved me hours every month. Bank statement conversion used to take me half a day, now it's done in minutes with zero errors."
               </p>
               <div className="review-author">
                 <div className="review-avatar">
-                  SJ
+                  RB
                 </div>
                 <div className="review-meta">
                   <div className="name">
-                    Sarah Johnson
+                    Rachel Brown
+                  </div>
+                  <div className="role">
+                    Bookkeeper
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="review">
+              <div className="review-stars">
+                ★★★★★
+              </div>
+              <p className="review-quote">
+                "Finally a converter that handles different bank formats correctly. The AI understands the transaction structure and outputs perfect Excel files."
+              </p>
+              <div className="review-author">
+                <div className="review-avatar">
+                  DK
+                </div>
+                <div className="review-meta">
+                  <div className="name">
+                    David Kim
                   </div>
                   <div className="role">
                     Financial Analyst
@@ -637,18 +730,18 @@ export default function BankStatementConverterPage() {
                 ★★★★★
               </div>
               <p className="review-quote">
-                "Incredibly accurate layouts. Even for complex financial models, the AI gets it right every time. Saved me countless hours."
+                "I've tried many PDF to Excel tools and this is by far the best for bank statements. No cleanup needed — just perfect data extraction."
               </p>
               <div className="review-author">
                 <div className="review-avatar">
-                  MC
+                  MP
                 </div>
                 <div className="review-meta">
                   <div className="name">
-                    Michael Chen
+                    Maria Perez
                   </div>
                   <div className="role">
-                    Data Scientist
+                    Accountant
                   </div>
                 </div>
               </div>
@@ -658,39 +751,18 @@ export default function BankStatementConverterPage() {
                 ★★★★★
               </div>
               <p className="review-quote">
-                "Finally a tool that makes spreadsheet creation accessible to everyone on my team. No more waiting on the 'Excel expert'."
+                "Handles multi-page statements flawlessly. The AI maintains transaction order across all pages and the Excel output is ready for analysis."
               </p>
               <div className="review-author">
                 <div className="review-avatar">
-                  ER
+                  JT
                 </div>
                 <div className="review-meta">
                   <div className="name">
-                    Emily Rodriguez
+                    James Thompson
                   </div>
                   <div className="role">
-                    Business Manager
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="review">
-              <div className="review-stars">
-                ★★★★★
-              </div>
-              <p className="review-quote">
-                "Works perfectly with both Excel and Google Sheets. The AI understands exactly what I need and delivers every time."
-              </p>
-              <div className="review-author">
-                <div className="review-avatar">
-                  JW
-                </div>
-                <div className="review-meta">
-                  <div className="name">
-                    James Wilson
-                  </div>
-                  <div className="role">
-                    Operations Lead
+                    Audit Manager
                   </div>
                 </div>
               </div>
@@ -716,7 +788,7 @@ export default function BankStatementConverterPage() {
         </div>
         <div className="row-body">
           <div className="related-grid">
-            <a className="related-card" href="/tools/ai-excel-formula-generator">
+            <a className="related-card" href="/tools/excel-formula-generator">
               <div className="glyph">
                 ƒ
               </div>
@@ -724,7 +796,63 @@ export default function BankStatementConverterPage() {
                 Excel Formula Generator
               </h4>
               <p>
-                Formulas generated from plain English on demand.
+                Generate Excel formulas from plain English descriptions.
+              </p>
+              <span className="link">
+                Try now →
+              </span>
+            </a>
+            <a className="related-card" href="/tools/ai-excel-spreadsheet-generator">
+              <div className="glyph">
+                📊
+              </div>
+              <h4>
+                AI Excel Spreadsheet Generator
+              </h4>
+              <p>
+                Create complete Excel files from text descriptions.
+              </p>
+              <span className="link">
+                Try now →
+              </span>
+            </a>
+            <a className="related-card" href="/tools/ai-pandas-code-generator">
+              <div className="glyph">
+                🐼
+              </div>
+              <h4>
+                AI Pandas Code Generator
+              </h4>
+              <p>
+                Generate Python Pandas code for data analysis.
+              </p>
+              <span className="link">
+                Try now →
+              </span>
+            </a>
+            <a className="related-card" href="/tools/ai-dax-code-generator">
+              <div className="glyph">
+                📊
+              </div>
+              <h4>
+                AI DAX Code Generator
+              </h4>
+              <p>
+                Generate Power BI DAX code from plain English.
+              </p>
+              <span className="link">
+                Try now →
+              </span>
+            </a>
+            <a className="related-card" href="/tools/sentiment-analysis-tool">
+              <div className="glyph">
+                ±
+              </div>
+              <h4>
+                Sentiment Analysis Tool
+              </h4>
+              <p>
+                Analyze text sentiment and emotions using AI.
               </p>
               <span className="link">
                 Try now →
@@ -738,63 +866,7 @@ export default function BankStatementConverterPage() {
                 AI Chatbot
               </h4>
               <p>
-                Conversational assistant for your data and questions.
-              </p>
-              <span className="link">
-                Try now →
-              </span>
-            </a>
-            <a className="related-card" href="/tools/sentiment-analysis">
-              <div className="glyph">
-                ±
-              </div>
-              <h4>
-                Sentiment Analysis
-              </h4>
-              <p>
-                Classify text by sentiment in bulk — positive, negative, neutral.
-              </p>
-              <span className="link">
-                Try now →
-              </span>
-            </a>
-            <a className="related-card" href="/tools/bank-statement-converter">
-              <div className="glyph">
-                §
-              </div>
-              <h4>
-                Bank Statement Converter
-              </h4>
-              <p>
-                Parse PDF statements into clean, analysis-ready tables.
-              </p>
-              <span className="link">
-                Try now →
-              </span>
-            </a>
-            <a className="related-card" href="/tools/ai-qa-generator">
-              <div className="glyph">
-                ?
-              </div>
-              <h4>
-                AI Q&amp;A Generator
-              </h4>
-              <p>
-                Bulk Q&amp;A for docs, FAQs, and knowledge bases.
-              </p>
-              <span className="link">
-                Try now →
-              </span>
-            </a>
-            <a className="related-card" href="/tools/ai-dax-generator">
-              <div className="glyph">
-                λ
-              </div>
-              <h4>
-                AI DAX Generator
-              </h4>
-              <p>
-                Power BI and DAX code from plain English descriptions.
+                Build intelligent chatbots that understand and respond.
               </p>
               <span className="link">
                 Try now →
@@ -816,57 +888,57 @@ export default function BankStatementConverterPage() {
             Frequently asked questions.
           </h2>
           <p className="intro">
-            Common things people ask before generating their first sheet.
+            Common questions about the Bank Statement Converter.
           </p>
         </div>
         <div className="row-body">
           <div className="faq-list">
             <details className="faq-item">
               <summary className="faq-q">
-                What is the AI Spreadsheet Generator?
+                What is a bank statement converter PDF to Excel?
               </summary>
               <div className="faq-a">
-                It's a tool that creates complete Excel spreadsheets using AI. You describe what you need in plain English, and the AI generates a professional, ready-to-use spreadsheet with proper structure, formulas, and formatting.
+                A tool that converts bank statement PDFs into structured Excel files using AI, accurately extracting transactions, dates, and balances.
               </div>
             </details>
             <details className="faq-item">
               <summary className="faq-q">
-                What types of spreadsheets can it generate?
+                Is this the best PDF to Excel converter for bank statements?
               </summary>
               <div className="faq-a">
-                Budgets, reports, schedules, trackers, dashboards, inventory sheets, and more. If you can describe it, the AI can create it — both simple templates and multi-section workbooks are supported.
+                It's built specifically for bank statements, understanding bank-specific formats that generic converters miss.
               </div>
             </details>
             <details className="faq-item">
               <summary className="faq-q">
-                Can I create Excel templates with AI?
+                Is Formula Byte's bank statement converter free?
               </summary>
               <div className="faq-a">
-                Yes — reusable templates are fully supported. Generate once and use the same structure for recurring needs, whether that's monthly reports or weekly trackers.
+                Yes, free access is available with optional upgrades for higher limits and advanced workflows.
               </div>
             </details>
             <details className="faq-item">
               <summary className="faq-q">
-                Does it work with Google Sheets?
+                Can I convert multiple bank statements at once?
               </summary>
               <div className="faq-a">
-                Yes. Generated files are compatible with Google Sheets — upload the .xlsx and the formulas, formatting, and structure carry over cleanly.
+                Yes, batch processing is supported on higher plans for handling multiple statements efficiently.
               </div>
             </details>
             <details className="faq-item">
               <summary className="faq-q">
-                Can it handle advanced formulas?
+                Does it work with all banks?
               </summary>
               <div className="faq-a">
-                Yes. Formulas are generated automatically when needed, from simple SUMs and AVERAGEs to nested IF/INDEX/MATCH logic and array formulas.
+                It supports most bank formats globally, from major US banks to international financial institutions.
               </div>
             </details>
             <details className="faq-item">
               <summary className="faq-q">
-                Is the AI Excel Spreadsheet Generator free?
+                Can I export Excel back to PDF?
               </summary>
               <div className="faq-a">
-                Yes. Free access is available with optional upgrades for higher usage limits and advanced automation. No credit card required to try it.
+                Yes, the converted Excel files can be easily exported back to PDF using Excel or Google Sheets.
               </div>
             </details>
           </div>
@@ -878,13 +950,13 @@ export default function BankStatementConverterPage() {
     <section className="final-cta">
       <div className="final-cta-inner">
         <h2>
-          Stop building spreadsheets
+          Stop wasting hours on
           <span className="accent">
-            from scratch.
+            manual bank statement conversion.
           </span>
         </h2>
         <p>
-          Create Excel files with AI — fast, clean, and ready to use the second they're generated.
+          Convert PDF bank statements to Excel using AI — fast, accurate, and stress-free.
         </p>
         <div className="btn-row">
           <a href="https://dashboard.formulabyte.com/" className="btn btn-primary btn-lg">
@@ -897,7 +969,6 @@ export default function BankStatementConverterPage() {
       </div>
     </section>
   </div>
-
     </>
   );
 }

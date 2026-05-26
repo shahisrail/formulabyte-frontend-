@@ -32,7 +32,7 @@ export default function BusinessBudgetTemplatePage() {
           </div>
 
           <div className="hero-ctas">
-            <a href="/auth?template=business-budget" className="btn btn-primary btn-lg">
+            <a href="https://dashboard.formulabyte.com/?template=business-budget" className="btn btn-primary btn-lg">
               Generate template
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -733,7 +733,7 @@ export default function BusinessBudgetTemplatePage() {
             <h2>Stop building budgets manually. <span className="accent">Start forecasting.</span></h2>
             <p>Generate your AI-powered business budget template in seconds — professional formulas, forecasting dashboards, and variance analysis included.</p>
             <div className="btn-row">
-              <a href="/auth?template=business-budget" className="btn btn-primary btn-lg">Generate budget template →</a>
+              <a href="https://dashboard.formulabyte.com/?template=business-budget" className="btn btn-primary btn-lg">Generate budget template →</a>
               <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse more templates</a>
             </div>
           </div>

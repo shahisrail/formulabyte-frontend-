@@ -54,10 +54,10 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-cta">
-          <Link href="https://dashboard.formulabyte.com" className="btn btn-ghost">
+          <Link href="https://dashboard.formulabyte.com/" className="btn btn-ghost">
             Log in
           </Link>
-          <Link href=" https://dashboard.formulabyte.com" className="btn btn-primary">
+          <Link href="https://dashboard.formulabyte.com/" className="btn btn-primary">
             Try free
           </Link>
         </div>

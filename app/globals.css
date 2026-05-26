@@ -31,6 +31,8 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Prevent page flash during transitions */
 body {
   font-family: var(--font-sans);
   color: var(--text);
@@ -39,6 +41,38 @@ body {
   line-height: 1.6;
   font-weight: 400;
   letter-spacing: -0.005em;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure proper full-page rendering */
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Prevent layout shifts and ensure consistent background */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent content shift during page loads */
+html {
+  overflow-y: scroll;
+}
+
+/* Smooth page transitions */
+* {
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Disable transitions during page loads for better performance */
+body.page-loading * {
+  transition: none !important;
 }
 
 a { color: var(--primary); text-decoration: none; transition: color 0.15s; }
@@ -195,4 +229,27 @@ footer { padding: 56px 0 32px; }
 @media (max-width: 480px) {
   .container { padding: 0 18px; }
   .nav-cta .btn-ghost { display: none; }
+}
+
+/* Prevent layout shifts during page loads */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Smooth transitions for interactive elements */
+button,
+a,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* Page content wrapper for proper rendering */
+.page-content-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
 }

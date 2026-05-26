@@ -741,9 +741,6 @@ header.nav {
   opacity: 1;
   width: 4px;
 }
-}
-.benefit-card:hover { background: var(--primary-softer); transform: translateY(-2px); }
-.benefit-card:hover::before { opacity: 1; }
 .benefit-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.015em; }
 .benefit-card p { font-size: 13.5px; color: var(--text-muted); line-height: 1.55; margin-bottom: 14px; }
 .benefit-stat {
@@ -815,16 +812,15 @@ header.nav {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-press) 100%);
   color: #fff;
   transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .feature-tile:hover .feature-tile-icon {
   transform: scale(1.1) rotate(5deg);
-}
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-serif); font-style: italic;
-  font-size: 18px;
-  margin-bottom: 16px;
-  box-shadow: 0 3px 8px rgba(129, 113, 208, 0.25);
 }
 .feature-tile h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
 .feature-tile > p { font-size: 13.5px; color: var(--text-muted); line-height: 1.55; margin-bottom: 14px; }
@@ -911,18 +907,6 @@ header.nav {
 
 .tool-card:hover h4 {
   color: var(--primary);
-}
-  top: 14px;
-  right: 14px;
-  font-size: 9.5px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--primary);
-  background: var(--bg-card);
-  padding: 3px 8px;
-  border-radius: 999px;
-  border: 1px solid var(--primary-soft);
 }
 .tool-card h4 {
   font-size: 15px;

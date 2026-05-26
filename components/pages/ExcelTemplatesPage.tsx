@@ -21,7 +21,7 @@ export default function ExcelTemplatesPage() {
           </p>
           <div className="hero-ctas">
             <a href="#directory" className="btn btn-primary btn-lg">Browse 16 templates →</a>
-            <a href="/auth" className="btn btn-outline btn-lg">Generate a custom one</a>
+            <a href="https://dashboard.formulabyte.com/" className="btn btn-outline btn-lg">Generate a custom one</a>
           </div>
           <div className="hero-trustline">
             <span>100% free</span>
@@ -251,7 +251,7 @@ export default function ExcelTemplatesPage() {
                 <p className="directory-footer-text">
                   Need something specific? <em>Describe it</em> and we'll generate it.
                 </p>
-                <a href="/auth" className="btn btn-outline">Generate a custom template →</a>
+                <a href="https://dashboard.formulabyte.com/" className="btn btn-outline">Generate a custom template →</a>
               </div>
             </div>
           </div>
@@ -688,7 +688,7 @@ export default function ExcelTemplatesPage() {
             <p>Pick from 16 templates, or describe your own — Formula Byte generates the spreadsheet, formulas, and dashboards in seconds.</p>
             <div className="btn-row">
               <a href="#directory" className="btn btn-primary btn-lg">Browse templates →</a>
-              <a href="/auth" className="btn btn-outline btn-lg">Generate a custom one</a>
+              <a href="https://dashboard.formulabyte.com/" className="btn btn-outline btn-lg">Generate a custom one</a>
             </div>
           </div>
         </section>

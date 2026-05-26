@@ -239,7 +239,7 @@ export default function ContactPage() {
           </h2>
           <p>{"No credit card required. Free forever plan included. You can always reach out after you've tried it."}</p>
           <div className={"btn-row"}>
-            <a href={"/auth"} className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
+            <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
             <a href={"/#tools"} className={"btn btn-outline btn-lg"}>{"Browse all tools"}</a>
           </div>
         </div>

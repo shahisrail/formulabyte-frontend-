@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AppShell from "@/components/layout/AppShell";
+import PageTransition from "@/components/layout/PageTransition";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -11,7 +12,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <AppShell>{children}</AppShell>
+        <PageTransition>
+          <AppShell>{children}</AppShell>
+        </PageTransition>
       </body>
     </html>
   );

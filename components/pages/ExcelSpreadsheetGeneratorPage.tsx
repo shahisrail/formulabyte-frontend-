@@ -494,7 +494,7 @@ export default function ExcelSpreadsheetGeneratorPage() {
           </h2>
           <p>{"Create Excel files with AI \u2014 fast, clean, and ready to use the second they're generated."}</p>
           <div className={"btn-row"}>
-            <a href={"/auth"} className={"btn btn-primary btn-lg"}>{"Start free with Formula Byte \u2192"}</a>
+            <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary btn-lg"}>{"Start free with Formula Byte \u2192"}</a>
             <a href={"/tools"} className={"btn btn-outline btn-lg"}>{"Browse all tools"}</a>
           </div>
         </div>

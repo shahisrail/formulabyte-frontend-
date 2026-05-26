@@ -1,8 +1,21 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function HomePage() {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleSendClick = () => {
+    window.location.href = 'https://dashboard.formulabyte.com/';
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      window.location.href = 'https://dashboard.formulabyte.com/';
+    }
+  };
+
   useEffect(() => {
     // Pricing toggle functionality
     const monthlyBtn = document.getElementById('monthly-btn');
@@ -87,7 +100,7 @@ export default function HomePage() {
         </h1>
         <p className={"lede"}>{" Ask anything about your data. Get instant answers, charts, and reports in plain English \u2014 no code, no spreadsheets, no SQL required. "}</p>
         <div className={"hero-ctas"}>
-          <a href={"/auth"} className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
+          <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
           <a href={"#how-it-works"} className={"btn btn-outline btn-lg"}>{"Book a demo"}</a>
         </div>
         <div className={"hero-trustline"}>
@@ -101,7 +114,14 @@ export default function HomePage() {
         </div>
         <div className={"prompt-card"}>
           <div className={"prompt-input"}>
-            <textarea className={"prompt-textarea"} placeholder={"Ask anything about your data\u2026 e.g. What's driving revenue this month?"} rows={2}></textarea>
+            <textarea
+              className={"prompt-textarea"}
+              placeholder={"Ask anything about your data\u2026 e.g. What's driving revenue this month?"}
+              rows={2}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              onKeyDown={handleKeyDown}
+            ></textarea>
           </div>
           <div className={"prompt-actions"}>
             <div className={"prompt-hints"}>
@@ -109,7 +129,11 @@ export default function HomePage() {
               <span>{"\u00b7"}</span>
               <span>{"Works with Excel, CSV, SQL"}</span>
             </div>
-            <button className={"send-btn"} aria-label={"Ask"}>
+            <button
+              className={"send-btn"}
+              aria-label={"Ask"}
+              onClick={handleSendClick}
+            >
               <svg width={"14"} height={"14"} viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"2.5"} strokeLinecap={"round"} strokeLinejoin={"round"}>
                 <line x1={"12"} y1={"19"} x2={"12"} y2={"5"}></line>
                 <polyline points={"5 12 12 5 19 12"}></polyline>
@@ -119,9 +143,24 @@ export default function HomePage() {
         </div>
         <div className={"example-prompts"}>
           <span>{"Try:"}</span>
-          <button className={"chip"}>{"What's driving revenue this month?"}</button>
-          <button className={"chip"}>{"Which customers might cancel?"}</button>
-          <button className={"chip"}>{"Forecast next quarter"}</button>
+          <button
+            className={"chip"}
+            onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}
+          >
+            {"What's driving revenue this month?"}
+          </button>
+          <button
+            className={"chip"}
+            onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}
+          >
+            {"Which customers might cancel?"}
+          </button>
+          <button
+            className={"chip"}
+            onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}
+          >
+            {"Forecast next quarter"}
+          </button>
         </div>
       </div>
     </section>
@@ -539,7 +578,7 @@ export default function HomePage() {
                   <li>{"1 Device at a time"}</li>
                   <li>{"14 days chat history"}</li>
                 </ul>
-                <a href={"/auth"} className={"btn btn-outline pricing-cta"}>{"Get started"}</a>
+                <a href="https://dashboard.formulabyte.com/" className={"btn btn-outline pricing-cta"}>{"Get started"}</a>
               </div>
               <div className={"pricing-card featured"}>
                 <span className={"pricing-tag"}>{"Most popular"}</span>
@@ -561,7 +600,7 @@ export default function HomePage() {
                   <li>{"Use on 3 device at once"}</li>
                   <li>{"30 days chat history"}</li>
                 </ul>
-                <a href={"/auth"} className={"btn btn-primary pricing-cta"}>{"Start free trial"}</a>
+                <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary pricing-cta"}>{"Start free trial"}</a>
               </div>
               <div className={"pricing-card"}>
                 <div className={"pricing-name"}>{"Unlimited Pro"}</div>
@@ -578,7 +617,7 @@ export default function HomePage() {
                   <li>{"Use on multiple device at once"}</li>
                   <li>{"60 days chat history"}</li>
                 </ul>
-                <a href={"/auth"} className={"btn btn-outline pricing-cta"}>{"Get started"}</a>
+                <a href="https://dashboard.formulabyte.com/" className={"btn btn-outline pricing-cta"}>{"Get started"}</a>
               </div>
             </div>
           </div>
@@ -700,7 +739,7 @@ export default function HomePage() {
           </h2>
           <p>{"No credit card required. Free forever plan included. Join 10,000+ professionals already using Formula Byte."}</p>
           <div className={"btn-row"}>
-            <a href={"/auth"} className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
+            <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
             <a href={"/tools"} className={"btn btn-outline btn-lg"}>{"Browse all tools"}</a>
           </div>
         </div>

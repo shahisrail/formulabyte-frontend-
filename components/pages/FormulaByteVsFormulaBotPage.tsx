@@ -856,7 +856,7 @@ export default function FormulaByteVsFormulaBotPage() {
                   <li>{"Bulk spreadsheet generation"}</li>
                   <li>{"To save time on recurring marketing/ops reports"}</li>
                 </ul>
-                <a href={"/auth"} className={"btn btn-primary btn-lg verdict-cta"}>{"Try Formula Byte free \u2192"}</a>
+                <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary btn-lg verdict-cta"}>{"Try Formula Byte free \u2192"}</a>
               </div>
               <div className={"verdict-card bot"}>
                 <span className={"verdict-tag"}>{"Recommended for beginners & learners"}</span>
@@ -930,7 +930,7 @@ export default function FormulaByteVsFormulaBotPage() {
           </h2>
           <p>{"No credit card. Free forever plan. The honest answer is: try it on your actual workflow for 10 minutes, and you'll know."}</p>
           <div className={"btn-row"}>
-            <a href={"/auth"} className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
+            <a href="https://dashboard.formulabyte.com/" className={"btn btn-primary btn-lg"}>{"Get started free \u2192"}</a>
             <a href={"/#tools"} className={"btn btn-outline btn-lg"}>{"Browse all tools"}</a>
           </div>
         </div>
