@@ -18,7 +18,6 @@ export default function AIExcelSpreadsheetGeneratorPage() {
 
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/excel-generator.css" />
     <section className="hero">
       <div className="hero-inner">
         <div className="eyebrow">AI Excel Spreadsheet Generator</div>

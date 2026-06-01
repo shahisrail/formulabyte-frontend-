@@ -4,7 +4,6 @@ import PageBehavior from '@/components/runtime/PageBehavior';
 export default function ContactPage() {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/contact.css" />
       <PageBehavior page={"contact"} />
     <section className={"hero"}>
       <div className={"hero-inner"}>

@@ -82,7 +82,6 @@ export default function HomePage() {
 
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/home.css" />
     <section className={"hero"}>
       <div className={"hero-inner"}>
         <div className={"hero-rating"}>
@@ -165,8 +164,9 @@ export default function HomePage() {
       </div>
     </section>
     <div className={"logo-strip"}>
-      <div className={"logo-strip-label"}>{"Trusted by data teams at"}</div>
-      <div className={"logo-marquee-container"}>
+      <div className={"logo-strip-content"}>
+        <div className={"logo-strip-label"}>{"Trusted by data teams at"}</div>
+        <div className={"logo-marquee-container"}>
         <div className={"logo-marquee"}>
           <div className={"logo-track"}>
             <span className={"logo-item sans"}>{"Google"}</span>
@@ -187,6 +187,7 @@ export default function HomePage() {
             <span className={"logo-item mono"}>{"shopify"}</span>
           </div>
         </div>
+      </div>
       </div>
     </div>
     <div className={"section-wrap"}>

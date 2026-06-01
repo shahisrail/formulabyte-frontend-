@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function NotFoundPage() {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/error-pages.css" />
       <section className={"error-hero"}>
         <div className={"error-hero-inner"}>
           <div className={"error-illustration"}>

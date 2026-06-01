@@ -3,7 +3,6 @@ import React from 'react';
 export default function ExcelFileGeneratorPage() {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/excel-upload-generator.css" />
     <section className={"hero"}>
       <div className={"hero-inner"}>
         <div className={"eyebrow"}>{"AI Excel Spreadsheet Generator"}</div>

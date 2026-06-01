@@ -1,7 +1,6 @@
 export default function BusinessBudgetTemplatePage() {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/amortization-schedule-template.css" />
 
       {/* HERO */}
       <section className="hero">

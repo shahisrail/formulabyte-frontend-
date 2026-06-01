@@ -3,7 +3,6 @@ import React from 'react';
 export default function FormulaByteVsFormulaBotPage() {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/formula-byte-vs-formula-bot.css" />
     <div className={"breadcrumb"}>
       <a href={"/compare"}>{"Compare"}</a>
       <span className={"sep"}>{"/"}</span>

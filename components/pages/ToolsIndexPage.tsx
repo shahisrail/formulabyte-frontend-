@@ -4,7 +4,6 @@ import { tools } from '@/data/tools';
 export default function ToolsIndexPage() {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/tools.css" />
       <section className="hero tools-hero">
         <div className="hero-inner">
           <div className="hero-rating">

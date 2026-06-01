@@ -3,7 +3,6 @@ import React from 'react';
 export default function AboutPage() {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/about.css" />
     <section className={"hero"}>
       <div className={"hero-inner"}>
         <div className={"hero-eyebrow-pill"}>

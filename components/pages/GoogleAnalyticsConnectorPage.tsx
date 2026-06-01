@@ -4,7 +4,6 @@ import PageBehavior from '@/components/runtime/PageBehavior';
 export default function GoogleAnalyticsConnectorPage() {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/google-analytics-connector.css" />
       <PageBehavior page={"google-analytics-connector"} />
     <div className={"breadcrumb"}>
       <a href={"/connectors"}>{"Connectors"}</a>

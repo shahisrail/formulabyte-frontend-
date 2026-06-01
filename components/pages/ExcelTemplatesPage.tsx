@@ -1,7 +1,6 @@
 export default function ExcelTemplatesPage() {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/excel-templates.css" />
 
    
 

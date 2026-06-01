@@ -63,7 +63,6 @@ export default function BankStatementConverterPage() {
 
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/bank-statement-converter.css" />
     <section className="hero">
     <div className="hero-inner">
       <div className="eyebrow">

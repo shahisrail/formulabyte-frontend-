@@ -4,7 +4,6 @@ import type { Tool } from '@/data/tools';
 export default function ToolLandingPage({ tool }: { tool: Tool }) {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/tools.css" />
       <section className="hero tool-detail-hero">
         <div className="hero-inner">
           <div className="hero-rating">

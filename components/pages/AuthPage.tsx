@@ -4,7 +4,6 @@ import PageBehavior from '@/components/runtime/PageBehavior';
 export default function AuthPage() {
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/auth.css" />
       <PageBehavior page={"auth"} />
     <div className={"auth-shell"} data-mode={"signin"}>
       <aside className={"auth-showcase"}>

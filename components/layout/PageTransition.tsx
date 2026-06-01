@@ -8,8 +8,8 @@ export default function PageTransition({ children }: { children: React.ReactNode
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Scroll to top on route change
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    // Scroll to top on route change - no smooth scroll to prevent flickering
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
   }, [pathname]);
 
   return (

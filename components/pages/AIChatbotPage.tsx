@@ -67,7 +67,6 @@ export default function AIChatbotPage() {
   }, []);
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/excel-generator.css" />
     <section className="hero">
       <div className="hero-inner">
         <div className="eyebrow">AI Data Analysis Chat</div>

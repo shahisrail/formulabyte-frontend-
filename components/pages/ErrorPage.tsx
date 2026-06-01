@@ -12,7 +12,6 @@ export default function ErrorPage({ reset }: { reset?: () => void }) {
 
   return (
     <>
-      <link rel="stylesheet" href="/page-styles/error-pages.css" />
       <section className={"error-hero"}>
         <div className={"error-hero-inner"}>
           <div className={"error-illustration error-illustration-error"}>

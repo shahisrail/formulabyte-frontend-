@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap');
 
+/* Import all page-specific styles to prevent flickering */
+@import '../public/page-styles/home.css';
+@import '../public/page-styles/about.css';
+@import '../public/page-styles/contact.css';
+@import '../public/page-styles/auth.css';
+@import '../public/page-styles/tools.css';
+@import '../public/page-styles/excel-templates.css';
+@import '../public/page-styles/excel-generator.css';
+@import '../public/page-styles/excel-upload-generator.css';
+@import '../public/page-styles/bank-statement-converter.css';
+@import '../public/page-styles/google-analytics-connector.css';
+@import '../public/page-styles/error-pages.css';
+@import '../public/page-styles/formula-byte-vs-formula-bot.css';
+@import '../public/page-styles/amortization-schedule-template.css';
+
 :root {
   --primary: #8171D0;
   --primary-hover: #6F5DC4;
@@ -30,7 +45,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 /* Prevent page flash during transitions */
 body {
@@ -65,14 +80,14 @@ html {
   overflow-y: scroll;
 }
 
-/* Smooth page transitions */
-* {
-  transition: opacity 0.2s ease-in-out;
-}
-
-/* Disable transitions during page loads for better performance */
-body.page-loading * {
-  transition: none !important;
+/* Smooth page transitions - only for interactive elements */
+a,
+button,
+.btn,
+.nav-links a,
+.tools-menu-item,
+.input-icon-btn {
+  transition: opacity 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 a { color: var(--primary); text-decoration: none; transition: color 0.15s; }
