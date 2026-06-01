@@ -1,7 +1,6 @@
 export default function BalanceSheetTemplatePage() {
   return (
     <>
-
       {/* HERO */}
       <section className="hero">
         <div className="hero-inner">
@@ -14,9 +13,9 @@ export default function BalanceSheetTemplatePage() {
           </div>
 
           <div className="eyebrow">Financial template</div>
-          <h1>AI Excel <span className="accent">Balance Sheet</span> Template</h1>
+          <h1>AI Excel Balance Sheet Template for Small Business <span className="accent">Financial Reporting</span></h1>
           <p className="lede">
-            Track assets, liabilities, equity, and business financial health with an AI-generated Excel balance sheet template designed for small business reporting and financial analysis.
+            Track assets, liabilities, equity, and business financial health with an AI-generated Excel balance sheet template designed for small business reporting and financial analysis. Formula Byte helps businesses automate balance sheet creation using intelligent spreadsheets with built-in formulas, financial summaries, and organized reporting structures.
           </p>
 
           <div className="hero-specs">
@@ -31,7 +30,7 @@ export default function BalanceSheetTemplatePage() {
           </div>
 
           <div className="hero-ctas">
-            <a href="https://dashboard.formulabyte.com/?template=balance-sheet" className="btn btn-primary btn-lg">
+            <a href="/auth?template=balance-sheet" className="btn btn-primary btn-lg">
               Generate template
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -41,15 +40,30 @@ export default function BalanceSheetTemplatePage() {
             <a href="#preview" className="btn btn-outline btn-lg">View preview</a>
           </div>
 
-          <div className="hero-suggest">
-            <span>Try:</span>
-            <button className="chip">Small business balance sheet</button>
-            <button className="chip">Startup financial statement</button>
-            <button className="chip">Ecommerce financial report</button>
-            <button className="chip">Freelancer accounting template</button>
+          <div className="hero-tagline">
+            <span className="hero-tagline-item">100% customizable</span>
+            <span className="hero-tagline-sep">•</span>
+            <span className="hero-tagline-item">Works with Excel &amp; Google Sheets</span>
+            <span className="hero-tagline-sep">•</span>
+            <span className="hero-tagline-item">AI-generated in seconds</span>
           </div>
         </div>
       </section>
+
+      {/* USE CASE PILLS */}
+      <div className="use-case-grid">
+        <div className="use-case-label">Generate balance sheet spreadsheets for:</div>
+        <div className="use-case-pills">
+          <span className="use-case-pill"><span className="dot"></span>Small businesses</span>
+          <span className="use-case-pill"><span className="dot"></span>Startups</span>
+          <span className="use-case-pill"><span className="dot"></span>Ecommerce brands</span>
+          <span className="use-case-pill"><span className="dot"></span>Agencies</span>
+          <span className="use-case-pill"><span className="dot"></span>Contractors</span>
+          <span className="use-case-pill"><span className="dot"></span>Freelancers</span>
+          <span className="use-case-pill"><span className="dot"></span>Consultants</span>
+          <span className="use-case-pill"><span className="dot"></span>Personal financial reporting</span>
+        </div>
+      </div>
 
       {/* SPREADSHEET PREVIEW */}
       <div className="preview-wrap" id="preview">
@@ -703,65 +717,105 @@ export default function BalanceSheetTemplatePage() {
         </section>
       </div>
 
+      {/* WHO IT'S FOR */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row-stacked">
+            <div className="row-header">
+              <div className="eyebrow">Who it's for</div>
+              <h2>Who Should Use This <span className="serif-accent">Balance Sheet</span> Spreadsheet?</h2>
+              <p className="intro">This spreadsheet solution is ideal for individuals and teams managing business finances.</p>
+            </div>
+            <div className="row-body">
+              <div className="audience-grid">
+                <div className="audience-cell"><h4>Small businesses</h4></div>
+                <div className="audience-cell"><h4>Accountants</h4></div>
+                <div className="audience-cell"><h4>Startups</h4></div>
+                <div className="audience-cell"><h4>Ecommerce brands</h4></div>
+                <div className="audience-cell"><h4>Agencies</h4></div>
+                <div className="audience-cell"><h4>Consultants</h4></div>
+                <div className="audience-cell"><h4>Financial analysts</h4></div>
+                <div className="audience-cell"><h4>Business owners</h4></div>
+                <div className="audience-cell"><h4>Finance managers</h4></div>
+              </div>
+              <div className="audience-footer">Whether you need simple financial reporting or advanced accounting analysis, Formula Byte helps automate balance sheet spreadsheet creation with AI.</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
       {/* FAQ */}
       <div className="section-wrap" id="faq">
         <section className="card">
           <div className="row">
             <div className="row-header">
               <div className="eyebrow">FAQ</div>
-              <h2>Frequently asked questions.</h2>
-              <p className="intro">Everything you need to know about balance sheet templates and Formula Byte.</p>
+              <h2>Frequently Asked Questions</h2>
+              <p className="intro">Common questions about generating balance sheet templates with Formula Byte.</p>
             </div>
             <div className="row-body">
               <div className="faq-list">
                 <details className="faq-item" open>
-                  <summary className="faq-q">What is a balance sheet template?</summary>
-                  <div className="faq-a">
-                    A balance sheet template is a pre-structured Excel spreadsheet that organizes a company's assets, liabilities, and equity at a specific point in time. Formula Byte generates these templates automatically with built-in formulas, financial categories, and reporting dashboards.
-                  </div>
+                  <summary className="faq-q">Can this spreadsheet calculate assets and liabilities automatically?</summary>
+                  <div className="faq-a">Yes. Formula Byte generates balance sheet spreadsheets with automated calculations for assets, liabilities, and equity reporting.</div>
                 </details>
                 <details className="faq-item">
-                  <summary className="faq-q">Does the balance sheet calculate assets and liabilities automatically?</summary>
-                  <div className="faq-a">
-                    Yes. Formula Byte generates balance sheet templates with automated SUM formulas, category totals, and equity calculations. All financial formulas are wired automatically — no manual Excel work needed.
-                  </div>
+                  <summary className="faq-q">Does the template include financial dashboards?</summary>
+                  <div className="faq-a">Yes. The spreadsheet can include dashboards, summaries, and financial reporting visuals.</div>
                 </details>
                 <details className="faq-item">
                   <summary className="faq-q">Can I customize the balance sheet structure?</summary>
-                  <div className="faq-a">
-                    Absolutely. Asset categories, liability sections, equity calculations, and reporting formats can all be customized. Describe your business structure, and Formula Byte generates a tailored balance sheet with the right accounts and categories.
-                  </div>
+                  <div className="faq-a">Absolutely. Asset categories, liability sections, reporting formats, and accounting layouts can all be customized.</div>
                 </details>
                 <details className="faq-item">
-                  <summary className="faq-q">Does this template work in Google Sheets?</summary>
-                  <div className="faq-a">
-                    Yes. All Formula Byte balance sheet templates work in both Microsoft Excel and Google Sheets. Generate once, export to your preferred platform, and all formulas and formatting remain intact.
-                  </div>
+                  <summary className="faq-q">Does this spreadsheet work in Google Sheets?</summary>
+                  <div className="faq-a">Yes. Formula Byte balance sheet templates work with both Microsoft Excel and Google Sheets.</div>
                 </details>
                 <details className="faq-item">
                   <summary className="faq-q">Is this suitable for small business financial reporting?</summary>
-                  <div className="faq-a">
-                    Yes. Small businesses commonly use balance sheet spreadsheets to monitor financial position, support loan applications, and maintain accurate accounting records. Formula Byte templates are designed specifically for small business needs.
-                  </div>
+                  <div className="faq-a">Yes. Small businesses commonly use balance sheet spreadsheets to monitor financial position, accounting records, and operational stability.</div>
                 </details>
-                <details className="faq-item">
-                  <summary className="faq-q">What financial formulas are included?</summary>
-                  <div className="faq-a">
-                    Formula Byte includes SUM, IF, XLOOKUP, SUBTOTAL, and equity calculation formulas. These automate asset totals, liability summaries, owner's equity, and financial ratios — all wired together and ready to use.
-                  </div>
-                </details>
-                <details className="faq-item">
-                  <summary className="faq-q">Can I track multiple business entities?</summary>
-                  <div className="faq-a">
-                    Yes. You can generate balance sheet templates for multiple business entities, departments, or divisions. Each template is independent and can be customized for that specific entity's structure and reporting needs.
-                  </div>
-                </details>
-                <details className="faq-item">
-                  <summary className="faq-q">Is this balance sheet template free to use?</summary>
-                  <div className="faq-a">
-                    Yes. The balance sheet template is completely free to generate and use. Describe your business structure, generate the balance sheet, and download it — no credit card or subscription required.
-                  </div>
-                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* RELATED TEMPLATES */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row-stacked">
+            <div className="row-header">
+              <div className="eyebrow">Related templates</div>
+              <h2>Other financial templates you might need.</h2>
+              <p className="intro">Same engine, different financial workflows.</p>
+            </div>
+            <div className="row-body">
+              <div className="related-grid">
+                <a href="/excel-templates/accounting-template/" className="related-card">
+                  <div className="glyph">A</div>
+                  <h4>Accounting Template</h4>
+                  <p>Bookkeeping with ledgers, invoices, and cash flow tracking.</p>
+                  <span className="link">View template →</span>
+                </a>
+                <a href="/excel-templates/profit-and-loss-template/" className="related-card">
+                  <div className="glyph">P</div>
+                  <h4>Profit &amp; Loss</h4>
+                  <p>Monthly and yearly P&amp;L with built-in formulas and margin tracking.</p>
+                  <span className="link">View template →</span>
+                </a>
+                <a href="/excel-templates/income-statement-template/" className="related-card">
+                  <div className="glyph">I</div>
+                  <h4>Income Statement</h4>
+                  <p>Revenue, expenses, and net income — calculated automatically.</p>
+                  <span className="link">View template →</span>
+                </a>
+                <a href="/excel-templates/invoice-template/" className="related-card">
+                  <div className="glyph">V</div>
+                  <h4>Invoice Template</h4>
+                  <p>Professional invoices with auto-numbering, taxes, and totals.</p>
+                  <span className="link">View template →</span>
+                </a>
               </div>
             </div>
           </div>
@@ -772,11 +826,13 @@ export default function BalanceSheetTemplatePage() {
       <div className="final-cta-wrap">
         <section className="final-cta">
           <div className="final-cta-inner">
-            <h2>Stop building financial statements manually. <span className="accent">Start automating.</span></h2>
-            <p>Generate your AI-powered balance sheet template in seconds — professional formulas, financial dashboards, and reporting systems included.</p>
+            <h2>Ready to Build Your AI <span className="accent">Balance Sheet</span> Spreadsheet?</h2>
+            <p>Stop building financial statements manually.</p>
+            <p>Describe your accounting and reporting workflow, and Formula Byte will generate a professional AI-powered Excel balance sheet template with automated formulas, financial dashboards, accounting worksheets, and organized reporting structures in seconds.</p>
+            <p>Create smarter financial reporting spreadsheets with AI today.</p>
             <div className="btn-row">
-              <a href="https://dashboard.formulabyte.com/?template=balance-sheet" className="btn btn-primary btn-lg">Generate balance sheet →</a>
-              <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse more templates</a>
+              <a href="/auth?template=balance-sheet" className="btn btn-primary btn-lg">Generate template →</a>
+              <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse all templates</a>
             </div>
           </div>
         </section>

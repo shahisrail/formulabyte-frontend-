@@ -1,7 +1,6 @@
 export default function AmortizationScheduleTemplatePage() {
   return (
     <>
- 
       {/* HERO */}
       <section className="hero">
         <div className="hero-inner">
@@ -14,16 +13,16 @@ export default function AmortizationScheduleTemplatePage() {
           </div>
 
           <div className="eyebrow">Financial template</div>
-          <h1>AI Amortization<br /><span className="accent">Schedule</span> Template</h1>
+          <h1>AI Excel Amortization Schedule Template for Loan Repayment <span className="accent">Planning</span></h1>
           <p className="lede">
-            Track loan payments, interest, and principal balances with an AI-generated Excel amortization schedule — built with PMT formulas, payoff timelines, and repayment dashboards in seconds.
+            Track loan payments, interest, principal balances, and repayment progress with an AI-generated Excel amortization schedule template designed for smarter financial planning. Formula Byte helps individuals and businesses automate loan tracking using intelligent spreadsheets with built-in payment formulas, repayment summaries, and financial forecasting tools.
           </p>
 
           <div className="hero-specs">
             <span className="hero-spec-tag"><span className="dot"></span>Free</span>
             <span className="hero-spec"><strong>8</strong> worksheets</span>
             <span className="hero-spec-sep"></span>
-            <span className="hero-spec"><strong>12</strong> built-in formulas</span>
+            <span className="hero-spec"><strong>9</strong> formulas built in</span>
             <span className="hero-spec-sep"></span>
             <span className="hero-spec">Excel <strong>&amp;</strong> Sheets</span>
             <span className="hero-spec-sep"></span>
@@ -31,7 +30,7 @@ export default function AmortizationScheduleTemplatePage() {
           </div>
 
           <div className="hero-ctas">
-            <a href="https://dashboard.formulabyte.com/?template=amortization-schedule" className="btn btn-primary btn-lg">
+            <a href="/auth?template=amortization-schedule" className="btn btn-primary btn-lg">
               Generate template
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -41,15 +40,30 @@ export default function AmortizationScheduleTemplatePage() {
             <a href="#preview" className="btn btn-outline btn-lg">View preview</a>
           </div>
 
-          <div className="hero-suggest">
-            <span>Try:</span>
-            <button className="chip">Mortgage with extra payments</button>
-            <button className="chip">Business loan repayment</button>
-            <button className="chip">Student loan payoff tracker</button>
-            <button className="chip">Auto loan dashboard</button>
+          <div className="hero-tagline">
+            <span className="hero-tagline-item">100% customizable</span>
+            <span className="hero-tagline-sep">•</span>
+            <span className="hero-tagline-item">Works with Excel &amp; Google Sheets</span>
+            <span className="hero-tagline-sep">•</span>
+            <span className="hero-tagline-item">AI-generated in seconds</span>
           </div>
         </div>
       </section>
+
+      {/* USE CASE PILLS */}
+      <div className="use-case-grid">
+        <div className="use-case-label">Generate amortization spreadsheets for</div>
+        <div className="use-case-pills">
+          <span className="use-case-pill"><span className="dot"></span>Home loans</span>
+          <span className="use-case-pill"><span className="dot"></span>Mortgage repayment</span>
+          <span className="use-case-pill"><span className="dot"></span>Business loans</span>
+          <span className="use-case-pill"><span className="dot"></span>Personal loans</span>
+          <span className="use-case-pill"><span className="dot"></span>Auto financing</span>
+          <span className="use-case-pill"><span className="dot"></span>Student loans</span>
+          <span className="use-case-pill"><span className="dot"></span>Equipment financing</span>
+          <span className="use-case-pill"><span className="dot"></span>Debt repayment planning</span>
+        </div>
+      </div>
 
       {/* SPREADSHEET PREVIEW */}
       <div className="preview-wrap" id="preview">
@@ -637,65 +651,105 @@ export default function AmortizationScheduleTemplatePage() {
         </section>
       </div>
 
+      {/* WHO IT'S FOR */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row-stacked">
+            <div className="row-header">
+              <div className="eyebrow">Who it's for</div>
+              <h2>Who Should Use This Loan <span className="serif-accent">Amortization</span> Spreadsheet?</h2>
+              <p className="intro">This spreadsheet solution is ideal for individuals and teams managing loans of any kind.</p>
+            </div>
+            <div className="row-body">
+              <div className="audience-grid">
+                <div className="audience-cell"><h4>Homeowners</h4></div>
+                <div className="audience-cell"><h4>Small businesses</h4></div>
+                <div className="audience-cell"><h4>Financial planners</h4></div>
+                <div className="audience-cell"><h4>Students</h4></div>
+                <div className="audience-cell"><h4>Loan borrowers</h4></div>
+                <div className="audience-cell"><h4>Accountants</h4></div>
+                <div className="audience-cell"><h4>Real estate investors</h4></div>
+                <div className="audience-cell"><h4>Startup founders</h4></div>
+                <div className="audience-cell"><h4>Personal finance managers</h4></div>
+              </div>
+              <div className="audience-footer">Whether you need basic loan tracking or advanced repayment analysis, Formula Byte helps automate amortization spreadsheet creation with AI.</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
       {/* FAQ */}
       <div className="section-wrap" id="faq">
         <section className="card">
           <div className="row">
             <div className="row-header">
               <div className="eyebrow">FAQ</div>
-              <h2>Frequently asked questions.</h2>
-              <p className="intro">Everything you need to know about amortization schedules and Formula Byte.</p>
+              <h2>Frequently Asked Questions</h2>
+              <p className="intro">Common questions about generating amortization schedules with Formula Byte.</p>
             </div>
             <div className="row-body">
               <div className="faq-list">
                 <details className="faq-item" open>
-                  <summary className="faq-q">What is an amortization schedule?</summary>
-                  <div className="faq-a">
-                    An amortization schedule is a complete table showing each periodic payment on a loan over time. It breaks down how much of each payment goes toward principal vs. interest, and shows the remaining balance after every payment. Formula Byte generates these schedules automatically with built-in formulas.
-                  </div>
+                  <summary className="faq-q">Can this spreadsheet calculate loan payments automatically?</summary>
+                  <div className="faq-a">Yes. Formula Byte generates amortization schedules with automated payment calculations, principal tracking, and interest analysis.</div>
                 </details>
                 <details className="faq-item">
-                  <summary className="faq-q">How do I calculate monthly payments in Excel?</summary>
-                  <div className="faq-a">
-                    Formula Byte uses the Excel PMT function: =PMT(rate, nper, pv). Rate is your interest rate per period, nper is the total number of payments, and pv is the loan amount (entered as negative). The AI generates these formulas automatically — no manual Excel work needed.
-                  </div>
+                  <summary className="faq-q">Does the template support extra payments?</summary>
+                  <div className="faq-a">Yes. The spreadsheet can calculate additional payments, early payoff timelines, and interest savings.</div>
                 </details>
                 <details className="faq-item">
-                  <summary className="faq-q">Can I include extra payments in the schedule?</summary>
-                  <div className="faq-a">
-                    Yes. The generated template includes an Extra Payment Calculator worksheet where you can model additional principal payments. The schedule automatically recalculates to show how extra payments reduce interest and shorten your loan term.
-                  </div>
+                  <summary className="faq-q">Can I use this spreadsheet for mortgage loans?</summary>
+                  <div className="faq-a">Absolutely. Formula Byte can generate mortgage amortization schedules for home financing and real estate loans.</div>
                 </details>
                 <details className="faq-item">
-                  <summary className="faq-q">Does this work for different loan types?</summary>
-                  <div className="faq-a">
-                    Absolutely. Describe any loan — mortgage, auto loan, student loan, business loan, personal loan — and Formula Byte generates an appropriate amortization schedule with correct formulas and structure for that loan type.
-                  </div>
+                  <summary className="faq-q">Does the spreadsheet work in Google Sheets?</summary>
+                  <div className="faq-a">Yes. The amortization spreadsheet works with both Microsoft Excel and Google Sheets.</div>
                 </details>
                 <details className="faq-item">
-                  <summary className="faq-q">Can I customize the payment frequency?</summary>
-                  <div className="faq-a">
-                    Yes. Specify monthly, biweekly, or weekly payments when generating your template. The AI adjusts all formulas, schedules, and calculations automatically based on your chosen payment frequency.
-                  </div>
+                  <summary className="faq-q">Can I customize the repayment schedule?</summary>
+                  <div className="faq-a">Yes. Loan terms, payment frequency, interest rates, and repayment structures can all be customized.</div>
                 </details>
-                <details className="faq-item">
-                  <summary className="faq-q">Do the templates work in Google Sheets?</summary>
-                  <div className="faq-a">
-                    Yes. All Formula Byte templates work in both Excel and Google Sheets. Generate once, export to your preferred platform, and all formulas and formatting remain intact.
-                  </div>
-                </details>
-                <details className="faq-item">
-                  <summary className="faq-q">How accurate are the calculations?</summary>
-                  <div className="faq-a">
-                    Formula Byte uses standard financial formulas like PMT, IPMT, PPMT, and cumulative interest calculations. These are the same formulas used by banks and financial institutions, ensuring accuracy to the penny.
-                  </div>
-                </details>
-                <details className="faq-item">
-                  <summary className="faq-q">Is this template free to use?</summary>
-                  <div className="faq-a">
-                    Yes. The amortization schedule template is completely free to generate and use. Describe your loan details, generate the schedule, and download it — no credit card or subscription required.
-                  </div>
-                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* RELATED TEMPLATES */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row-stacked">
+            <div className="row-header">
+              <div className="eyebrow">Related templates</div>
+              <h2>Other financial templates you might need.</h2>
+              <p className="intro">Same engine, different financial workflows.</p>
+            </div>
+            <div className="row-body">
+              <div className="related-grid">
+                <a href="/excel-templates/accounting-template/" className="related-card">
+                  <div className="glyph">A</div>
+                  <h4>Accounting Template</h4>
+                  <p>Bookkeeping with ledgers, invoices, and cash flow tracking.</p>
+                  <span className="link">View template →</span>
+                </a>
+                <a href="/excel-templates/profit-and-loss-template/" className="related-card">
+                  <div className="glyph">P</div>
+                  <h4>Profit &amp; Loss</h4>
+                  <p>Monthly and yearly P&amp;L with built-in formulas and margin tracking.</p>
+                  <span className="link">View template →</span>
+                </a>
+                <a href="/excel-templates/income-statement-template/" className="related-card">
+                  <div className="glyph">I</div>
+                  <h4>Income Statement</h4>
+                  <p>Revenue, expenses, and net income — calculated automatically.</p>
+                  <span className="link">View template →</span>
+                </a>
+                <a href="/excel-templates/invoice-template/" className="related-card">
+                  <div className="glyph">V</div>
+                  <h4>Invoice Template</h4>
+                  <p>Professional invoices with auto-numbering, taxes, and totals.</p>
+                  <span className="link">View template →</span>
+                </a>
               </div>
             </div>
           </div>
@@ -706,11 +760,13 @@ export default function AmortizationScheduleTemplatePage() {
       <div className="final-cta-wrap">
         <section className="final-cta">
           <div className="final-cta-inner">
-            <h2>Stop calculating manually. <span className="accent">Start tracking smart.</span></h2>
-            <p>Generate your AI-powered amortization schedule in seconds — perfect formulas, complete tracking, and payoff insights included.</p>
+            <h2>Ready to Build Your AI Loan <span className="accent">Amortization</span> Schedule?</h2>
+            <p>Stop building loan repayment spreadsheets manually.</p>
+            <p>Describe your financing structure, and Formula Byte will generate a professional AI-powered Excel amortization schedule with automated formulas, repayment tracking, interest analysis, and financial forecasting tools in seconds.</p>
+            <p>Create smarter loan repayment spreadsheets with AI today.</p>
             <div className="btn-row">
-              <a href="https://dashboard.formulabyte.com/?template=amortization-schedule" className="btn btn-primary btn-lg">Generate amortization schedule →</a>
-              <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse more templates</a>
+              <a href="/auth?template=amortization-schedule" className="btn btn-primary btn-lg">Generate template →</a>
+              <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse all templates</a>
             </div>
           </div>
         </section>

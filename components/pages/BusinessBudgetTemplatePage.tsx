@@ -1,7 +1,6 @@
 export default function BusinessBudgetTemplatePage() {
   return (
     <>
-
       {/* HERO */}
       <section className="hero">
         <div className="hero-inner">
@@ -14,9 +13,9 @@ export default function BusinessBudgetTemplatePage() {
           </div>
 
           <div className="eyebrow">Financial template</div>
-          <h1>AI Business <span className="accent">Budget</span> Template</h1>
+          <h1>AI Excel Business Budget Template for Small Business <span className="accent">Financial Planning</span></h1>
           <p className="lede">
-            Track income, expenses, cash flow, and business financial performance with an AI-generated Excel business budget template designed for smarter budgeting and operational planning.
+            Track income, expenses, cash flow, and business financial performance with an AI-generated Excel business budget template designed for smarter budgeting and operational planning. Formula Byte helps businesses automate budget management using intelligent spreadsheets with built-in formulas, forecasting dashboards, and organized expense tracking systems.
           </p>
 
           <div className="hero-specs">
@@ -31,7 +30,7 @@ export default function BusinessBudgetTemplatePage() {
           </div>
 
           <div className="hero-ctas">
-            <a href="https://dashboard.formulabyte.com/?template=business-budget" className="btn btn-primary btn-lg">
+            <a href="/auth?template=business-budget" className="btn btn-primary btn-lg">
               Generate template
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -41,15 +40,30 @@ export default function BusinessBudgetTemplatePage() {
             <a href="#preview" className="btn btn-outline btn-lg">View preview</a>
           </div>
 
-          <div className="hero-suggest">
-            <span>Try:</span>
-            <button className="chip">Small business monthly budget</button>
-            <button className="chip">Startup expense tracker</button>
-            <button className="chip">Ecommerce budget forecast</button>
-            <button className="chip">Freelancer budget planner</button>
+          <div className="hero-tagline">
+            <span className="hero-tagline-item">100% customizable</span>
+            <span className="hero-tagline-sep">•</span>
+            <span className="hero-tagline-item">Works with Excel &amp; Google Sheets</span>
+            <span className="hero-tagline-sep">•</span>
+            <span className="hero-tagline-item">AI-generated in seconds</span>
           </div>
         </div>
       </section>
+
+      {/* USE CASE PILLS */}
+      <div className="use-case-grid">
+        <div className="use-case-label">Generate business budget spreadsheets for:</div>
+        <div className="use-case-pills">
+          <span className="use-case-pill"><span className="dot"></span>Small businesses</span>
+          <span className="use-case-pill"><span className="dot"></span>Startups</span>
+          <span className="use-case-pill"><span className="dot"></span>Ecommerce brands</span>
+          <span className="use-case-pill"><span className="dot"></span>Agencies</span>
+          <span className="use-case-pill"><span className="dot"></span>Contractors</span>
+          <span className="use-case-pill"><span className="dot"></span>Freelancers</span>
+          <span className="use-case-pill"><span className="dot"></span>Consultants</span>
+          <span className="use-case-pill"><span className="dot"></span>Personal business budgeting</span>
+        </div>
+      </div>
 
       {/* SPREADSHEET PREVIEW */}
       <div className="preview-wrap" id="preview">
@@ -660,65 +674,105 @@ export default function BusinessBudgetTemplatePage() {
         </section>
       </div>
 
+      {/* WHO IT'S FOR */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row-stacked">
+            <div className="row-header">
+              <div className="eyebrow">Who it's for</div>
+              <h2>Who Should Use This <span className="serif-accent">Business Budget</span> Spreadsheet?</h2>
+              <p className="intro">This spreadsheet solution is ideal for individuals and teams managing business finances.</p>
+            </div>
+            <div className="row-body">
+              <div className="audience-grid">
+                <div className="audience-cell"><h4>Small businesses</h4></div>
+                <div className="audience-cell"><h4>Startups</h4></div>
+                <div className="audience-cell"><h4>Ecommerce brands</h4></div>
+                <div className="audience-cell"><h4>Agencies</h4></div>
+                <div className="audience-cell"><h4>Consultants</h4></div>
+                <div className="audience-cell"><h4>Contractors</h4></div>
+                <div className="audience-cell"><h4>Freelancers</h4></div>
+                <div className="audience-cell"><h4>Finance managers</h4></div>
+                <div className="audience-cell"><h4>Business owners</h4></div>
+              </div>
+              <div className="audience-footer">Whether you need simple expense tracking or advanced budget forecasting, Formula Byte helps automate business budget spreadsheet creation with AI.</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
       {/* FAQ */}
       <div className="section-wrap" id="faq">
         <section className="card">
           <div className="row">
             <div className="row-header">
               <div className="eyebrow">FAQ</div>
-              <h2>Frequently asked questions.</h2>
-              <p className="intro">Everything you need to know about business budget templates and Formula Byte.</p>
+              <h2>Frequently Asked Questions</h2>
+              <p className="intro">Common questions about generating business budget templates with Formula Byte.</p>
             </div>
             <div className="row-body">
               <div className="faq-list">
                 <details className="faq-item" open>
-                  <summary className="faq-q">What is a business budget template?</summary>
-                  <div className="faq-a">
-                    A business budget template is a pre-structured Excel spreadsheet that helps you plan, organize, and track business income and expenses. Formula Byte generates these templates automatically with built-in formulas, forecasting capabilities, and financial dashboards.
-                  </div>
-                </details>
-                <details className="faq-item">
                   <summary className="faq-q">Can this spreadsheet forecast business expenses automatically?</summary>
-                  <div className="faq-a">
-                    Yes. Formula Byte generates budget spreadsheets with automated forecasting formulas and financial calculations. The template can predict future income, expenses, and cash flow based on your historical data and growth assumptions.
-                  </div>
+                  <div className="faq-a">Yes. Formula Byte generates budget spreadsheets with automated forecasting formulas and financial calculations.</div>
                 </details>
                 <details className="faq-item">
                   <summary className="faq-q">Does the template include financial dashboards?</summary>
-                  <div className="faq-a">
-                    Yes. The spreadsheet includes budgeting dashboards, variance analysis, profit summaries, and cash flow visuals. All dashboards are generated automatically and update based on your budget data.
-                  </div>
+                  <div className="faq-a">Yes. The spreadsheet can include budgeting dashboards, summaries, and financial analysis visuals.</div>
                 </details>
                 <details className="faq-item">
                   <summary className="faq-q">Can I customize budget categories?</summary>
-                  <div className="faq-a">
-                    Absolutely. Income categories, expense sections, forecasting layouts, and budgeting structures can all be customized. Describe your business model, and Formula Byte generates a tailored budget with the right categories and targets.
-                  </div>
+                  <div className="faq-a">Absolutely. Revenue categories, expense sections, forecasting layouts, and budgeting structures can all be customized.</div>
                 </details>
                 <details className="faq-item">
                   <summary className="faq-q">Does this spreadsheet work in Google Sheets?</summary>
-                  <div className="faq-a">
-                    Yes. All Formula Byte budget templates work in both Microsoft Excel and Google Sheets. Generate once, export to your preferred platform, and all formulas and formatting remain intact.
-                  </div>
+                  <div className="faq-a">Yes. Formula Byte business budget templates work with both Microsoft Excel and Google Sheets.</div>
                 </details>
                 <details className="faq-item">
                   <summary className="faq-q">Is this suitable for small business budgeting?</summary>
-                  <div className="faq-a">
-                    Yes. Small businesses commonly use budgeting spreadsheets to manage expenses, monitor financial performance, and forecast profitability. Formula Byte templates are designed specifically for small business needs and growth planning.
-                  </div>
+                  <div className="faq-a">Yes. Small businesses commonly use budgeting spreadsheets to manage expenses, monitor financial performance, and forecast profitability.</div>
                 </details>
-                <details className="faq-item">
-                  <summary className="faq-q">What budgeting formulas are included?</summary>
-                  <div className="faq-a">
-                    Formula Byte includes SUM, IF, XLOOKUP, SUMIF, FORECAST, and SUBTOTAL formulas. These automate income totals, expense summaries, variance calculations, and cash flow forecasting — all wired together and ready to use.
-                  </div>
-                </details>
-                <details className="faq-item">
-                  <summary className="faq-q">Is this business budget template free to use?</summary>
-                  <div className="faq-a">
-                    Yes. The business budget template is completely free to generate and use. Describe your budgeting workflow, generate the budget spreadsheet, and download it — no credit card or subscription required.
-                  </div>
-                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* RELATED TEMPLATES */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row-stacked">
+            <div className="row-header">
+              <div className="eyebrow">Related templates</div>
+              <h2>Other financial templates you might need.</h2>
+              <p className="intro">Same engine, different financial workflows.</p>
+            </div>
+            <div className="row-body">
+              <div className="related-grid">
+                <a href="/excel-templates/accounting-template/" className="related-card">
+                  <div className="glyph">A</div>
+                  <h4>Accounting Template</h4>
+                  <p>Bookkeeping with ledgers, invoices, and cash flow tracking.</p>
+                  <span className="link">View template →</span>
+                </a>
+                <a href="/excel-templates/profit-and-loss-template/" className="related-card">
+                  <div className="glyph">P</div>
+                  <h4>Profit &amp; Loss</h4>
+                  <p>Monthly and yearly P&amp;L with built-in formulas and margin tracking.</p>
+                  <span className="link">View template →</span>
+                </a>
+                <a href="/excel-templates/income-statement-template/" className="related-card">
+                  <div className="glyph">I</div>
+                  <h4>Income Statement</h4>
+                  <p>Revenue, expenses, and net income — calculated automatically.</p>
+                  <span className="link">View template →</span>
+                </a>
+                <a href="/excel-templates/invoice-template/" className="related-card">
+                  <div className="glyph">V</div>
+                  <h4>Invoice Template</h4>
+                  <p>Professional invoices with auto-numbering, taxes, and totals.</p>
+                  <span className="link">View template →</span>
+                </a>
               </div>
             </div>
           </div>
@@ -729,11 +783,13 @@ export default function BusinessBudgetTemplatePage() {
       <div className="final-cta-wrap">
         <section className="final-cta">
           <div className="final-cta-inner">
-            <h2>Stop building budgets manually. <span className="accent">Start forecasting.</span></h2>
-            <p>Generate your AI-powered business budget template in seconds — professional formulas, forecasting dashboards, and variance analysis included.</p>
+            <h2>Ready to Build Your AI <span className="accent">Business Budget</span> Spreadsheet?</h2>
+            <p>Stop building budgeting spreadsheets manually.</p>
+            <p>Describe your budgeting workflow, and Formula Byte will generate a professional AI-powered Excel business budget template with automated formulas, forecasting dashboards, expense tracking systems, and organized financial reporting structures in seconds.</p>
+            <p>Create smarter budgeting spreadsheets with AI today.</p>
             <div className="btn-row">
-              <a href="https://dashboard.formulabyte.com/?template=business-budget" className="btn btn-primary btn-lg">Generate budget template →</a>
-              <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse more templates</a>
+              <a href="/auth?template=business-budget" className="btn btn-primary btn-lg">Generate template →</a>
+              <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse all templates</a>
             </div>
           </div>
         </section>
