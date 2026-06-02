@@ -20,10 +20,10 @@ export default function AIPandasCodeGeneratorPage() {
     <>
     <section className="hero">
       <div className="hero-inner">
-        <div className="eyebrow">AI Pandas Code Generator</div>
+        <div className="eyebrow">AI Pandas Code Generator – Write Pandas Code Free</div>
         <h1>
-          AI Pandas Code Generator –
-          <span className="accent">Write Python Pandas Code Instantly</span>
+          AI Pandas Code Generator – Write Python
+          <span className="accent"> Pandas Code Instantly</span>
         </h1>
         <p className="lede">Generate clean, accurate Pandas code using AI. No syntax errors. No trial-and-error. Just ready-to-run Python code for data analysis. Describe what you want to do with your data and let Formula Byte generate the exact Pandas code in seconds. Start free. Generate Pandas code instantly.</p>
         <div className="hero-trust">
@@ -44,7 +44,7 @@ export default function AIPandasCodeGeneratorPage() {
           <div className="prompt-input">
             <textarea
               className="prompt-textarea"
-              placeholder="Describe what you want to do with your data and let Formula Byte generate the exact Pandas code in seconds."
+              placeholder="Describe your data task in plain English and let Formula Byte generate the exact Pandas code for you."
               rows={2}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
@@ -71,9 +71,10 @@ export default function AIPandasCodeGeneratorPage() {
         </div>
         <div className="example-prompts">
           <span>Try:</span>
-          <button className="chip" onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}>Filter rows where value &gt; 100</button>
-          <button className="chip" onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}>Group by category and sum</button>
-          <button className="chip" onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}>Merge two dataframes</button>
+          <button className="chip" onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}>Filter and group data</button>
+          <button className="chip" onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}>Merge DataFrames</button>
+          <button className="chip" onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}>Clean missing values</button>
+          <button className="chip" onClick={() => window.location.href = 'https://dashboard.formulabyte.com/'}>Aggregate and analyze</button>
         </div>
       </div>
     </section>
@@ -83,12 +84,12 @@ export default function AIPandasCodeGeneratorPage() {
           <div className={"row-header"}>
             <div className={"eyebrow"}>{"Generate Pandas Code Using AI"}</div>
             <h2>
-              {"Writing Pandas code can be time-consuming "}
-              <span className={"serif-accent"}>{"— especially when handling large datasets, transformations, or complex logic."}</span>
+              {"Writing Pandas code "}
+              <span className={"serif-accent"}>{"can be time-consuming — especially when handling large datasets, transformations, or complex logic."}</span>
             </h2>
           </div>
           <div className={"row-body"}>
-            <p className={"intro"}>{"The AI Pandas Code Generator understands data operations, not just Python syntax. Formula Byte delivers reliable Pandas code every time."}</p>
+            <p className={"intro"}>{"The AI Pandas Code Generator understands data operations, not just Python syntax. Whether you need to generate Pandas code automatically, use an AI Pandas code generator for free, or build complex data transformations fast, Formula Byte delivers reliable Pandas code every time."}</p>
             <ul className={"bulleted"}>
               <li><strong>{"Generate Pandas code automatically"}</strong></li>
               <li><strong>{"Use an AI Pandas code generator for free"}</strong></li>
@@ -104,10 +105,10 @@ export default function AIPandasCodeGeneratorPage() {
           <div className={"row-header"}>
             <div className={"eyebrow"}>{"The problem"}</div>
             <h2>
-              {"Why writing Pandas code manually "}
-              <span className={"serif-accent"}>{"slows you down."}</span>
+              {"Why Writing Pandas Code "}
+              <span className={"serif-accent"}>{"Manually Slows You Down"}</span>
             </h2>
-            <p className={"intro"}>{"Manual Pandas coding often leads to syntax and indentation errors, incorrect filtering or grouping logic, time wasted debugging small mistakes, and rewriting similar code repeatedly. Even experienced Python users lose time fixing avoidable issues. AI removes friction from data manipulation."}</p>
+            <p className={"intro"}>{"Manual Pandas coding often leads to syntax and indentation errors. Incorrect filtering or grouping logic wastes time. Even experienced Python users lose time fixing avoidable issues. AI removes friction from data manipulation."}</p>
           </div>
           <div className={"row-body"}>
             <ul className={"bulleted"}>
@@ -115,12 +116,10 @@ export default function AIPandasCodeGeneratorPage() {
               <li>{"Incorrect filtering or grouping logic"}</li>
               <li>{"Time wasted debugging small mistakes"}</li>
               <li>{"Rewriting similar code repeatedly"}</li>
-              <li>{"Even experienced Python users lose time fixing avoidable issues"}</li>
             </ul>
-            <blockquote className={"pull-quote"}>
-              {" \"I spent 3 hours debugging a groupby logic that should have taken 10 minutes.\" "}
-              <cite>{"— Data Scientist, Tech Company"}</cite>
-            </blockquote>
+            <p className={"audience-footer"}>
+              {"Even experienced Python users lose time fixing avoidable issues. AI removes friction from data manipulation."}
+            </p>
           </div>
         </div>
       </section>
@@ -130,8 +129,8 @@ export default function AIPandasCodeGeneratorPage() {
         <div className={"row"}>
           <div className={"row-header"}>
             <div className={"eyebrow"}>{"How it works"}</div>
-            <h2>{"No boilerplate. No debugging loops. No confusion."}</h2>
-            <p className={"intro"}>{"Four steps from describing your data task to getting working Pandas code. No boilerplate. No debugging loops. No confusion."}</p>
+            <h2>{"How the AI Pandas Code Generator Works"}</h2>
+            <p className={"intro"}>{"Four steps from describing your data task to getting correct Pandas code. No boilerplate. No debugging loops. No confusion."}</p>
           </div>
           <div className={"row-body"}>
             <div className={"steps"}>
@@ -139,7 +138,7 @@ export default function AIPandasCodeGeneratorPage() {
                 <div className={"step-num"}>{"1"}</div>
                 <div>
                   <h3>{"Describe your data task in plain English"}</h3>
-                  <p>{"Tell the AI what you want to do — filter data, merge datasets, group by categories, or complex transformations."}</p>
+                  <p>{"Tell the AI what you want to do — load data, clean it, merge datasets, or analyze results."}</p>
                 </div>
               </div>
               <div className={"step"}>
@@ -153,14 +152,14 @@ export default function AIPandasCodeGeneratorPage() {
                 <div className={"step-num"}>{"3"}</div>
                 <div>
                   <h3>{"Correct Pandas code is generated instantly"}</h3>
-                  <p>{"Get syntactically perfect Python code with proper imports and logic in seconds."}</p>
+                  <p>{"Get syntactically perfect Python code with proper logic and data handling in seconds."}</p>
                 </div>
               </div>
               <div className={"step"}>
                 <div className={"step-num"}>{"4"}</div>
                 <div>
                   <h3>{"Copy and run the code in your Python environment"}</h3>
-                  <p>{"Your code is ready immediately. Works perfectly in Jupyter notebooks, scripts, or any Python environment."}</p>
+                  <p>{"Your Pandas code is ready immediately. Works in Jupyter, scripts, and production environments."}</p>
                 </div>
               </div>
             </div>
@@ -173,7 +172,7 @@ export default function AIPandasCodeGeneratorPage() {
         <div className={"row-stacked"}>
           <div className={"row-header"}>
             <div className={"eyebrow"}>{"Capabilities"}</div>
-            <h2>{"What the AI Pandas Code Generator actually does."}</h2>
+            <h2>{"What the AI Pandas Code Generator Actually Does"}</h2>
             <p className={"intro"}>{"This is not a generic code suggestion tool. The AI works as a Pandas-focused data manipulation engine."}</p>
           </div>
           <div className={"row-body"}>
@@ -273,13 +272,13 @@ export default function AIPandasCodeGeneratorPage() {
           <div className={"row-header"}>
             <div className={"eyebrow"}>{"Comparison"}</div>
             <h2>{"Why Formula Byte's AI Pandas Code Generator Is Different"}</h2>
-            <p className={"intro"}>{"Basic code generators fail where it matters. Here's the difference."}</p>
+            <p className={"intro"}>{"Basic code generators versus AI-powered Pandas code generation."}</p>
           </div>
           <div className={"row-body"}>
             <div className={"compare"}>
               <div className={"compare-col"}>
                 <div className={"compare-label"}>{"Basic code generators"}</div>
-                <h3>{"Limited. Generic."}</h3>
+                <h3>{"Generic. Limited."}</h3>
                 <ul>
                   <li>{"Produce generic snippets"}</li>
                   <li>{"Miss data context"}</li>
@@ -288,7 +287,7 @@ export default function AIPandasCodeGeneratorPage() {
               </div>
               <div className={"compare-col"}>
                 <div className={"compare-label"}>{"Formula Byte's AI"}</div>
-                <h3>{"Data-Aware. Intelligent."}</h3>
+                <h3>{"Smart. Data-aware."}</h3>
                 <ul>
                   <li>{"Understands data operations"}</li>
                   <li>{"Generates task-specific Pandas code"}</li>
@@ -339,7 +338,7 @@ export default function AIPandasCodeGeneratorPage() {
                   <div className={"stat-label"}>{"Users"}</div>
                 </div>
                 <div className={"stat-inline"}>
-                  <div className={"stat-num"}>{"50k+"}</div>
+                  <div className={"stat-num"}>{"100k+"}</div>
                   <div className={"stat-label"}>{"Scripts"}</div>
                 </div>
                 <div className={"stat-inline"}>
@@ -374,69 +373,6 @@ export default function AIPandasCodeGeneratorPage() {
       <section className={"card"}>
         <div className={"row-stacked"}>
           <div className={"row-header"}>
-            <div className={"eyebrow"}>{"Reviews"}</div>
-            <h2>{"What our users say."}</h2>
-            <p className={"intro"}>{"Data professionals who have stopped struggling with Pandas code."}</p>
-          </div>
-          <div className={"row-body"}>
-            <div className={"reviews"}>
-              <div className={"review"}>
-                <div className={"review-stars"}>{"★★★★★"}</div>
-                <p className={"review-quote"}>{"\"This tool has completely transformed my data workflow. What used to take hours of coding now takes seconds. The generated Pandas code is clean and accurate.\""}
-</p>
-                <div className={"review-author"}>
-                  <div className={"review-avatar"}>{"AM"}</div>
-                  <div className={"review-meta"}>
-                    <div className={"name"}>{"Alex Martinez"}</div>
-                    <div className={"role"}>{"Data Analyst"}</div>
-                  </div>
-                </div>
-              </div>
-              <div className={"review"}>
-                <div className={"review-stars"}>{"★★★★★"}</div>
-                <p className={"review-quote"}>{"\"As someone learning Python and Pandas, this is invaluable. The AI understands exactly what I need and generates working code every time.\""}
-</p>
-                <div className={"review-author"}>
-                  <div className={"review-avatar"}>{"JK"}</div>
-                  <div className={"review-meta"}>
-                    <div className={"name"}>{"Jennifer Kim"}</div>
-                    <div className={"role"}>{"Python Developer"}</div>
-                  </div>
-                </div>
-              </div>
-              <div className={"review"}>
-                <div className={"review-stars"}>{"★★★★★"}</div>
-                <p className={"review-quote"}>{"\"Incredibly powerful for complex data transformations. The AI handles grouping, merging, and filtering with perfect syntax. Essential tool for data science.\""}
-</p>
-                <div className={"review-author"}>
-                  <div className={"review-avatar"}>{"RP"}</div>
-                  <div className={"review-meta"}>
-                    <div className={"name"}>{"Robert Park"}</div>
-                    <div className={"role"}>{"Data Scientist"}</div>
-                  </div>
-                </div>
-              </div>
-              <div className={"review"}>
-                <div className={"review-stars"}>{"★★★★★"}</div>
-                <p className={"review-quote"}>{"\"Works perfectly for both simple data cleaning and complex analysis. The AI generates clean, production-ready Pandas code that saves me hours every week.\""}
-</p>
-                <div className={"review-author"}>
-                  <div className={"review-avatar"}>{"SC"}</div>
-                  <div className={"review-meta"}>
-                    <div className={"name"}>{"Sarah Chen"}</div>
-                    <div className={"role"}>{"ML Engineer"}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div className={"section-wrap"}>
-      <section className={"card"}>
-        <div className={"row-stacked"}>
-          <div className={"row-header"}>
             <div className={"eyebrow"}>{"Explore more"}</div>
             <h2>{"Related products you may like."}</h2>
             <p className={"intro"}>{"More AI tools built around the same idea: describe what you need, get a usable result."}</p>
@@ -444,9 +380,27 @@ export default function AIPandasCodeGeneratorPage() {
           <div className={"row-body"}>
             <div className={"related-grid"}>
               <a className={"related-card"} href={"/tools/excel-formula-generator"}>
-                <div className={"glyph"}>{"ƒ"}</div>
+                <div className={"glyph"}>fx</div>
                 <h4>{"Excel Formula Generator"}</h4>
-                <p>{"Generate Excel formulas from plain English descriptions."}</p>
+                <p>{"Create Excel formulas instantly using AI."}</p>
+                <span className={"link"}>{"Try now →"}</span>
+              </a>
+              <a className={"related-card"} href={"/tools/ai-sql-query-generator"}>
+                <div className={"glyph"}>{"SQL"}</div>
+                <h4>{"AI SQL Query Generator"}</h4>
+                <p>{"Generate accurate SQL queries using AI."}</p>
+                <span className={"link"}>{"Try now →"}</span>
+              </a>
+              <a className={"related-card"} href={"/tools/m-code-ai"}>
+                <div className={"glyph"}>{"M"}</div>
+                <h4>{"M Code Generator"}</h4>
+                <p>{"Generate Power Query M code instantly using AI."}</p>
+                <span className={"link"}>{"Try now →"}</span>
+              </a>
+              <a className={"related-card"} href={"/tools/ai-dax-generator"}>
+                <div className={"glyph"}>{"λ"}</div>
+                <h4>{"AI DAX Generator"}</h4>
+                <p>{"Power BI and DAX code from plain English descriptions."}</p>
                 <span className={"link"}>{"Try now →"}</span>
               </a>
               <a className={"related-card"} href={"/tools/ai-chatbot"}>
@@ -459,24 +413,6 @@ export default function AIPandasCodeGeneratorPage() {
                 <div className={"glyph"}>{"±"}</div>
                 <h4>{"Sentiment Analysis"}</h4>
                 <p>{"Classify text by sentiment in bulk — positive, negative, neutral."}</p>
-                <span className={"link"}>{"Try now →"}</span>
-              </a>
-              <a className={"related-card"} href={"/tools/bank-statement-converter"}>
-                <div className={"glyph"}>{"§"}</div>
-                <h4>{"Bank Statement Converter"}</h4>
-                <p>{"Parse PDF statements into clean, analysis-ready tables."}</p>
-                <span className={"link"}>{"Try now →"}</span>
-              </a>
-              <a className={"related-card"} href={"/tools/ai-qa-generator"}>
-                <div className={"glyph"}>{"?"}</div>
-                <h4>{"AI Q&A Generator"}</h4>
-                <p>{"Bulk Q&A for docs, FAQs, and knowledge bases."}</p>
-                <span className={"link"}>{"Try now →"}</span>
-              </a>
-              <a className={"related-card"} href={"/tools/ai-dax-generator"}>
-                <div className={"glyph"}>{"λ"}</div>
-                <h4>{"AI DAX Generator"}</h4>
-                <p>{"Power BI and DAX code from plain English descriptions."}</p>
                 <span className={"link"}>{"Try now →"}</span>
               </a>
             </div>

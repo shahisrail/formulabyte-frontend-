@@ -19,7 +19,7 @@ export default function ExcelTemplatesPage() {
             Free, AI-generated Excel templates for accounting, projects, scheduling, inventory, productivity, and reporting. Describe what you need — Formula Byte builds the spreadsheet.
           </p>
           <div className="hero-ctas">
-            <a href="#directory" className="btn btn-primary btn-lg">Browse 16 templates →</a>
+            <a href="#directory" className="btn btn-primary btn-lg">Browse 25 templates →</a>
             <a href="https://dashboard.formulabyte.com/" className="btn btn-outline btn-lg">Generate a custom one</a>
           </div>
           <div className="hero-trustline">
@@ -101,12 +101,12 @@ export default function ExcelTemplatesPage() {
 
               <div className="directory-stats">
                 <div className="directory-stat">
-                  <span className="directory-stat-num">16</span>
+                  <span className="directory-stat-num">25</span>
                   <span className="directory-stat-label">Templates</span>
                 </div>
                 <span className="directory-stat-sep"></span>
                 <div className="directory-stat">
-                  <span className="directory-stat-num">4</span>
+                  <span className="directory-stat-num">5</span>
                   <span className="directory-stat-label">Categories</span>
                 </div>
                 <span className="directory-stat-sep"></span>
@@ -117,44 +117,59 @@ export default function ExcelTemplatesPage() {
               </div>
 
               <div className="filter-pills" role="tablist">
-                <button className="filter-pill active" data-filter="all">All <span className="count">16</span></button>
-                <button className="filter-pill" data-filter="financial">Financial <span className="count">5</span></button>
+                <button className="filter-pill active" data-filter="all">All <span className="count">25</span></button>
+                <button className="filter-pill" data-filter="financial">Financial <span className="count">7</span></button>
                 <button className="filter-pill" data-filter="project">Project <span className="count">3</span></button>
-                <button className="filter-pill" data-filter="productivity">Productivity <span className="count">5</span></button>
+                <button className="filter-pill" data-filter="productivity">Productivity <span className="count">9</span></button>
                 <button className="filter-pill" data-filter="operations">Operations <span className="count">3</span></button>
+                <button className="filter-pill" data-filter="business">Business <span className="count">3</span></button>
               </div>
 
               <div className="template-grid">
                 {/* FINANCIAL */}
-                <a href="/accounting-template/" className="template-card" data-cat="financial">
+                <a href="/excel-templates/accounting-template/" className="template-card" data-cat="financial">
                   <span className="template-cat">Financial</span>
                   <div className="template-glyph">A</div>
                   <h4>Accounting Template</h4>
                   <p>Track ledgers, transactions, and accounts with automated reconciliation.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/income-statement-template/" className="template-card" data-cat="financial">
+                <a href="/excel-templates/balance-sheet-template/" className="template-card" data-cat="financial">
+                  <span className="template-cat">Financial</span>
+                  <div className="template-glyph">B</div>
+                  <h4>Balance Sheet</h4>
+                  <p>Assets, liabilities, and equity — structured for clear financial reporting.</p>
+                  <span className="template-link">Use template →</span>
+                </a>
+                <a href="/excel-templates/business-budget-template/" className="template-card" data-cat="financial">
+                  <span className="template-cat">Financial</span>
+                  <div className="template-glyph">Bg</div>
+                  <h4>Business Budget</h4>
+                  <p>Plan and track business expenses, revenue, and cash flow by category.</p>
+                  <span className="template-link">Use template →</span>
+                </a>
+                <a href="/excel-templates/income-statement-template/" className="template-card" data-cat="financial">
                   <span className="template-cat">Financial</span>
                   <div className="template-glyph">I</div>
                   <h4>Income Statement</h4>
                   <p>Revenue, expenses, and net income — calculated and formatted instantly.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/profit-and-loss-template/" className="template-card" data-cat="financial">
+                <a href="/excel-templates/profit-and-loss-template/" className="template-card" data-cat="financial">
                   <span className="template-cat">Financial</span>
                   <div className="template-glyph compact">P&amp;L</div>
                   <h4>Profit &amp; Loss</h4>
                   <p>Monthly and yearly P&amp;L with built-in formulas and margin tracking.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/invoice-template/" className="template-card" data-cat="financial">
+                <a href="/excel-templates/invoice-template/" className="template-card" data-cat="financial">
                   <span className="template-cat">Financial</span>
                   <div className="template-glyph">V</div>
                   <h4>Invoice Template</h4>
                   <p>Professional invoices with auto-numbering, taxes, and totals.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/personal-financial-statement-template/" className="template-card" data-cat="financial">
+                <a href="/excel-templates/personal-financial-statement-template/" className="template-card" data-cat="financial">
                   <span className="template-cat">Financial</span>
                   <div className="template-glyph compact">PF</div>
                   <h4>Personal Financial</h4>
@@ -162,22 +177,31 @@ export default function ExcelTemplatesPage() {
                   <span className="template-link">Use template →</span>
                 </a>
 
+                {/* FINANCIAL - Amortization */}
+                <a href="/excel-templates/amortization-schedule-template/" className="template-card" data-cat="financial">
+                  <span className="template-cat">Financial</span>
+                  <div className="template-glyph">Am</div>
+                  <h4>Amortization Schedule</h4>
+                  <p>Loan repayment schedule with principal, interest, and balance tracking.</p>
+                  <span className="template-link">Use template →</span>
+                </a>
+
                 {/* PROJECT */}
-                <a href="/project-timeline-template/" className="template-card" data-cat="project">
+                <a href="/excel-templates/project-timeline-template/" className="template-card" data-cat="project">
                   <span className="template-cat">Project</span>
                   <div className="template-glyph">T</div>
                   <h4>Project Timeline</h4>
                   <p>Gantt-style timeline with milestones, dependencies, and progress.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/multiple-project-tracking-template/" className="template-card" data-cat="project">
+                <a href="/excel-templates/multiple-project-tracking-template/" className="template-card" data-cat="project">
                   <span className="template-cat">Project</span>
                   <div className="template-glyph compact">MP</div>
                   <h4>Multiple Projects</h4>
                   <p>Portfolio dashboard tracking many projects in a single view.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/raci-template/" className="template-card" data-cat="project">
+                <a href="/excel-templates/raci-template/" className="template-card" data-cat="project">
                   <span className="template-cat">Project</span>
                   <div className="template-glyph">R</div>
                   <h4>RACI Matrix</h4>
@@ -186,35 +210,77 @@ export default function ExcelTemplatesPage() {
                 </a>
 
                 {/* PRODUCTIVITY */}
-                <a href="/time-sheet-template/" className="template-card" data-cat="productivity">
+                <a href="/excel-templates/calendar-template-2026/" className="template-card" data-cat="productivity">
+                  <span className="template-cat">Productivity</span>
+                  <div className="template-glyph">C</div>
+                  <h4>Calendar 2026</h4>
+                  <p>Yearly calendar with holidays, events, and scheduling views.</p>
+                  <span className="template-link">Use template →</span>
+                </a>
+                <a href="/excel-templates/contact-list-template/" className="template-card" data-cat="productivity">
+                  <span className="template-cat">Productivity</span>
+                  <div className="template-glyph">Co</div>
+                  <h4>Contact List</h4>
+                  <p>Organized contacts with emails, phones, addresses, and categories.</p>
+                  <span className="template-link">Use template →</span>
+                </a>
+                <a href="/excel-templates/daily-schedule-template/" className="template-card" data-cat="productivity">
+                  <span className="template-cat">Productivity</span>
+                  <div className="template-glyph compact">DS</div>
+                  <h4>Daily Schedule</h4>
+                  <p>Plan your day with hourly time blocks and priority tracking.</p>
+                  <span className="template-link">Use template →</span>
+                </a>
+                <a href="/excel-templates/employee-schedule-template/" className="template-card" data-cat="productivity">
+                  <span className="template-cat">Productivity</span>
+                  <div className="template-glyph compact">ES</div>
+                  <h4>Employee Schedule</h4>
+                  <p>Shift planning and workforce scheduling with hours tracking.</p>
+                  <span className="template-link">Use template →</span>
+                </a>
+                <a href="/excel-templates/expense-report-template/" className="template-card" data-cat="productivity">
+                  <span className="template-cat">Productivity</span>
+                  <div className="template-glyph compact">ER</div>
+                  <h4>Expense Report</h4>
+                  <p>Track business expenses with receipts, categories, and approvals.</p>
+                  <span className="template-link">Use template →</span>
+                </a>
+                <a href="/excel-templates/family-tree-template/" className="template-card" data-cat="productivity">
+                  <span className="template-cat">Productivity</span>
+                  <div className="template-glyph compact">FT</div>
+                  <h4>Family Tree</h4>
+                  <p>Genealogy chart with relationships, generations, and details.</p>
+                  <span className="template-link">Use template →</span>
+                </a>
+                <a href="/excel-templates/time-sheet-template/" className="template-card" data-cat="productivity">
                   <span className="template-cat">Productivity</span>
                   <div className="template-glyph compact">TS</div>
                   <h4>Time Sheet</h4>
                   <p>Weekly and biweekly timesheets with auto-calculated hours and pay.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/time-tracking-template/" className="template-card" data-cat="productivity">
+                <a href="/excel-templates/time-tracking-template/" className="template-card" data-cat="productivity">
                   <span className="template-cat">Productivity</span>
                   <div className="template-glyph compact">TT</div>
                   <h4>Time Tracking</h4>
                   <p>Log hours by project and task with summary dashboards built in.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/to-do-list-template/" className="template-card" data-cat="productivity">
+                <a href="/excel-templates/to-do-list-template/" className="template-card" data-cat="productivity">
                   <span className="template-cat">Productivity</span>
                   <div className="template-glyph">D</div>
                   <h4>To-Do List</h4>
                   <p>Prioritized task list with due dates, status, and progress tracking.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/weekly-schedule-template/" className="template-card" data-cat="productivity">
+                <a href="/excel-templates/weekly-schedule-template/" className="template-card" data-cat="productivity">
                   <span className="template-cat">Productivity</span>
                   <div className="template-glyph">W</div>
                   <h4>Weekly Schedule</h4>
                   <p>Plan your week by day and time block with recurring slots.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/travel-itinerary-template/" className="template-card" data-cat="productivity">
+                <a href="/excel-templates/travel-itinerary-template/" className="template-card" data-cat="productivity">
                   <span className="template-cat">Productivity</span>
                   <div className="template-glyph compact">Tr</div>
                   <h4>Travel Itinerary</h4>
@@ -223,27 +289,39 @@ export default function ExcelTemplatesPage() {
                 </a>
 
                 {/* OPERATIONS */}
-                <a href="/inventory-template/" className="template-card" data-cat="operations">
+                <a href="/excel-templates/inventory-template/" className="template-card" data-cat="operations">
                   <span className="template-cat">Operations</span>
                   <div className="template-glyph">N</div>
                   <h4>Inventory Template</h4>
                   <p>Stock levels, reorder points, suppliers, and movement history.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/purchase-order-template/" className="template-card" data-cat="operations">
+                <a href="/excel-templates/purchase-order-template/" className="template-card" data-cat="operations">
                   <span className="template-cat">Operations</span>
                   <div className="template-glyph compact">PO</div>
                   <h4>Purchase Order</h4>
                   <p>Standardized POs with line items, vendor info, and tax math.</p>
                   <span className="template-link">Use template →</span>
                 </a>
-                <a href="/kpi-template/" className="template-card" data-cat="operations">
+                <a href="/excel-templates/kpi-template/" className="template-card" data-cat="operations">
                   <span className="template-cat">Operations</span>
                   <div className="template-glyph">K</div>
                   <h4>KPI Dashboard</h4>
                   <p>Track business metrics with conditional formatting and trend charts.</p>
                   <span className="template-link">Use template →</span>
                 </a>
+
+                {/* BUSINESS */}
+                <a href="/excel-templates/crm-template/" className="template-card" data-cat="business">
+                  <span className="template-cat">Business</span>
+                  <div className="template-glyph">CR</div>
+                  <h4>CRM Template</h4>
+                  <p>Customer relationship management with pipeline, contacts, and tracking.</p>
+                  <span className="template-link">Use template →</span>
+                </a>
+              </div>
+
+              <div className="directory-footer">
               </div>
 
               <div className="directory-footer">
@@ -403,16 +481,19 @@ export default function ExcelTemplatesPage() {
                     <div className="industry-glyph">$</div>
                     <div>
                       <h4>Financial &amp; Accounting</h4>
-                      <div className="industry-count">5 TEMPLATES</div>
+                      <div className="industry-count">8 TEMPLATES</div>
                     </div>
                   </div>
                   <p>Profit tracking, statements, invoicing, and full accounting workflows — calculated and formatted on generation.</p>
                   <div className="industry-templates">
-                    <a href="/accounting-template/">Accounting Template</a>
-                    <a href="/income-statement-template/">Income Statement Template</a>
-                    <a href="/profit-and-loss-template/">Profit &amp; Loss Template</a>
-                    <a href="/invoice-template/">Invoice Template</a>
-                    <a href="/personal-financial-statement-template/">Personal Financial Statement</a>
+                    <a href="/excel-templates/accounting-template/">Accounting Template</a>
+                    <a href="/excel-templates/amortization-schedule-template/">Amortization Schedule</a>
+                    <a href="/excel-templates/balance-sheet-template/">Balance Sheet Template</a>
+                    <a href="/excel-templates/business-budget-template/">Business Budget Template</a>
+                    <a href="/excel-templates/income-statement-template/">Income Statement Template</a>
+                    <a href="/excel-templates/profit-and-loss-template/">Profit &amp; Loss Template</a>
+                    <a href="/excel-templates/invoice-template/">Invoice Template</a>
+                    <a href="/excel-templates/personal-financial-statement-template/">Personal Financial Statement</a>
                   </div>
                 </div>
                 <div className="industry-card">
@@ -425,9 +506,9 @@ export default function ExcelTemplatesPage() {
                   </div>
                   <p>Timelines, portfolios, and responsibility matrices for keeping teams and deliverables coordinated.</p>
                   <div className="industry-templates">
-                    <a href="/project-timeline-template/">Project Timeline Template</a>
-                    <a href="/multiple-project-tracking-template/">Multiple Project Tracking</a>
-                    <a href="/raci-template/">RACI Matrix Template</a>
+                    <a href="/excel-templates/project-timeline-template/">Project Timeline Template</a>
+                    <a href="/excel-templates/multiple-project-tracking-template/">Multiple Project Tracking</a>
+                    <a href="/excel-templates/raci-template/">RACI Matrix Template</a>
                   </div>
                 </div>
                 <div className="industry-card">
@@ -435,16 +516,20 @@ export default function ExcelTemplatesPage() {
                     <div className="industry-glyph">P</div>
                     <div>
                       <h4>Productivity &amp; Planning</h4>
-                      <div className="industry-count">5 TEMPLATES</div>
+                      <div className="industry-count">9 TEMPLATES</div>
                     </div>
                   </div>
                   <p>Personal organization, time management, and scheduling systems for individuals and teams.</p>
                   <div className="industry-templates">
-                    <a href="/to-do-list-template/">To Do List Template</a>
-                    <a href="/weekly-schedule-template/">Weekly Schedule Template</a>
-                    <a href="/time-tracking-template/">Time Tracking Template</a>
-                    <a href="/time-sheet-template/">Time Sheet Template</a>
-                    <a href="/travel-itinerary-template/">Travel Itinerary Template</a>
+                    <a href="/excel-templates/calendar-template-2026/">Calendar 2026</a>
+                    <a href="/excel-templates/contact-list-template/">Contact List Template</a>
+                    <a href="/excel-templates/daily-schedule-template/">Daily Schedule Template</a>
+                    <a href="/excel-templates/employee-schedule-template/">Employee Schedule Template</a>
+                    <a href="/excel-templates/expense-report-template/">Expense Report Template</a>
+                    <a href="/excel-templates/family-tree-template/">Family Tree Template</a>
+                    <a href="/excel-templates/to-do-list-template/">To Do List Template</a>
+                    <a href="/excel-templates/travel-itinerary-template/">Travel Itinerary Template</a>
+                    <a href="/excel-templates/weekly-schedule-template/">Weekly Schedule Template</a>
                   </div>
                 </div>
                 <div className="industry-card">
@@ -457,9 +542,22 @@ export default function ExcelTemplatesPage() {
                   </div>
                   <p>Inventory, procurement, and KPI tracking — the operational backbone of growing businesses.</p>
                   <div className="industry-templates">
-                    <a href="/inventory-template/">Inventory Template</a>
-                    <a href="/purchase-order-template/">Purchase Order Template</a>
-                    <a href="/kpi-template/">KPI Dashboard Template</a>
+                    <a href="/excel-templates/inventory-template/">Inventory Template</a>
+                    <a href="/excel-templates/purchase-order-template/">Purchase Order Template</a>
+                    <a href="/excel-templates/kpi-template/">KPI Dashboard Template</a>
+                  </div>
+                </div>
+                <div className="industry-card">
+                  <div className="industry-card-head">
+                    <div className="industry-glyph">B</div>
+                    <div>
+                      <h4>Business Management</h4>
+                      <div className="industry-count">2 TEMPLATES</div>
+                    </div>
+                  </div>
+                  <p>Customer relationships and business operations for growing companies.</p>
+                  <div className="industry-templates">
+                    <a href="/excel-templates/crm-template/">CRM Template</a>
                   </div>
                 </div>
               </div>
@@ -684,7 +782,7 @@ export default function ExcelTemplatesPage() {
         <section className="final-cta">
           <div className="final-cta-inner">
             <h2>Stop building spreadsheets. <span className="accent">Start describing them.</span></h2>
-            <p>Pick from 16 templates, or describe your own — Formula Byte generates the spreadsheet, formulas, and dashboards in seconds.</p>
+            <p>Pick from 25 templates, or describe your own — Formula Byte generates the spreadsheet, formulas, and dashboards in seconds.</p>
             <div className="btn-row">
               <a href="#directory" className="btn btn-primary btn-lg">Browse templates →</a>
               <a href="https://dashboard.formulabyte.com/" className="btn btn-outline btn-lg">Generate a custom one</a>

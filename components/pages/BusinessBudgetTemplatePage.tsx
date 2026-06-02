@@ -30,7 +30,7 @@ export default function BusinessBudgetTemplatePage() {
           </div>
 
           <div className="hero-ctas">
-            <a href="/auth?template=business-budget" className="btn btn-primary btn-lg">
+            <a href="https://dashboard.formulabyte.com/" className="btn btn-primary btn-lg">
               Generate template
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -52,7 +52,7 @@ export default function BusinessBudgetTemplatePage() {
 
       {/* USE CASE PILLS */}
       <div className="use-case-grid">
-        <div className="use-case-label">Generate business budget spreadsheets for:</div>
+        <div className="use-case-label">Generate business budget spreadsheets for</div>
         <div className="use-case-pills">
           <span className="use-case-pill"><span className="dot"></span>Small businesses</span>
           <span className="use-case-pill"><span className="dot"></span>Startups</span>
@@ -103,146 +103,173 @@ export default function BusinessBudgetTemplatePage() {
 
             {/* Row 1: headers */}
             <div className="preview-row-num">1</div>
-            <div className="preview-cell preview-header-cell">Category</div>
-            <div className="preview-cell preview-header-cell">Budget</div>
-            <div className="preview-cell preview-header-cell">Actual</div>
-            <div className="preview-cell preview-header-cell">Variance</div>
-            <div className="preview-cell preview-header-cell">Notes</div>
-            <div className="preview-cell preview-header-cell preview-hide-mobile">Reference</div>
+            <div className="preview-cell preview-header-cell">Item</div>
+            <div className="preview-cell preview-header-cell">Jan</div>
+            <div className="preview-cell preview-header-cell">Feb</div>
+            <div className="preview-cell preview-header-cell">Mar</div>
+            <div className="preview-cell preview-header-cell">Total</div>
+            <div className="preview-cell preview-header-cell preview-hide-mobile">Notes</div>
 
             {/* Row 2 - Income section */}
             <div className="preview-row-num">2</div>
-            <div className="preview-cell preview-header-cell" style={{gridColumn: 'span 2'}}>INCOME</div>
-            <div className="preview-cell"></div>
-            <div className="preview-cell"></div>
-            <div className="preview-cell"></div>
-            <div className="preview-cell preview-hide-mobile"></div>
+            <div className="preview-cell text faded">INCOME</div>
+            <div className="preview-cell text faded"></div>
+            <div className="preview-cell text faded"></div>
+            <div className="preview-cell text faded"></div>
+            <div className="preview-cell text faded"></div>
+            <div className="preview-cell text faded preview-hide-mobile"></div>
 
             {/* Row 3 */}
             <div className="preview-row-num">3</div>
             <div className="preview-cell text">Product Sales</div>
-            <div className="preview-cell">$85,000</div>
-            <div className="preview-cell">$92,000</div>
-            <div className="preview-cell principal">+$7,000</div>
-            <div className="preview-cell text">Above target</div>
-            <div className="preview-cell text preview-hide-mobile">B3</div>
+            <div className="preview-cell">$15,000</div>
+            <div className="preview-cell">$16,500</div>
+            <div className="preview-cell">$18,000</div>
+            <div className="preview-cell">$49,500</div>
+            <div className="preview-cell text preview-hide-mobile">Core revenue</div>
 
             {/* Row 4 */}
             <div className="preview-row-num">4</div>
             <div className="preview-cell text">Service Revenue</div>
-            <div className="preview-cell">$45,000</div>
-            <div className="preview-cell">$43,000</div>
-            <div className="preview-cell interest">-$2,000</div>
-            <div className="preview-cell text">Below target</div>
-            <div className="preview-cell text preview-hide-mobile">B4</div>
+            <div className="preview-cell">$8,000</div>
+            <div className="preview-cell">$8,500</div>
+            <div className="preview-cell">$9,200</div>
+            <div className="preview-cell">$25,700</div>
+            <div className="preview-cell text preview-hide-mobile">Consulting</div>
 
             {/* Row 5 */}
             <div className="preview-row-num">5</div>
-            <div className="preview-cell text">Total Income</div>
-            <div className="preview-cell">$130,000</div>
-            <div className="preview-cell selected">$135,000</div>
-            <div className="preview-cell principal">+$5,000</div>
-            <div className="preview-cell text"></div>
-            <div className="preview-cell text preview-hide-mobile"></div>
+            <div className="preview-cell text">Subscription Income</div>
+            <div className="preview-cell">$3,500</div>
+            <div className="preview-cell">$3,800</div>
+            <div className="preview-cell">$4,200</div>
+            <div className="preview-cell">$11,500</div>
+            <div className="preview-cell text preview-hide-mobile">MRR</div>
 
-            {/* Row 6 - Expenses section */}
+            {/* Row 6 - Total Income */}
             <div className="preview-row-num">6</div>
-            <div className="preview-cell preview-header-cell" style={{gridColumn: 'span 2'}}>EXPENSES</div>
-            <div className="preview-cell"></div>
-            <div className="preview-cell"></div>
-            <div className="preview-cell"></div>
-            <div className="preview-cell preview-hide-mobile"></div>
+            <div className="preview-cell preview-header-cell">Total Income</div>
+            <div className="preview-cell preview-header-cell">$26,500</div>
+            <div className="preview-cell preview-header-cell">$28,800</div>
+            <div className="preview-cell preview-header-cell">$31,400</div>
+            <div className="preview-cell preview-header-cell">$86,700</div>
+            <div className="preview-cell preview-header-cell preview-hide-mobile"></div>
 
-            {/* Row 7 */}
+            {/* Row 7 - Expenses section */}
             <div className="preview-row-num">7</div>
-            <div className="preview-cell text">Payroll</div>
-            <div className="preview-cell">$52,000</div>
-            <div className="preview-cell">$51,000</div>
-            <div className="preview-cell principal">-$1,000</div>
-            <div className="preview-cell text">Under budget</div>
-            <div className="preview-cell text preview-hide-mobile">B7</div>
+            <div className="preview-cell text faded">EXPENSES</div>
+            <div className="preview-cell text faded"></div>
+            <div className="preview-cell text faded"></div>
+            <div className="preview-cell text faded"></div>
+            <div className="preview-cell text faded"></div>
+            <div className="preview-cell text faded preview-hide-mobile"></div>
 
             {/* Row 8 */}
             <div className="preview-row-num">8</div>
             <div className="preview-cell text">Rent</div>
-            <div className="preview-cell">$12,000</div>
-            <div className="preview-cell">$12,000</div>
-            <div className="preview-cell">$0</div>
-            <div className="preview-cell text">On target</div>
-            <div className="preview-cell text preview-hide-mobile">B8</div>
+            <div className="preview-cell">$3,000</div>
+            <div className="preview-cell">$3,000</div>
+            <div className="preview-cell">$3,000</div>
+            <div className="preview-cell">$9,000</div>
+            <div className="preview-cell text preview-hide-mobile">Office lease</div>
 
             {/* Row 9 */}
             <div className="preview-row-num">9</div>
-            <div className="preview-cell text">Marketing</div>
-            <div className="preview-cell">$8,000</div>
-            <div className="preview-cell">$9,500</div>
-            <div className="preview-cell interest">+$1,500</div>
-            <div className="preview-cell text">Over budget</div>
-            <div className="preview-cell text preview-hide-mobile">B9</div>
+            <div className="preview-cell text">Payroll</div>
+            <div className="preview-cell">$12,000</div>
+            <div className="preview-cell">$12,500</div>
+            <div className="preview-cell">$13,000</div>
+            <div className="preview-cell">$37,500</div>
+            <div className="preview-cell text preview-hide-mobile">Salaries</div>
 
             {/* Row 10 */}
             <div className="preview-row-num">10</div>
-            <div className="preview-cell text">Software</div>
-            <div className="preview-cell">$3,500</div>
+            <div className="preview-cell text">Marketing</div>
+            <div className="preview-cell">$2,500</div>
+            <div className="preview-cell">$2,800</div>
             <div className="preview-cell">$3,200</div>
-            <div className="preview-cell principal">-$300</div>
-            <div className="preview-cell text">Savings</div>
-            <div className="preview-cell text preview-hide-mobile">B10</div>
+            <div className="preview-cell">$8,500</div>
+            <div className="preview-cell text preview-hide-mobile">Ads & promo</div>
 
             {/* Row 11 */}
             <div className="preview-row-num">11</div>
-            <div className="preview-cell text">Total Expenses</div>
-            <div className="preview-cell">$75,500</div>
-            <div className="preview-cell">$75,700</div>
-            <div className="preview-cell interest">+$200</div>
-            <div className="preview-cell text"></div>
-            <div className="preview-cell text preview-hide-mobile"></div>
+            <div className="preview-cell text">Software</div>
+            <div className="preview-cell">$800</div>
+            <div className="preview-cell">$850</div>
+            <div className="preview-cell">$900</div>
+            <div className="preview-cell">$2,550</div>
+            <div className="preview-cell text preview-hide-mobile">SaaS tools</div>
 
-            {/* Row 12 - Profit */}
+            {/* Row 12 - Total Expenses */}
             <div className="preview-row-num">12</div>
-            <div className="preview-cell preview-header-cell" style={{gridColumn: 'span 2'}}>NET PROFIT</div>
-            <div className="preview-cell"></div>
-            <div className="preview-cell"></div>
-            <div className="preview-cell"></div>
-            <div className="preview-cell preview-hide-mobile"></div>
+            <div className="preview-cell preview-header-cell">Total Expenses</div>
+            <div className="preview-cell preview-header-cell">$18,300</div>
+            <div className="preview-cell preview-header-cell">$19,150</div>
+            <div className="preview-cell preview-header-cell">$20,100</div>
+            <div className="preview-cell preview-header-cell">$57,550</div>
+            <div className="preview-cell preview-header-cell preview-hide-mobile"></div>
 
-            {/* Row 13 */}
+            {/* Row 13 - Profit */}
             <div className="preview-row-num">13</div>
-            <div className="preview-cell text">Profit</div>
-            <div className="preview-cell">$54,500</div>
-            <div className="preview-cell balance">$59,300</div>
-            <div className="preview-cell principal">+$4,800</div>
-            <div className="preview-cell text">Above target</div>
-            <div className="preview-cell text preview-hide-mobile"></div>
+            <div className="preview-cell preview-header-cell">NET PROFIT</div>
+            <div className="preview-cell preview-header-cell">$8,200</div>
+            <div className="preview-cell preview-header-cell">$9,650</div>
+            <div className="preview-cell preview-header-cell">$11,300</div>
+            <div className="preview-cell preview-header-cell">$29,150</div>
+            <div className="preview-cell preview-header-cell preview-hide-mobile">31% margin</div>
           </div>
 
           {/* Status bar */}
           <div className="preview-status">
             <div className="preview-status-item">
               <span>Total Income:</span>
-              <span className="val">$135K</span>
+              <span className="val">$86,700</span>
             </div>
             <div className="preview-status-item">
               <span>Total Expenses:</span>
-              <span className="val">$75.7K</span>
+              <span className="val">$57,550</span>
             </div>
             <div className="preview-status-item">
               <span>Net Profit:</span>
-              <span className="val serif">$59.3K</span>
-            </div>
-            <div className="preview-status-item">
-              <span>Margin:</span>
-              <span className="val">43.9%</span>
+              <span className="val">$29,150</span>
             </div>
             <div className="preview-status-spacer"></div>
             <div className="preview-status-tabs">
               <button className="preview-tab active">Budget</button>
+              <button className="preview-tab">Income</button>
+              <button className="preview-tab">Expenses</button>
               <button className="preview-tab">Forecast</button>
-              <button className="preview-tab">Cash Flow</button>
-              <button className="preview-tab">+5</button>
+              <button className="preview-tab">+4</button>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* CREATE AN AI BUSINESS BUDGET SPREADSHEET */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row">
+            <div className="row-header">
+              <div className="eyebrow">Generate</div>
+              <h2>Create an AI Business Budget Spreadsheet with Formula Byte</h2>
+              <p className="intro">Describe the budget spreadsheet you need, and Formula Byte automatically generates a professional Excel budgeting system with:</p>
+            </div>
+            <div className="row-body">
+              <ul className="bulleted">
+                <li>Income tracking</li>
+                <li>Expense categorization</li>
+                <li>Budget forecasting</li>
+                <li>Monthly financial summaries</li>
+                <li>Operational cost analysis</li>
+                <li>Cash flow planning</li>
+                <li>Automated spreadsheet formulas</li>
+                <li>Financial dashboards</li>
+                <li>Business performance reporting</li>
+              </ul>
+              <p style={{marginTop: '18px'}}>Instead of manually creating budget spreadsheets, Formula Byte builds AI-powered budgeting systems tailored to your financial workflow.</p>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* WHAT IS IT */}
@@ -251,23 +278,27 @@ export default function BusinessBudgetTemplatePage() {
           <div className="row">
             <div className="row-header">
               <div className="eyebrow">The basics</div>
-              <h2>What is an Excel Business Budget Template?</h2>
-              <p className="intro">A structured spreadsheet used to plan, organize, and monitor business income and expenses over a specific period for financial planning and operational control.</p>
+              <h2>What Is an Excel Business Budget Template?</h2>
+              <p className="intro">A structured spreadsheet used to plan, organize, and monitor business income and expenses over a specific period.</p>
             </div>
             <div className="row-body">
               <p>
-                A <strong>business budget template</strong> is a financial planning tool that helps you estimate income, plan expenses, and track actual performance against budget targets. It's essential for <strong>maintaining profitability</strong>, managing cash flow, and making informed business decisions.
+                An <strong>Excel business budget template</strong> is a structured spreadsheet used to plan, organize, and monitor business income and expenses over a specific period. It helps businesses manage operational costs, forecast financial performance, and improve budgeting decisions.
               </p>
               <p>
-                Effective budgeting helps businesses <strong>allocate resources efficiently</strong>, monitor operational costs, forecast financial performance, and maintain financial stability. Instead of reacting to financial surprises, a good budget lets you plan ahead and adjust spending based on data.
+                A business budget spreadsheet typically includes:
               </p>
               <ul className="bulleted">
-                <li><strong>Revenue tracking</strong> — product sales, service income, client payments</li>
-                <li><strong>Expense categorization</strong> — fixed costs, variable expenses, operational spending</li>
-                <li><strong>Budget forecasting</strong> — monthly cash flow, profit projections, growth planning</li>
-                <li><strong>Variance analysis</strong> — budget vs. actual, spending trends, cost control</li>
-                <li><strong>Financial dashboards</strong> — profit margins, expense ratios, performance insights</li>
+                <li>Revenue tracking</li>
+                <li>Expense categories</li>
+                <li>Budget forecasts</li>
+                <li>Financial summaries</li>
+                <li>Profit analysis</li>
+                <li>Operational cost tracking</li>
+                <li>Cash flow planning</li>
+                <li>Monthly and yearly budgeting reports</li>
               </ul>
+              <p>Formula Byte generates AI-powered budget spreadsheets designed for financial planning and business expense management.</p>
             </div>
           </div>
         </section>
@@ -279,38 +310,73 @@ export default function BusinessBudgetTemplatePage() {
           <div className="row">
             <div className="row-header">
               <div className="eyebrow">How it works</div>
-              <h2>From business description to budget system in seconds.</h2>
-              <p className="intro">Describe your budgeting workflow, and Formula Byte generates a complete business budget with automated calculations and forecasting dashboards.</p>
+              <h2>How Business Budgeting Works</h2>
+              <p className="intro">Business budgeting is the process of estimating income, planning expenses, and controlling operational spending.</p>
             </div>
             <div className="row-body">
-              <div className="steps">
-                <div className="step">
-                  <div className="step-num">1</div>
-                  <div>
-                    <h3>Describe your budgeting needs</h3>
-                    <p>Business type, income sources, expense categories, budget period, forecasting requirements — in plain English or a quick form.</p>
-                  </div>
+              <p>Business budgeting is the process of estimating income, planning expenses, and controlling operational spending to maintain financial stability and profitability.</p>
+              <p style={{marginTop: '18px'}}>A structured budget helps businesses:</p>
+              <ul className="bulleted">
+                <li>Allocate resources efficiently</li>
+                <li>Monitor operational costs</li>
+                <li>Plan future expenses</li>
+                <li>Forecast business growth</li>
+                <li>Improve financial decision-making</li>
+                <li>Reduce overspending risks</li>
+              </ul>
+              <p style={{marginTop: '18px'}}>Most business budgets track:</p>
+              <ul className="bulleted">
+                <li>Revenue projections</li>
+                <li>Fixed expenses</li>
+                <li>Variable expenses</li>
+                <li>Marketing costs</li>
+                <li>Payroll expenses</li>
+                <li>Operational spending</li>
+                <li>Profit margins</li>
+                <li>Financial forecasts</li>
+              </ul>
+              <p style={{marginTop: '18px'}}>Formula Byte simplifies this process using AI-generated budgeting spreadsheets and automated financial calculations.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* WHY SMALL BUSINESSES NEED BUDGET PLANNING SYSTEMS */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row">
+            <div className="row-header">
+              <div className="eyebrow">Why it matters</div>
+              <h2>Why Small Businesses Need Budget Planning Systems</h2>
+              <p className="intro">Managing finances without a structured budgeting system often creates financial confusion and operational risks.</p>
+            </div>
+            <div className="row-body">
+              <div className="compare">
+                <div className="compare-col">
+                  <div className="compare-label">Without a budgeting system</div>
+                  <h3>Managing finances without a structured budgeting system often creates:</h3>
+                  <ul>
+                    <li>Uncontrolled spending</li>
+                    <li>Poor cash flow management</li>
+                    <li>Financial uncertainty</li>
+                    <li>Budget calculation errors</li>
+                    <li>Revenue forecasting issues</li>
+                    <li>Overspending problems</li>
+                    <li>Inconsistent financial planning</li>
+                  </ul>
                 </div>
-                <div className="step">
-                  <div className="step-num">2</div>
-                  <div>
-                    <h3>AI builds your budget structure</h3>
-                    <p>SUM, IF, and variance formulas are wired to your income and expense categories. Budget targets and forecasting systems organize automatically.</p>
-                  </div>
-                </div>
-                <div className="step">
-                  <div className="step-num">3</div>
-                  <div>
-                    <h3>Financial formulas calculate automatically</h3>
-                    <p>Income totals, expense summaries, profit calculations, and budget variances update instantly as you enter or adjust financial data.</p>
-                  </div>
-                </div>
-                <div className="step">
-                  <div className="step-num">4</div>
-                  <div>
-                    <h3>Generate budget dashboards</h3>
-                    <p>Variance analysis, profit trends, expense breakdowns, and cash flow forecasts appear on dedicated dashboard sheets for quick insights.</p>
-                  </div>
+                <div className="compare-col">
+                  <div className="compare-label">With a structured budget</div>
+                  <h3>A properly organized business budget helps companies:</h3>
+                  <ul>
+                    <li>Monitor financial health</li>
+                    <li>Control operational costs</li>
+                    <li>Improve spending decisions</li>
+                    <li>Forecast future growth</li>
+                    <li>Maintain profitability</li>
+                    <li>Organize financial data</li>
+                    <li>Improve cash flow visibility</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -324,50 +390,104 @@ export default function BusinessBudgetTemplatePage() {
           <div className="row-stacked">
             <div className="row-header">
               <div className="eyebrow">Core features</div>
-              <h2>What every generated <span className="serif-accent">business budget</span> includes.</h2>
-              <p className="intro">Complete budgeting system — income tracking, expense management, forecasting, and financial dashboards in one template.</p>
+              <h2>Core Features of Formula Byte's AI <span className="serif-accent">Budget</span> Spreadsheet</h2>
+              <p className="intro">Four pillars of budget tracking — automatic, accurate, and built to support real business decisions.</p>
             </div>
             <div className="row-body">
               <div className="feature-quad">
                 <div className="feature-tile">
                   <div className="feature-tile-icon">$</div>
-                  <h3>Income tracking</h3>
-                  <p>Monitor all revenue streams with organized categories and automated totaling for accurate financial forecasting.</p>
+                  <h3>Income Tracking</h3>
+                  <p>Track all business revenue streams with automatic categorization and real-time summaries.</p>
                   <ul>
-                    <li>Product & service revenue</li>
-                    <li>Client payment tracking</li>
-                    <li>Multi-channel income</li>
+                    <li>Product sales</li>
+                    <li>Service revenue</li>
+                    <li>Client payments</li>
+                    <li>Subscription income</li>
+                    <li>Investment earnings</li>
+                    <li>Other business revenue streams</li>
                   </ul>
+                  <p style={{marginTop: '12px', fontSize: '14px', fontStyle: 'italic'}}>The spreadsheet automatically organizes revenue categories and financial summaries.</p>
                 </div>
                 <div className="feature-tile">
-                  <div className="feature-tile-icon">📊</div>
-                  <h3>Expense management</h3>
-                  <p>Categorize and track all operational costs with budget targets and variance analysis.</p>
+                  <div className="feature-tile-icon">E</div>
+                  <h3>Expense Management</h3>
+                  <p>Monitor all operational expenses with organized tracking and automated calculations.</p>
                   <ul>
-                    <li>Fixed & variable expenses</li>
-                    <li>Payroll & operational costs</li>
-                    <li>Marketing & software spend</li>
+                    <li>Rent</li>
+                    <li>Utilities</li>
+                    <li>Payroll</li>
+                    <li>Marketing costs</li>
+                    <li>Software subscriptions</li>
+                    <li>Inventory purchases</li>
+                    <li>Operational expenses</li>
+                    <li>Vendor payments</li>
                   </ul>
+                  <p style={{marginTop: '12px', fontSize: '14px', fontStyle: 'italic'}}>This helps businesses maintain structured financial organization and expense visibility.</p>
                 </div>
                 <div className="feature-tile">
-                  <div className="feature-tile-icon">📈</div>
-                  <h3>Budget forecasting</h3>
-                  <p>Predict future income and expenses with automated forecasting models and trend analysis.</p>
+                  <div className="feature-tile-icon">F</div>
+                  <h3>Budget Forecasting</h3>
+                  <p>Formula Byte can generate forecasting systems that help businesses predict and plan.</p>
                   <ul>
-                    <li>Monthly cash flow forecasts</li>
-                    <li>Profit projections</li>
-                    <li>Seasonal trend analysis</li>
+                    <li>Predict future expenses</li>
+                    <li>Estimate monthly cash flow</li>
+                    <li>Forecast profitability</li>
+                    <li>Analyze financial performance</li>
+                    <li>Prepare growth strategies</li>
                   </ul>
+                  <p style={{marginTop: '12px', fontSize: '14px', fontStyle: 'italic'}}>This improves long-term financial planning and budgeting accuracy.</p>
                 </div>
                 <div className="feature-tile">
-                  <div className="feature-tile-icon">💰</div>
-                  <h3>Cash flow monitoring</h3>
-                  <p>Track financial movement with incoming revenue, outgoing expenses, and balance projections.</p>
+                  <div className="feature-tile-icon">C</div>
+                  <h3>Cash Flow Monitoring</h3>
+                  <p>Cash flow management is one of the most important parts of business budgeting.</p>
                   <ul>
-                    <li>Monthly cash flow tracking</li>
-                    <li>Balance forecasting</li>
-                    <li>Liquidity planning</li>
+                    <li>Incoming revenue tracking</li>
+                    <li>Expense monitoring</li>
+                    <li>Monthly balance summaries</li>
+                    <li>Financial forecasting dashboards</li>
+                    <li>Operational cash flow analysis</li>
                   </ul>
+                  <p style={{marginTop: '12px', fontSize: '14px', fontStyle: 'italic'}}>This helps businesses maintain financial stability and operational efficiency.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* AI BUDGETING AUTOMATION FOR MODERN BUSINESSES */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row">
+            <div className="row-header">
+              <div className="eyebrow">AI automation</div>
+              <h2>AI Budgeting Automation for Modern Businesses</h2>
+              <p className="intro">Skip the manual setup. The AI understands budgeting instructions from natural language prompts.</p>
+            </div>
+            <div className="row-body">
+              <p>Traditional budget spreadsheets require manual setup and repetitive calculations.</p>
+              <p>Formula Byte uses AI spreadsheet automation to:</p>
+              <ul className="bulleted">
+                <li>Structure budgeting worksheets</li>
+                <li>Generate Excel formulas</li>
+                <li>Organize expense categories</li>
+                <li>Build financial dashboards</li>
+                <li>Create forecasting systems</li>
+                <li>Generate budget summaries</li>
+                <li>Apply spreadsheet formatting</li>
+                <li>Automate financial calculations</li>
+              </ul>
+              <p style={{marginTop: '18px'}}>The AI understands budgeting instructions from natural language prompts.</p>
+
+              <div className="example-prompts-block">
+                <span className="list-sublabel">Example prompts</span>
+                <div className="example-prompts-list">
+                  <button className="chip">"Create a small business monthly budget spreadsheet"</button>
+                  <button className="chip">"Build a startup expense tracking dashboard"</button>
+                  <button className="chip">"Generate an ecommerce budget forecasting template"</button>
+                  <button className="chip">"Create a business cash flow planning spreadsheet"</button>
                 </div>
               </div>
             </div>
@@ -381,8 +501,8 @@ export default function BusinessBudgetTemplatePage() {
           <div className="row-stacked">
             <div className="row-header">
               <div className="eyebrow">What's inside</div>
-              <h2>Eight worksheets, <span className="serif-accent">one</span> generation.</h2>
-              <p className="intro">A complete budgeting workspace — every sheet linked, every formula wired, every dashboard ready on open.</p>
+              <h2>Business Budget Worksheets <span className="serif-accent">Included</span></h2>
+              <p className="intro">A complete budgeting spreadsheet with 8 worksheets — each generated, formatted, and wired up automatically.</p>
             </div>
             <div className="row-body">
               <div className="spec-table">
@@ -390,55 +510,111 @@ export default function BusinessBudgetTemplatePage() {
                   <div className="spec-head-cell">#</div>
                   <div className="spec-head-cell">Worksheet</div>
                   <div className="spec-head-cell">Purpose</div>
-                  <div className="spec-head-cell">Type</div>
                 </div>
                 <div className="spec-row">
                   <span className="spec-num">01</span>
                   <span className="spec-name">Income Tracker</span>
-                  <span className="spec-purpose">Monitors business revenue, product sales, service income, and payment collections.</span>
-                  <span className="spec-tag">Core</span>
+                  <span className="spec-purpose">Monitors business revenue</span>
                 </div>
                 <div className="spec-row">
                   <span className="spec-num">02</span>
                   <span className="spec-name">Expense Ledger</span>
-                  <span className="spec-purpose">Tracks operational expenses, payroll, marketing, and all business spending.</span>
-                  <span className="spec-tag">Core</span>
+                  <span className="spec-purpose">Tracks operational expenses</span>
                 </div>
                 <div className="spec-row">
                   <span className="spec-num">03</span>
                   <span className="spec-name">Budget Forecast</span>
-                  <span className="spec-purpose">Predicts future income, expenses, and cash flow with automated forecasting models.</span>
-                  <span className="spec-tag">Analysis</span>
+                  <span className="spec-purpose">Predicts future financial performance</span>
                 </div>
                 <div className="spec-row">
                   <span className="spec-num">04</span>
                   <span className="spec-name">Cash Flow Dashboard</span>
-                  <span className="spec-purpose">Monitors financial movement with monthly inflow, outflow, and balance summaries.</span>
-                  <span className="spec-tag">Dashboard</span>
+                  <span className="spec-purpose">Monitors financial movement</span>
                 </div>
                 <div className="spec-row">
                   <span className="spec-num">05</span>
                   <span className="spec-name">Payroll Budget Sheet</span>
-                  <span className="spec-purpose">Organizes employee expenses, salaries, benefits, and contractor payments.</span>
-                  <span className="spec-tag">Operations</span>
+                  <span className="spec-purpose">Organizes employee expenses</span>
                 </div>
                 <div className="spec-row">
                   <span className="spec-num">06</span>
                   <span className="spec-name">Marketing Budget Tracker</span>
-                  <span className="spec-purpose">Tracks advertising and campaign costs with ROI analysis and spend optimization.</span>
-                  <span className="spec-tag">Operations</span>
+                  <span className="spec-purpose">Tracks advertising and campaign costs</span>
                 </div>
                 <div className="spec-row">
                   <span className="spec-num">07</span>
                   <span className="spec-name">Financial Summary</span>
-                  <span className="spec-purpose">Generates profit analysis, variance reports, and financial overviews.</span>
-                  <span className="spec-tag">Report</span>
+                  <span className="spec-purpose">Generates reporting overviews</span>
                 </div>
                 <div className="spec-row">
                   <span className="spec-num">08</span>
                   <span className="spec-name">Profit Analysis Dashboard</span>
-                  <span className="spec-purpose">Tracks profitability, margins, expense trends, and budget performance insights.</span>
-                  <span className="spec-tag">Dashboard</span>
+                  <span className="spec-purpose">Tracks profitability and spending trends</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* BUDGET CATEGORIES INCLUDED */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row-stacked">
+            <div className="row-header">
+              <div className="eyebrow">Budget categories</div>
+              <h2>Budget Categories <span className="serif-accent">Included</span></h2>
+              <p className="intro">Comprehensive expense and income categories organized for complete business budget tracking.</p>
+            </div>
+            <div className="row-body">
+              <div className="feature-quad">
+                <div className="feature-tile">
+                  <div className="feature-tile-icon">FE</div>
+                  <h3>Fixed Expenses</h3>
+                  <p>Track recurring operational costs such as:</p>
+                  <ul>
+                    <li>Rent</li>
+                    <li>Salaries</li>
+                    <li>Insurance</li>
+                    <li>Software subscriptions</li>
+                    <li>Utilities</li>
+                  </ul>
+                </div>
+                <div className="feature-tile">
+                  <div className="feature-tile-icon">VE</div>
+                  <h3>Variable Expenses</h3>
+                  <p>Monitor changing business costs including:</p>
+                  <ul>
+                    <li>Advertising</li>
+                    <li>Shipping</li>
+                    <li>Inventory purchases</li>
+                    <li>Equipment costs</li>
+                    <li>Contractor payments</li>
+                  </ul>
+                </div>
+                <div className="feature-tile">
+                  <div className="feature-tile-icon">RF</div>
+                  <h3>Revenue Forecasting</h3>
+                  <p>Estimate:</p>
+                  <ul>
+                    <li>Monthly income</li>
+                    <li>Quarterly growth</li>
+                    <li>Seasonal revenue trends</li>
+                    <li>Profit projections</li>
+                    <li>Financial targets</li>
+                  </ul>
+                </div>
+                <div className="feature-tile">
+                  <div className="feature-tile-icon">CF</div>
+                  <h3>Cash Flow Planning</h3>
+                  <p>Manage:</p>
+                  <ul>
+                    <li>Incoming cash flow</li>
+                    <li>Outgoing expenses</li>
+                    <li>Monthly balances</li>
+                    <li>Financial reserves</li>
+                    <li>Liquidity planning</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -452,36 +628,37 @@ export default function BusinessBudgetTemplatePage() {
           <div className="row">
             <div className="row-header">
               <div className="eyebrow">Under the hood</div>
-              <h2>The formulas that <span className="serif-accent">power</span> your budget.</h2>
-              <p className="intro">Every Formula Byte business budget template is wired up with essential financial functions — generated, linked, and tested automatically.</p>
+              <h2>Built-In Excel Formulas and <span className="serif-accent">Budget</span> Automation</h2>
+              <p className="intro">Every Formula Byte business budget template is wired up with industry-standard financial functions.</p>
             </div>
             <div className="row-body">
               <div className="formula-grid">
                 <div className="formula-block">
                   <div className="formula-code"><span className="fn">=SUM</span>(<span className="arg">range</span>)</div>
-                  <div className="formula-desc">Calculates <em>total income</em>, <em>total expenses</em>, and budget subtotals instantly.</div>
+                  <div className="formula-desc">Calculates totals for income, expenses, and profit categories.</div>
                 </div>
                 <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=IF</span>(<span className="arg">condition, true, false</span>)</div>
-                  <div className="formula-desc">Enables <em>budget alerts</em>, conditional formatting, and automated variance analysis.</div>
+                  <div className="formula-code"><span className="fn">=IF</span>(<span className="arg">condition, value_if_true, value_if_false</span>)</div>
+                  <div className="formula-desc">Creates conditional logic for budget calculations and alerts.</div>
                 </div>
                 <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=XLOOKUP</span>(<span className="arg">value, range, return</span>)</div>
-                  <div className="formula-desc">Retrieves <em>account details</em>, expense categories, and budget references across worksheets.</div>
+                  <div className="formula-code"><span className="fn">=XLOOKUP</span>(<span className="arg">lookup_value, lookup_array, return_array</span>)</div>
+                  <div className="formula-desc">Retrieves budget details and financial data across worksheets.</div>
                 </div>
                 <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=SUMIF</span>(<span className="arg">range, criteria, sum_range</span>)</div>
-                  <div className="formula-desc">Calculates <em>category totals</em> for specific income or expense types.</div>
+                  <div className="formula-code"><span className="fn">Forecasting calculations</span></div>
+                  <div className="formula-desc">Dynamic financial dashboards with trend analysis.</div>
                 </div>
                 <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=FORECAST</span>(<span className="arg">data, periods</span>)</div>
-                  <div className="formula-desc">Predicts <em>future income</em> and expenses based on historical data trends.</div>
+                  <div className="formula-code"><span className="fn">Conditional formatting</span></div>
+                  <div className="formula-desc">Budget tracking systems with visual indicators.</div>
                 </div>
                 <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=SUBTOTAL</span>(<span className="arg">function, range</span>)</div>
-                  <div className="formula-desc">Creates <em>filtered totals</em> that adapt when you filter by category or period.</div>
+                  <div className="formula-code"><span className="fn">Expense analysis formulas</span></div>
+                  <div className="formula-desc">Profitability summaries and spending insights.</div>
                 </div>
               </div>
+              <p style={{marginTop: '18px'}}>These spreadsheet automations reduce manual budgeting work and improve financial accuracy.</p>
             </div>
           </div>
         </section>
@@ -493,76 +670,111 @@ export default function BusinessBudgetTemplatePage() {
           <div className="row-stacked">
             <div className="row-header">
               <div className="eyebrow">Use cases</div>
-              <h2>Four business types, <span className="serif-accent">one</span> budgeting engine.</h2>
-              <p className="intro">Customize the budget structure for any business model — same engine, different categories and targets.</p>
+              <h2>Business Budget Templates by <span className="serif-accent">Industry</span></h2>
+              <p className="intro">Customize the budget for any business type — same structure, different focus.</p>
             </div>
             <div className="row-body">
               <div className="industry-grid">
                 <div className="industry-card">
                   <div className="industry-card-head">
-                    <div className="industry-glyph">S</div>
+                    <div className="industry-glyph">SB</div>
                     <div>
-                      <h4>Small business budget spreadsheet</h4>
-                      <div className="industry-tagline">RETAIL · SERVICE · LOCAL</div>
+                      <h4>Small Business Budget Spreadsheet</h4>
+                      <div className="industry-tagline">GENERAL · RETAIL · SERVICE</div>
                     </div>
                   </div>
-                  <p>Track operational expenses, revenue growth, payroll costs, and financial performance. Ideal for local businesses monitoring profitability and cash flow.</p>
+                  <p>Track:</p>
                   <ul>
                     <li>Operational expenses</li>
-                    <li>Revenue growth targets</li>
-                    <li>Payroll budgeting</li>
+                    <li>Revenue growth</li>
+                    <li>Payroll costs</li>
                     <li>Financial performance</li>
+                    <li>Cash reserves</li>
                   </ul>
+                  <p style={{marginTop: '12px', fontSize: '14px', fontStyle: 'italic'}}>Ideal for startups and growing businesses.</p>
                 </div>
                 <div className="industry-card">
                   <div className="industry-card-head">
-                    <div className="industry-glyph">E</div>
+                    <div className="industry-glyph">EC</div>
                     <div>
-                      <h4>Ecommerce budget template</h4>
+                      <h4>Ecommerce Budget Template</h4>
                       <div className="industry-tagline">SHOPIFY · AMAZON · ETSY</div>
                     </div>
                   </div>
-                  <p>Manage product costs, advertising spend, inventory expenses, marketplace fees, and revenue forecasting for online sellers.</p>
+                  <p>Manage:</p>
                   <ul>
-                    <li>Product cost tracking</li>
-                    <li>Advertising budget</li>
+                    <li>Product costs</li>
+                    <li>Advertising spend</li>
+                    <li>Inventory expenses</li>
                     <li>Marketplace fees</li>
                     <li>Revenue forecasting</li>
                   </ul>
+                  <p style={{marginTop: '12px', fontSize: '14px', fontStyle: 'italic'}}>Useful for Shopify, Amazon, Etsy, and WooCommerce businesses.</p>
                 </div>
                 <div className="industry-card">
                   <div className="industry-card-head">
-                    <div className="industry-glyph">F</div>
+                    <div className="industry-glyph">FR</div>
                     <div>
-                      <h4>Freelancer budget spreadsheet</h4>
-                      <div className="industry-tagline">CONSULTANTS · CONTRACTORS</div>
+                      <h4>Freelancer Budget Spreadsheet</h4>
+                      <div className="industry-tagline">CONSULTANTS · FREELANCERS</div>
                     </div>
                   </div>
-                  <p>Track client income, monthly expenses, tax estimates, subscription costs, and profitability for independent professionals.</p>
+                  <p>Track:</p>
                   <ul>
-                    <li>Client income tracking</li>
+                    <li>Client income</li>
                     <li>Monthly expenses</li>
-                    <li>Tax planning</li>
-                    <li>Profitability analysis</li>
+                    <li>Tax estimates</li>
+                    <li>Subscription costs</li>
+                    <li>Profitability</li>
                   </ul>
+                  <p style={{marginTop: '12px', fontSize: '14px', fontStyle: 'italic'}}>Designed for consultants, freelancers, and independent professionals.</p>
                 </div>
                 <div className="industry-card">
                   <div className="industry-card-head">
-                    <div className="industry-glyph">🚀</div>
+                    <div className="industry-glyph">ST</div>
                     <div>
-                      <h4>Startup financial budget template</h4>
-                      <div className="industry-tagline">FUNDED · GROWTH · STARTUP</div>
+                      <h4>Startup Financial Budget Template</h4>
+                      <div className="industry-tagline">FUNDED · GROWTH · INVESTOR</div>
                     </div>
                   </div>
-                  <p>Monitor investor funding, burn rate, operational expenses, growth forecasting, and financial runway for startup planning and investor reporting.</p>
+                  <p>Monitor:</p>
                   <ul>
-                    <li>Investor funding tracking</li>
-                    <li>Burn rate analysis</li>
+                    <li>Investor funding</li>
+                    <li>Burn rate</li>
+                    <li>Operational expenses</li>
                     <li>Growth forecasting</li>
                     <li>Financial runway</li>
                   </ul>
+                  <p style={{marginTop: '12px', fontSize: '14px', fontStyle: 'italic'}}>Useful for startup financial planning and investor reporting.</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* FINANCIAL REPORTS AND BUDGET ANALYSIS */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row">
+            <div className="row-header">
+              <div className="eyebrow">Reporting</div>
+              <h2>Financial Reports and Budget Analysis</h2>
+              <p className="intro">Every generated budget system produces dashboard-grade reports — no manual analysis required.</p>
+            </div>
+            <div className="row-body">
+              <p>Formula Byte budget spreadsheets can generate:</p>
+              <ul className="bulleted">
+                <li>Monthly budget summaries</li>
+                <li>Expense analysis reports</li>
+                <li>Profit forecasting reports</li>
+                <li>Cash flow summaries</li>
+                <li>Financial performance dashboards</li>
+                <li>Operational spending reports</li>
+                <li>Revenue tracking insights</li>
+                <li>Budget comparison analysis</li>
+              </ul>
+              <p style={{marginTop: '18px'}}>These reports improve financial visibility and support better business planning.</p>
             </div>
           </div>
         </section>
@@ -574,36 +786,39 @@ export default function BusinessBudgetTemplatePage() {
           <div className="row">
             <div className="row-header">
               <div className="eyebrow">The difference</div>
-              <h2>Manual budgeting vs. <span className="serif-accent">Formula Byte.</span></h2>
-              <p className="intro">Most budget spreadsheets are static files with limited forecasting. Formula Byte generates AI-powered budgeting systems tailored to your business.</p>
+              <h2>Excel Budget Spreadsheet vs. <span className="serif-accent">Manual</span> Budget Tracking</h2>
+              <p className="intro">Seven dimensions where AI-powered budget spreadsheets outperform manual budget tracking.</p>
             </div>
             <div className="row-body">
               <div className="compare">
                 <div className="compare-col">
-                  <div className="compare-label">Manual budget tracking</div>
-                  <h3>Spreadsheets built by hand</h3>
+                  <div className="compare-label">Manual Budget Tracking</div>
+                  <h3>Manual budget tracking</h3>
                   <ul>
-                    <li>Manual expense entry & categorization</li>
-                    <li>Time-consuming formula setup</li>
-                    <li>Error-prone calculations</li>
-                    <li>Limited forecasting capability</li>
-                    <li>Basic reporting, no dashboards</li>
-                    <li>Difficult to scale with growth</li>
+                    <li>Manual calculations</li>
+                    <li>Limited forecasting</li>
+                    <li>Error-prone reporting</li>
+                    <li>Time-consuming setup</li>
+                    <li>Basic tracking</li>
+                    <li>Often inconsistent</li>
+                    <li>Limited customization</li>
                   </ul>
                 </div>
                 <div className="compare-col">
                   <div className="compare-label">Formula Byte AI</div>
-                  <h3>Generated, automated, accurate</h3>
+                  <h3>AI-generated spreadsheets</h3>
                   <ul>
-                    <li>Automated expense organization</li>
-                    <li>Instant budget calculations</li>
-                    <li>Forecasting formulas included</li>
-                    <li>Financial dashboards built in</li>
-                    <li>Variance analysis automated</li>
-                    <li>Fully customizable for growth</li>
+                    <li>Automated calculations</li>
+                    <li>Included forecasting</li>
+                    <li>High accuracy</li>
+                    <li>Fast setup</li>
+                    <li>Dashboard-based</li>
+                    <li>Structured organization</li>
+                    <li>High customization</li>
                   </ul>
                 </div>
               </div>
+              <p style={{marginTop: '18px'}}>AI-generated spreadsheets simplify budgeting and financial planning workflows.</p>
             </div>
           </div>
         </section>
@@ -615,60 +830,105 @@ export default function BusinessBudgetTemplatePage() {
           <div className="row-stacked">
             <div className="row-header">
               <div className="eyebrow">Why use it</div>
-              <h2>Benefits of AI-generated <span className="serif-accent">business budget</span> templates.</h2>
-              <p className="intro">Faster budget creation, better financial control, smarter decisions — every calculation and forecast you need already built in.</p>
+              <h2>Benefits of AI-Generated <span className="serif-accent">Budget</span> Templates</h2>
+              <p className="intro">Faster setup, fewer errors, sharper financial insights — every number you'd want already calculated.</p>
             </div>
             <div className="row-body">
               <div className="benefit-grid">
                 <div className="benefit-card">
-                  <h3>Faster budget creation</h3>
-                  <p>Generate complete business budgeting systems instantly instead of spending hours on manual spreadsheet setup and formula construction.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">90%</span>
-                    <span className="benefit-stat-label">Less setup time</span>
-                  </div>
+                  <h3>Faster Budget Creation</h3>
+                  <p>Generate complete business budgeting systems instantly without manual spreadsheet setup.</p>
                 </div>
                 <div className="benefit-card">
-                  <h3>Better financial organization</h3>
-                  <p>Structured budgeting worksheets improve financial visibility and make expense management clearer and more consistent.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">Organized</span>
-                    <span className="benefit-stat-label">Expense tracking</span>
-                  </div>
+                  <h3>Better Financial Organization</h3>
+                  <p>Structured budgeting worksheets improve financial visibility and expense management.</p>
                 </div>
                 <div className="benefit-card">
-                  <h3>Reduce budgeting errors</h3>
-                  <p>Automated SUM, IF, and variance formulas eliminate calculation mistakes and ensure budget accuracy across all categories.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">100%</span>
-                    <span className="benefit-stat-label">Formula accuracy</span>
-                  </div>
+                  <h3>Reduced Budgeting Errors</h3>
+                  <p>Automated formulas reduce financial mistakes and reporting inconsistencies.</p>
                 </div>
                 <div className="benefit-card">
-                  <h3>Improve financial forecasting</h3>
-                  <p>Budget dashboards help analyze income trends, expense patterns, and cash flow projections for smarter business planning.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">Real-time</span>
-                    <span className="benefit-stat-label">Financial insights</span>
-                  </div>
+                  <h3>Improved Financial Forecasting</h3>
+                  <p>Budget dashboards help businesses analyze growth trends and operational spending more effectively.</p>
                 </div>
                 <div className="benefit-card">
-                  <h3>Smarter spending decisions</h3>
-                  <p>Variance analysis and expense tracking help identify overspending risks and opportunities for cost optimization.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">Data-driven</span>
-                    <span className="benefit-stat-label">Budget decisions</span>
-                  </div>
-                </div>
-                <div className="benefit-card">
-                  <h3>Support business planning</h3>
-                  <p>Professional budgeting and forecasting improve loan applications, investor presentations, and strategic planning.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">Investor-ready</span>
-                    <span className="benefit-stat-label">Financial plans</span>
-                  </div>
+                  <h3>Smarter Business Decisions</h3>
+                  <p>Clear financial reporting supports better budgeting strategies and profitability planning.</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* BEST PRACTICES */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row-stacked">
+            <div className="row-header">
+              <div className="eyebrow">Best practices</div>
+              <h2>Best Practices for Managing <span className="serif-accent">Business Budget</span> Spreadsheets</h2>
+              <p className="intro">Four habits that turn a generated budget into a real financial planning tool.</p>
+            </div>
+            <div className="row-body">
+              <div className="capability-grid">
+                <div className="capability">
+                  <span className="cap-num">01 / HABIT</span>
+                  <h3>Update Budget Data Regularly</h3>
+                  <p>Consistent updates improve financial forecasting and budget accuracy.</p>
+                </div>
+                <div className="capability">
+                  <span className="cap-num">02 / HABIT</span>
+                  <h3>Organize Expense Categories Properly</h3>
+                  <p>Structured budgeting categories improve reporting quality and financial visibility.</p>
+                </div>
+                <div className="capability">
+                  <span className="cap-num">03 / HABIT</span>
+                  <h3>Monitor Spending Trends</h3>
+                  <p>Regular reviews help identify:</p>
+                  <ul>
+                    <li>Overspending risks</li>
+                    <li>Revenue changes</li>
+                    <li>Expense growth</li>
+                    <li>Profitability issues</li>
+                    <li>Financial opportunities</li>
+                  </ul>
+                </div>
+                <div className="capability">
+                  <span className="cap-num">04 / HABIT</span>
+                  <h3>Review Financial Forecasts Monthly</h3>
+                  <p>Monthly budget reviews help businesses maintain better operational planning and financial control.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* WHY FORMULA BYTE IS DIFFERENT */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row">
+            <div className="row-header">
+              <div className="eyebrow">The difference</div>
+              <h2>Why Formula Byte <span className="serif-accent">Is Different</span></h2>
+              <p className="intro">Most business budget templates are static spreadsheets with limited flexibility.</p>
+            </div>
+            <div className="row-body">
+              <p>Most business budget templates are static spreadsheets with limited flexibility.</p>
+              <p>Formula Byte creates AI-generated budgeting systems tailored to your business workflow, expense structure, and financial planning requirements.</p>
+              <p style={{marginTop: '18px'}}>You can generate:</p>
+              <ul className="bulleted">
+                <li>Budget planning spreadsheets</li>
+                <li>Expense management systems</li>
+                <li>Financial dashboards</li>
+                <li>Revenue forecasting tools</li>
+                <li>Cash flow tracking sheets</li>
+                <li>Operational finance reports</li>
+                <li>Automated budget formulas</li>
+                <li>Business-specific budgeting workflows</li>
+              </ul>
+              <p style={{marginTop: '18px'}}>Instead of manually building budgeting spreadsheets, Formula Byte automates financial planning using AI.</p>
             </div>
           </div>
         </section>
@@ -681,7 +941,7 @@ export default function BusinessBudgetTemplatePage() {
             <div className="row-header">
               <div className="eyebrow">Who it's for</div>
               <h2>Who Should Use This <span className="serif-accent">Business Budget</span> Spreadsheet?</h2>
-              <p className="intro">This spreadsheet solution is ideal for individuals and teams managing business finances.</p>
+              <p className="intro">This spreadsheet solution is ideal for businesses and professionals managing budgets and expenses.</p>
             </div>
             <div className="row-body">
               <div className="audience-grid">
@@ -749,26 +1009,26 @@ export default function BusinessBudgetTemplatePage() {
             </div>
             <div className="row-body">
               <div className="related-grid">
-                <a href="/excel-templates/accounting-template/" className="related-card">
-                  <div className="glyph">A</div>
-                  <h4>Accounting Template</h4>
-                  <p>Bookkeeping with ledgers, invoices, and cash flow tracking.</p>
-                  <span className="link">View template →</span>
-                </a>
                 <a href="/excel-templates/profit-and-loss-template/" className="related-card">
                   <div className="glyph">P</div>
                   <h4>Profit &amp; Loss</h4>
                   <p>Monthly and yearly P&amp;L with built-in formulas and margin tracking.</p>
                   <span className="link">View template →</span>
                 </a>
-                <a href="/excel-templates/income-statement-template/" className="related-card">
-                  <div className="glyph">I</div>
-                  <h4>Income Statement</h4>
-                  <p>Revenue, expenses, and net income — calculated automatically.</p>
+                <a href="/excel-templates/balance-sheet-template/" className="related-card">
+                  <div className="glyph">B</div>
+                  <h4>Balance Sheet</h4>
+                  <p>Track assets, liabilities, equity, and financial position.</p>
+                  <span className="link">View template →</span>
+                </a>
+                <a href="/excel-templates/amortization-schedule-template/" className="related-card">
+                  <div className="glyph">A</div>
+                  <h4>Amortization Schedule</h4>
+                  <p>Track loan payments, interest, principal balances, and repayment progress.</p>
                   <span className="link">View template →</span>
                 </a>
                 <a href="/excel-templates/invoice-template/" className="related-card">
-                  <div className="glyph">V</div>
+                  <div className="glyph">I</div>
                   <h4>Invoice Template</h4>
                   <p>Professional invoices with auto-numbering, taxes, and totals.</p>
                   <span className="link">View template →</span>
@@ -788,7 +1048,7 @@ export default function BusinessBudgetTemplatePage() {
             <p>Describe your budgeting workflow, and Formula Byte will generate a professional AI-powered Excel business budget template with automated formulas, forecasting dashboards, expense tracking systems, and organized financial reporting structures in seconds.</p>
             <p>Create smarter budgeting spreadsheets with AI today.</p>
             <div className="btn-row">
-              <a href="/auth?template=business-budget" className="btn btn-primary btn-lg">Generate template →</a>
+              <a href="https://dashboard.formulabyte.com/" className="btn btn-primary btn-lg">Generate template →</a>
               <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse all templates</a>
             </div>
           </div>

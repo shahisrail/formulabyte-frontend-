@@ -1,3 +1,5 @@
+'use client';
+
 export default function AmortizationScheduleTemplatePage() {
   return (
     <>
@@ -13,238 +15,80 @@ export default function AmortizationScheduleTemplatePage() {
           </div>
 
           <div className="eyebrow">Financial template</div>
-          <h1>AI Excel Amortization Schedule Template for Loan Repayment <span className="accent">Planning</span></h1>
+          <h1>AI Excel Amortization Schedule Template for Loan <span className="accent">Repayment Tracking</span></h1>
           <p className="lede">
             Track loan payments, interest, principal balances, and repayment progress with an AI-generated Excel amortization schedule template designed for smarter financial planning. Formula Byte helps individuals and businesses automate loan tracking using intelligent spreadsheets with built-in payment formulas, repayment summaries, and financial forecasting tools.
           </p>
 
           <div className="hero-specs">
             <span className="hero-spec-tag"><span className="dot"></span>Free</span>
-            <span className="hero-spec"><strong>8</strong> worksheets</span>
+            <span className="hero-spec"><strong>100%</strong> customizable</span>
             <span className="hero-spec-sep"></span>
-            <span className="hero-spec"><strong>9</strong> formulas built in</span>
+            <span className="hero-spec">Excel <strong>&amp;</strong> Google Sheets</span>
             <span className="hero-spec-sep"></span>
-            <span className="hero-spec">Excel <strong>&amp;</strong> Sheets</span>
-            <span className="hero-spec-sep"></span>
-            <span className="hero-spec">~ <strong>15 sec</strong> to generate</span>
+            <span className="hero-spec">AI-generated in seconds</span>
           </div>
 
           <div className="hero-ctas">
-            <a href="/auth?template=amortization-schedule" className="btn btn-primary btn-lg">
-              Generate template
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="#preview" className="btn btn-outline btn-lg">View preview</a>
+            <a href="https://dashboard.formulabyte.com/" className="btn btn-primary btn-lg">Generate template →</a>
+            <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse all templates</a>
           </div>
 
-          <div className="hero-tagline">
-            <span className="hero-tagline-item">100% customizable</span>
-            <span className="hero-tagline-sep">•</span>
-            <span className="hero-tagline-item">Works with Excel &amp; Google Sheets</span>
-            <span className="hero-tagline-sep">•</span>
-            <span className="hero-tagline-item">AI-generated in seconds</span>
+          <div className="prompt-card">
+            <div className="prompt-input">
+              <textarea className="prompt-textarea" placeholder="Describe the amortization schedule you need… e.g. Create a loan amortization schedule with monthly payments for a 30-year mortgage" rows={2}></textarea>
+            </div>
+            <div className="prompt-actions">
+              <div className="prompt-hints">
+                <span>Powered by AI</span>
+                <span>·</span>
+                <span>Formulas included</span>
+              </div>
+              <button className="send-btn" aria-label="Generate template">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="12" y1="19" x2="12" y2="5"></line>
+                  <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div className="example-prompts">
+            <span>Try:</span>
+            <button className="chip">30-year mortgage schedule</button>
+            <button className="chip">Car loan amortization</button>
+            <button className="chip">Equipment payment tracker</button>
+            <button className="chip">Personal loan repayment</button>
           </div>
         </div>
       </section>
 
-      {/* USE CASE PILLS */}
-      <div className="use-case-grid">
-        <div className="use-case-label">Generate amortization spreadsheets for</div>
-        <div className="use-case-pills">
-          <span className="use-case-pill"><span className="dot"></span>Home loans</span>
-          <span className="use-case-pill"><span className="dot"></span>Mortgage repayment</span>
-          <span className="use-case-pill"><span className="dot"></span>Business loans</span>
-          <span className="use-case-pill"><span className="dot"></span>Personal loans</span>
-          <span className="use-case-pill"><span className="dot"></span>Auto financing</span>
-          <span className="use-case-pill"><span className="dot"></span>Student loans</span>
-          <span className="use-case-pill"><span className="dot"></span>Equipment financing</span>
-          <span className="use-case-pill"><span className="dot"></span>Debt repayment planning</span>
-        </div>
-      </div>
-
-      {/* SPREADSHEET PREVIEW */}
-      <div className="preview-wrap" id="preview">
-        <div className="preview-window">
-          {/* Window chrome */}
-          <div className="preview-chrome">
-            <div className="preview-dots"><span></span><span></span><span></span></div>
-            <div className="preview-filename">Amortization-Schedule<span className="ext">.xlsx</span> · Generated by Formula Byte</div>
-            <div className="preview-chrome-actions">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="1"></circle>
-                <circle cx="19" cy="12" r="1"></circle>
-                <circle cx="5" cy="12" r="1"></circle>
-              </svg>
-            </div>
-          </div>
-
-          {/* Formula bar */}
-          <div className="preview-formula">
-            <span className="preview-formula-label">D4</span>
-            <span className="preview-formula-fx">ƒx</span>
-            <span className="preview-formula-text">
-              <span className="fn">=PMT</span>(<span className="num">0.065</span>/12, <span className="num">360</span>, -<span className="num">250000</span>)
-            </span>
-          </div>
-
-          {/* Grid */}
-          <div className="preview-grid">
-            {/* Column letters */}
-            <div className="preview-col-header"></div>
-            <div className="preview-col-header">A</div>
-            <div className="preview-col-header">B</div>
-            <div className="preview-col-header">C</div>
-            <div className="preview-col-header">D</div>
-            <div className="preview-col-header">E</div>
-            <div className="preview-col-header preview-hide-mobile">F</div>
-
-            {/* Row 1: headers */}
-            <div className="preview-row-num">1</div>
-            <div className="preview-cell preview-header-cell">Month</div>
-            <div className="preview-cell preview-header-cell">Date</div>
-            <div className="preview-cell preview-header-cell">Payment</div>
-            <div className="preview-cell preview-header-cell">Principal</div>
-            <div className="preview-cell preview-header-cell">Interest</div>
-            <div className="preview-cell preview-header-cell preview-hide-mobile">Balance</div>
-
-            {/* Row 2 */}
-            <div className="preview-row-num">2</div>
-            <div className="preview-cell text">1</div>
-            <div className="preview-cell text">Jan 2026</div>
-            <div className="preview-cell">$1,580.17</div>
-            <div className="preview-cell principal">$226.84</div>
-            <div className="preview-cell interest">$1,353.33</div>
-            <div className="preview-cell balance preview-hide-mobile">$249,773.16</div>
-
-            {/* Row 3 */}
-            <div className="preview-row-num">3</div>
-            <div className="preview-cell text">2</div>
-            <div className="preview-cell text">Feb 2026</div>
-            <div className="preview-cell">$1,580.17</div>
-            <div className="preview-cell principal">$228.07</div>
-            <div className="preview-cell interest">$1,352.10</div>
-            <div className="preview-cell balance preview-hide-mobile">$249,545.09</div>
-
-            {/* Row 4 — selected */}
-            <div className="preview-row-num">4</div>
-            <div className="preview-cell text">3</div>
-            <div className="preview-cell text">Mar 2026</div>
-            <div className="preview-cell selected">$1,580.17</div>
-            <div className="preview-cell principal">$229.31</div>
-            <div className="preview-cell interest">$1,350.86</div>
-            <div className="preview-cell balance preview-hide-mobile">$249,315.78</div>
-
-            {/* Row 5 */}
-            <div className="preview-row-num">5</div>
-            <div className="preview-cell text">6</div>
-            <div className="preview-cell text">Apr 2026</div>
-            <div className="preview-cell">$1,580.17</div>
-            <div className="preview-cell principal">$230.55</div>
-            <div className="preview-cell interest">$1,349.62</div>
-            <div className="preview-cell balance preview-hide-mobile">$249,085.23</div>
-
-            {/* Row 6 */}
-            <div className="preview-row-num">6</div>
-            <div className="preview-cell text">7</div>
-            <div className="preview-cell text">May 2026</div>
-            <div className="preview-cell">$1,580.17</div>
-            <div className="preview-cell principal">$231.80</div>
-            <div className="preview-cell interest">$1,348.37</div>
-            <div className="preview-cell balance preview-hide-mobile">$248,853.43</div>
-
-            {/* Row 7 */}
-            <div className="preview-row-num">7</div>
-            <div className="preview-cell text">8</div>
-            <div className="preview-cell text">Jun 2026</div>
-            <div className="preview-cell">$1,580.17</div>
-            <div className="preview-cell principal">$233.06</div>
-            <div className="preview-cell interest">$1,347.11</div>
-            <div className="preview-cell balance preview-hide-mobile">$248,620.37</div>
-
-            {/* Row 8 — sparkline */}
-            <div className="preview-row-num">8</div>
-            <div className="preview-cell text faded">…</div>
-            <div className="preview-cell text faded">…</div>
-            <div className="preview-cell faded">…</div>
-            <div className="preview-cell sparkline" style={{gridColumn: 'span 2'}}>
-              <svg width="140" height="22" viewBox="0 0 140 22" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="spark-grad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#8171D0" stopOpacity="0.35"/>
-                    <stop offset="100%" stopColor="#8171D0" stopOpacity="0"/>
-                  </linearGradient>
-                </defs>
-                <path d="M0,3 L14,4 L28,5 L42,7 L56,9 L70,11 L84,13 L98,15 L112,17 L126,19 L140,21 L140,22 L0,22 Z" fill="url(#spark-grad)"/>
-                <path d="M0,3 L14,4 L28,5 L42,7 L56,9 L70,11 L84,13 L98,15 L112,17 L126,19 L140,21" fill="none" stroke="#8171D0" strokeWidth="1.5"/>
-              </svg>
-            </div>
-            <div className="preview-cell faded preview-hide-mobile">↓ falling</div>
-
-            {/* Row 9 - last row */}
-            <div className="preview-row-num">360</div>
-            <div className="preview-cell text">360</div>
-            <div className="preview-cell text">Dec 2055</div>
-            <div className="preview-cell">$1,580.17</div>
-            <div className="preview-cell principal">$1,571.65</div>
-            <div className="preview-cell interest">$8.52</div>
-            <div className="preview-cell balance preview-hide-mobile">$0.00</div>
-          </div>
-
-          {/* Status bar */}
-          <div className="preview-status">
-            <div className="preview-status-item">
-              <span>Loan:</span>
-              <span className="val">$250,000</span>
-            </div>
-            <div className="preview-status-item">
-              <span>Rate:</span>
-              <span className="val">6.50%</span>
-            </div>
-            <div className="preview-status-item">
-              <span>Term:</span>
-              <span className="val">30 yr</span>
-            </div>
-            <div className="preview-status-item">
-              <span>Total interest:</span>
-              <span className="val serif">$318,861</span>
-            </div>
-            <div className="preview-status-spacer"></div>
-            <div className="preview-status-tabs">
-              <button className="preview-tab active">Summary</button>
-              <button className="preview-tab">Schedule</button>
-              <button className="preview-tab">Dashboard</button>
-              <button className="preview-tab">+5</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* WHAT IS IT */}
+      {/* WHAT IS AMORTIZATION SCHEDULE TEMPLATE */}
       <div className="section-wrap">
         <section className="card">
           <div className="row">
             <div className="row-header">
               <div className="eyebrow">The basics</div>
-              <h2>What is an amortization schedule?</h2>
-              <p className="intro">A structured spreadsheet that breaks down every loan payment into principal, interest, and remaining balance over the full repayment term.</p>
+              <h2>What Is an Excel Amortization Schedule Template?</h2>
+              <p className="intro">An Excel amortization schedule template is a structured spreadsheet used to track loan repayment over time, showing how each payment is divided between principal and interest, and how the loan balance decreases.</p>
             </div>
             <div className="row-body">
               <p>
-                An <strong>Excel amortization schedule</strong> is a month-by-month breakdown of how a loan is repaid. Each row shows how much of that month's payment goes to <strong>interest</strong>, how much to <strong>principal</strong>, and what the <strong>remaining balance</strong> looks like afterward.
+                <strong>Amortization schedules</strong> are essential tools for anyone managing loans, mortgages, or financing plans. They provide a clear breakdown of each payment, showing exactly how much goes toward principal versus interest, and track the remaining balance over the life of the loan.
               </p>
               <p>
-                Early in a loan, most of every payment is interest. As the balance shrinks, more goes to principal. An amortization schedule makes this shift visible — so you can plan budgets, evaluate refinancing, and see exactly when you'll be debt-free.
+                A typical amortization schedule template includes:
               </p>
               <ul className="bulleted">
-                <li><strong>Loan amount, interest rate, and term</strong> set the foundation</li>
-                <li><strong>Monthly payment</strong> calculated automatically with PMT</li>
-                <li><strong>Principal &amp; interest split</strong> shown for every period</li>
-                <li><strong>Remaining balance</strong> updated row by row</li>
-                <li><strong>Payoff summary</strong> with total interest and final date</li>
+                <li><strong>Payment schedule</strong> - dates and amounts for each payment</li>
+                <li><strong>Principal portion</strong> - how much of each payment reduces the loan balance</li>
+                <li><strong>Interest portion</strong> - cost of borrowing for each period</li>
+                <li><strong>Remaining balance</strong> - outstanding loan balance after each payment</li>
+                <li><strong>Cumulative interest</strong> - total interest paid over time</li>
+                <li><strong>Loan summary</strong> - total payments, total interest, loan term</li>
               </ul>
+              <p>
+                Formula Byte goes beyond static spreadsheet downloads by generating AI-powered amortization systems based on your specific loan terms, payment frequency, and financial goals.
+              </p>
             </div>
           </div>
         </section>
@@ -256,37 +100,37 @@ export default function AmortizationScheduleTemplatePage() {
           <div className="row">
             <div className="row-header">
               <div className="eyebrow">How it works</div>
-              <h2>From loan terms to full schedule in seconds.</h2>
-              <p className="intro">Describe your financing, and Formula Byte generates the complete spreadsheet — formulas, dashboards, and payoff projections included.</p>
+              <h2>How Loan Amortization Schedules Work</h2>
+              <p className="intro">Each payment is split between reducing the loan balance (principal) and paying the cost of borrowing (interest), with the balance declining over time until the loan is fully repaid.</p>
             </div>
             <div className="row-body">
               <div className="steps">
                 <div className="step">
                   <div className="step-num">1</div>
                   <div>
-                    <h3>Describe your loan</h3>
-                    <p>Loan amount, interest rate, term, start date, payment frequency — in plain English or a quick form.</p>
+                    <h3>Enter loan details</h3>
+                    <p>Input your loan amount, interest rate, loan term, and payment frequency into the spreadsheet.</p>
                   </div>
                 </div>
                 <div className="step">
                   <div className="step-num">2</div>
                   <div>
-                    <h3>AI builds the schedule</h3>
-                    <p>PMT, IPMT, and PPMT formulas are wired to your inputs. Every row recalculates automatically as you change terms.</p>
+                    <h3>Calculate each payment</h3>
+                    <p>The spreadsheet formulas automatically calculate the fixed payment amount using standard amortization formulas.</p>
                   </div>
                 </div>
                 <div className="step">
                   <div className="step-num">3</div>
                   <div>
-                    <h3>Dashboards generate themselves</h3>
-                    <p>Principal vs. interest charts, payoff timelines, and balance trends appear on a dedicated dashboard sheet.</p>
+                    <h3>Track principal vs. interest</h3>
+                    <p>Watch how each payment is divided between reducing your balance and paying interest, with the interest portion decreasing over time.</p>
                   </div>
                 </div>
                 <div className="step">
                   <div className="step-num">4</div>
                   <div>
-                    <h3>Model extra payments</h3>
-                    <p>Add one-time or recurring extra payments and see exactly how much interest you'd save and how much earlier you'd be debt-free.</p>
+                    <h3>Monitor remaining balance</h3>
+                    <p>See your loan balance decrease with each payment until reaching zero at the end of the term.</p>
                   </div>
                 </div>
               </div>
@@ -296,54 +140,54 @@ export default function AmortizationScheduleTemplatePage() {
       </div>
 
       {/* CORE FEATURES */}
-      <div className="section-wrap" id="features">
+      <div className="section-wrap">
         <section className="card">
           <div className="row-stacked">
             <div className="row-header">
-              <div className="eyebrow">Core features</div>
-              <h2>What every generated <span className="serif-accent">amortization</span> schedule ships with.</h2>
-              <p className="intro">Four pillars of loan tracking — automatic, accurate, and built to support real financial decisions.</p>
+              <div className="eyebrow">Core capabilities</div>
+              <h2>Four things every amortization schedule template <span className="serif-accent">should include.</span></h2>
+              <p className="intro">Beyond just a payment list — every generated amortization schedule includes payment formulas, balance tracking, interest calculations, and summary reporting.</p>
             </div>
             <div className="row-body">
               <div className="feature-quad">
                 <div className="feature-tile">
-                  <div className="feature-tile-icon">$</div>
-                  <h3>Monthly payment tracking</h3>
-                  <p>Every payment row records installments, dates, and balance impact — the full life of the loan in one view.</p>
+                  <div className="feature-tile-icon">📅</div>
+                  <h3>Payment schedule tracking</h3>
+                  <p>Complete payment calendar with dates, amounts, and breakdowns automatically calculated from loan terms.</p>
                   <ul>
-                    <li>Monthly installments &amp; dates</li>
-                    <li>Principal &amp; interest split</li>
-                    <li>Running balance per period</li>
+                    <li>Monthly payment schedule</li>
+                    <li>Bi-weekly payment options</li>
+                    <li>Payment due date tracking</li>
                   </ul>
                 </div>
                 <div className="feature-tile">
-                  <div className="feature-tile-icon">π</div>
-                  <h3>Principal &amp; interest breakdown</h3>
-                  <p>See where every dollar goes. The early-loan interest burden and the principal acceleration over time are both visible.</p>
+                  <div className="feature-tile-icon">📊</div>
+                  <h3>Principal & interest breakdown</h3>
+                  <p>Clear visualization of how each payment is split between loan reduction and borrowing cost.</p>
                   <ul>
-                    <li>Interest paid per period</li>
-                    <li>Cumulative interest tracked</li>
-                    <li>Principal reduction visualized</li>
+                    <li>Principal portion calculation</li>
+                    <li>Interest expense tracking</li>
+                    <li>Running balance updates</li>
                   </ul>
                 </div>
                 <div className="feature-tile">
-                  <div className="feature-tile-icon">▢</div>
-                  <h3>Remaining balance monitoring</h3>
-                  <p>Outstanding balance, percentage paid off, and payoff projections — refreshed on every input change.</p>
+                  <div className="feature-tile-icon">💰</div>
+                  <h3>Cumulative interest tracking</h3>
+                  <p>Total interest paid over time with running totals and year-to-date summaries.</p>
                   <ul>
-                    <li>Live balance per row</li>
-                    <li>Percent-paid tracker</li>
-                    <li>Projected payoff date</li>
+                    <li>Total interest calculations</li>
+                    <li>Annual interest summaries</li>
+                    <li>Lifetime interest projection</li>
                   </ul>
                 </div>
                 <div className="feature-tile">
-                  <div className="feature-tile-icon">+</div>
-                  <h3>Extra payment analysis</h3>
-                  <p>Model one-time or recurring extra payments. The template shows interest savings and shortened terms in real time.</p>
+                  <div className="feature-tile-icon">📈</div>
+                  <h3>Loan summary dashboard</h3>
+                  <p>Quick overview of loan terms, total payments, total interest, and payoff timeline.</p>
                   <ul>
-                    <li>Early-payoff scenarios</li>
-                    <li>Total interest saved</li>
-                    <li>Months shaved off term</li>
+                    <li>Loan overview section</li>
+                    <li>Payoff date projection</li>
+                    <li>Extra payment calculations</li>
                   </ul>
                 </div>
               </div>
@@ -352,233 +196,41 @@ export default function AmortizationScheduleTemplatePage() {
         </section>
       </div>
 
-      {/* WORKSHEETS INCLUDED */}
+      {/* CAPABILITIES */}
       <div className="section-wrap">
         <section className="card">
           <div className="row-stacked">
             <div className="row-header">
-              <div className="eyebrow">What's inside</div>
-              <h2>Eight worksheets, <span className="serif-accent">one</span> generation.</h2>
-              <p className="intro">A complete amortization workspace — every sheet linked, every formula wired, every dashboard ready on open.</p>
+              <div className="eyebrow">Capabilities</div>
+              <h2>What the Amortization Schedule Template Actually Does</h2>
+              <p className="intro">This is not a simple loan calculator. The template is a complete loan repayment tracking system.</p>
             </div>
             <div className="row-body">
-              <div className="spec-table">
-                <div className="spec-row spec-head">
-                  <div className="spec-head-cell">#</div>
-                  <div className="spec-head-cell">Worksheet</div>
-                  <div className="spec-head-cell">Purpose</div>
-                  <div className="spec-head-cell">Type</div>
+              <div className="capability-grid">
+                <div className="capability">
+                  <span className="cap-num">01</span>
+                  <h3>Payment Calculation Automation</h3>
+                  <p>Automatically calculates fixed payment amounts using standard amortization formulas (PMT function).</p>
                 </div>
-                <div className="spec-row">
-                  <span className="spec-num">01</span>
-                  <span className="spec-name">Loan Summary</span>
-                  <span className="spec-purpose">Stores loan details, terms, and computed monthly payment.</span>
-                  <span className="spec-tag">Inputs</span>
+                <div className="capability">
+                  <span className="cap-num">02</span>
+                  <h3>Principal Balance Tracking</h3>
+                  <p>Monitors how each payment reduces the outstanding loan balance over time.</p>
                 </div>
-                <div className="spec-row">
-                  <span className="spec-num">02</span>
-                  <span className="spec-name">Payment Schedule</span>
-                  <span className="spec-purpose">Tracks monthly repayments, dates, principal, interest, and balance.</span>
-                  <span className="spec-tag">Core</span>
+                <div className="capability">
+                  <span className="cap-num">03</span>
+                  <h3>Interest Expense Calculation</h3>
+                  <p>Computes interest portion for each payment based on remaining balance and rate.</p>
                 </div>
-                <div className="spec-row">
-                  <span className="spec-num">03</span>
-                  <span className="spec-name">Principal Breakdown</span>
-                  <span className="spec-purpose">Monitors how the principal reduces over each payment period.</span>
-                  <span className="spec-tag">Analysis</span>
+                <div className="capability">
+                  <span className="cap-num">04</span>
+                  <h3>Extra Payment Handling</h3>
+                  <p>Includes options for additional principal payments and shows how they affect payoff timeline.</p>
                 </div>
-                <div className="spec-row">
-                  <span className="spec-num">04</span>
-                  <span className="spec-name">Interest Analysis</span>
-                  <span className="spec-purpose">Tracks interest paid per period and cumulative interest total.</span>
-                  <span className="spec-tag">Analysis</span>
-                </div>
-                <div className="spec-row">
-                  <span className="spec-num">05</span>
-                  <span className="spec-name">Remaining Balance</span>
-                  <span className="spec-purpose">Displays outstanding balances, percent paid, and projected payoff.</span>
-                  <span className="spec-tag">Analysis</span>
-                </div>
-                <div className="spec-row">
-                  <span className="spec-num">06</span>
-                  <span className="spec-name">Extra Payment Calculator</span>
-                  <span className="spec-purpose">Models early-payoff scenarios, interest savings, and term reduction.</span>
-                  <span className="spec-tag">Scenario</span>
-                </div>
-                <div className="spec-row">
-                  <span className="spec-num">07</span>
-                  <span className="spec-name">Financial Forecast</span>
-                  <span className="spec-purpose">Visualizes repayment progress with charts and trend dashboards.</span>
-                  <span className="spec-tag">Dashboard</span>
-                </div>
-                <div className="spec-row">
-                  <span className="spec-num">08</span>
-                  <span className="spec-name">Loan Comparison</span>
-                  <span className="spec-purpose">Side-by-side comparison of multiple loan terms, rates, and payments.</span>
-                  <span className="spec-tag">Compare</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* BUILT-IN FORMULAS */}
-      <div className="section-wrap">
-        <section className="card">
-          <div className="row">
-            <div className="row-header">
-              <div className="eyebrow">Under the hood</div>
-              <h2>The formulas that <span className="serif-accent">do</span> the work.</h2>
-              <p className="intro">Every Formula Byte amortization template is wired up with industry-standard financial functions — generated, linked, and tested automatically.</p>
-            </div>
-            <div className="row-body">
-              <div className="formula-grid">
-                <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=PMT</span>(<span className="arg">rate, nper, pv</span>)</div>
-                  <div className="formula-desc">Calculates the <em>monthly payment</em> for a loan based on rate, number of periods, and present value.</div>
-                </div>
-                <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=IPMT</span>(<span className="arg">rate, per, nper, pv</span>)</div>
-                  <div className="formula-desc">Returns the <em>interest portion</em> of a payment for a specific period.</div>
-                </div>
-                <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=PPMT</span>(<span className="arg">rate, per, nper, pv</span>)</div>
-                  <div className="formula-desc">Returns the <em>principal portion</em> of a payment for a specific period.</div>
-                </div>
-                <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=CUMIPMT</span>(<span className="arg">rate, nper, pv, start, end</span>)</div>
-                  <div className="formula-desc">Computes the <em>cumulative interest</em> paid between two periods.</div>
-                </div>
-                <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=CUMPRINC</span>(<span className="arg">rate, nper, pv, start, end</span>)</div>
-                  <div className="formula-desc">Computes the <em>cumulative principal</em> paid between two periods.</div>
-                </div>
-                <div className="formula-block">
-                  <div className="formula-code"><span className="fn">=NPER</span>(<span className="arg">rate, pmt, pv</span>)</div>
-                  <div className="formula-desc">Calculates the <em>number of periods</em> needed to pay off the loan.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* USE CASES */}
-      <div className="section-wrap">
-        <section className="card">
-          <div className="row-stacked">
-            <div className="row-header">
-              <div className="eyebrow">Use cases</div>
-              <h2>Four loan types, <span className="serif-accent">one</span> template engine.</h2>
-              <p className="intro">Customize the schedule for any kind of financing — same engine, different defaults.</p>
-            </div>
-            <div className="row-body">
-              <div className="industry-grid">
-                <div className="industry-card">
-                  <div className="industry-card-head">
-                    <div className="industry-glyph">M</div>
-                    <div>
-                      <h4>Mortgage amortization</h4>
-                      <div className="industry-tagline">15–30 YR · FIXED OR ARM</div>
-                    </div>
-                  </div>
-                  <p>Track monthly mortgage payments, interest costs, and principal reduction. Ideal for homeowners modeling refinance or early payoff.</p>
-                  <ul>
-                    <li>Monthly mortgage payments</li>
-                    <li>Interest costs &amp; PMI lines</li>
-                    <li>Remaining balance &amp; equity</li>
-                    <li>Early-payoff opportunities</li>
-                  </ul>
-                </div>
-                <div className="industry-card">
-                  <div className="industry-card-head">
-                    <div className="industry-glyph">B</div>
-                    <div>
-                      <h4>Business loan repayment</h4>
-                      <div className="industry-tagline">SBA · COMMERCIAL · LINE</div>
-                    </div>
-                  </div>
-                  <p>Manage commercial loan payments and repayment schedules. Built for startups and growing businesses tracking debt.</p>
-                  <ul>
-                    <li>Commercial loan payments</li>
-                    <li>Financing cost analysis</li>
-                    <li>Repayment schedules</li>
-                    <li>Debt planning forecasts</li>
-                  </ul>
-                </div>
-                <div className="industry-card">
-                  <div className="industry-card-head">
-                    <div className="industry-glyph">S</div>
-                    <div>
-                      <h4>Student loan tracker</h4>
-                      <div className="industry-tagline">FEDERAL · PRIVATE · REFI</div>
-                    </div>
-                  </div>
-                  <p>Monitor monthly payments, interest accrual, and loan balances across federal and private student debt.</p>
-                  <ul>
-                    <li>Monthly payments per loan</li>
-                    <li>Interest accumulation</li>
-                    <li>Extra-payment strategies</li>
-                    <li>Debt reduction timelines</li>
-                  </ul>
-                </div>
-                <div className="industry-card">
-                  <div className="industry-card-head">
-                    <div className="industry-glyph">A</div>
-                    <div>
-                      <h4>Auto loan schedule</h4>
-                      <div className="industry-tagline">36–84 MO · NEW OR USED</div>
-                    </div>
-                  </div>
-                  <p>Track vehicle financing payments, remaining balances, and total cost of borrowing across the loan term.</p>
-                  <ul>
-                    <li>Vehicle financing payments</li>
-                    <li>Remaining loan balances</li>
-                    <li>Interest costs &amp; total paid</li>
-                    <li>Repayment timeline view</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* COMPARE */}
-      <div className="section-wrap">
-        <section className="card">
-          <div className="row">
-            <div className="row-header">
-              <div className="eyebrow">The difference</div>
-              <h2>Manual tracking vs. <span className="serif-accent">Formula Byte.</span></h2>
-              <p className="intro">Most amortization spreadsheets are static files you fight to customize. Formula Byte generates one tailored to your loan in seconds.</p>
-            </div>
-            <div className="row-body">
-              <div className="compare">
-                <div className="compare-col">
-                  <div className="compare-label">Manual loan tracking</div>
-                  <h3>Spreadsheets built by hand</h3>
-                  <ul>
-                    <li>Manual payment entry every month</li>
-                    <li>Time-consuming interest calculations</li>
-                    <li>Error-prone formulas you rewrite</li>
-                    <li>Limited forecasting capability</li>
-                    <li>Extra-payment scenarios are painful</li>
-                    <li>Basic tracking, no dashboards</li>
-                  </ul>
-                </div>
-                <div className="compare-col">
-                  <div className="compare-label">Formula Byte AI</div>
-                  <h3>Generated, automated, accurate</h3>
-                  <ul>
-                    <li>Automated payment calculation</li>
-                    <li>Instant interest calculations</li>
-                    <li>Repayment accuracy guaranteed</li>
-                    <li>Loan forecasting included</li>
-                    <li>Extra-payment analysis built in</li>
-                    <li>Dashboards on every generation</li>
-                  </ul>
+                <div className="capability">
+                  <span className="cap-num">05</span>
+                  <h3>Summary Reporting</h3>
+                  <p>Generates year-end summaries and lifetime totals for interest and principal paid.</p>
                 </div>
               </div>
             </div>
@@ -591,59 +243,68 @@ export default function AmortizationScheduleTemplatePage() {
         <section className="card">
           <div className="row-stacked">
             <div className="row-header">
-              <div className="eyebrow">Why use it</div>
-              <h2>Benefits of AI-generated <span className="serif-accent">amortization</span> schedules.</h2>
-              <p className="intro">Faster setup, fewer errors, sharper financial decisions — every number you'd want already calculated.</p>
+              <div className="eyebrow">Benefits</div>
+              <h2>Why Use an Amortization Schedule Template?</h2>
+              <p className="intro">Benefits of AI-generated amortization schedules for loan management and financial planning.</p>
             </div>
             <div className="row-body">
-              <div className="benefit-grid">
-                <div className="benefit-card">
-                  <h3>Faster loan planning</h3>
-                  <p>Generate a complete amortization schedule in seconds instead of spending hours building and testing formulas manually.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">90%</span>
-                    <span className="benefit-stat-label">Less setup time</span>
-                  </div>
+              <div className="benefits-strip">
+                <div className="benefit-item">
+                  <h4>Clear payment breakdown</h4>
+                  <p>See exactly how each payment splits between principal and interest</p>
                 </div>
-                <div className="benefit-card">
-                  <h3>Avoid calculation errors</h3>
-                  <p>PMT, IPMT, and PPMT formulas are wired automatically — no more typos, broken references, or math mistakes.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">100%</span>
-                    <span className="benefit-stat-label">Formula accuracy</span>
-                  </div>
+                <div className="benefit-item">
+                  <h4>Track payoff progress</h4>
+                  <p>Monitor your loan balance reduction over the full term</p>
                 </div>
-                <div className="benefit-card">
-                  <h3>Model what-if scenarios</h3>
-                  <p>Test extra payments, refinance terms, or different interest rates and see exactly how they affect your payoff timeline.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">Unlimited</span>
-                    <span className="benefit-stat-label">Scenario testing</span>
-                  </div>
+                <div className="benefit-item">
+                  <h4>Plan extra payments</h4>
+                  <p>See how additional payments reduce your loan term and total interest</p>
                 </div>
-                <div className="benefit-card">
-                  <h3>Visualize progress</h3>
-                  <p>Charts and dashboards show principal vs. interest trends, remaining balance, and payoff progress at a glance.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">Built-in</span>
-                    <span className="benefit-stat-label">Visual dashboards</span>
-                  </div>
+                <div className="benefit-item">
+                  <h4>Better financial decisions</h4>
+                  <p>Compare loan options and understand true borrowing costs</p>
                 </div>
-                <div className="benefit-card">
-                  <h3>Track total interest cost</h3>
-                  <p>Cumulative interest calculations show exactly how much your loan costs — and how to reduce that number with extra payments.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">Real-time</span>
-                    <span className="benefit-stat-label">Interest tracking</span>
-                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* USE CASES */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row">
+            <div className="row-header">
+              <div className="eyebrow">Use cases</div>
+              <h2>Common Loan <span className="serif-accent">Types Tracked</span></h2>
+              <p className="intro">Amortization schedules work for various loan types and borrowing scenarios.</p>
+            </div>
+            <div className="row-body">
+              <div className="use-case-grid">
+                <div className="use-case-item">
+                  <h4>🏠 Mortgage Amortization</h4>
+                  <p>Track home loan payments for 15, 20, or 30-year fixed or adjustable-rate mortgages.</p>
                 </div>
-                <div className="benefit-card">
-                  <h3>Export and share</h3>
-                  <p>Download your completed schedule as an Excel file or open directly in Google Sheets — works everywhere your team works.</p>
-                  <div className="benefit-stat">
-                    <span className="benefit-stat-num">2</span>
-                    <span className="benefit-stat-label">Platform options</span>
-                  </div>
+                <div className="use-case-item">
+                  <h4>🚗 Auto Loan Schedule</h4>
+                  <p>Monitor car loan payments with interest and track vehicle equity over time.</p>
+                </div>
+                <div className="use-case-item">
+                  <h4>💼 Business Equipment Loan</h4>
+                  <p>Track repayment for machinery, equipment, or business vehicle financing.</p>
+                </div>
+                <div className="use-case-item">
+                  <h4>👤 Personal Loan</h4>
+                  <p>Manage personal loans with fixed payments and track payoff timeline.</p>
+                </div>
+                <div className="use-case-item">
+                  <h4>🎓 Student Loan Tracking</h4>
+                  <p>Monitor student loan repayment and interest accumulation over time.</p>
+                </div>
+                <div className="use-case-item">
+                  <h4>💳 Credit Card Payoff</h4>
+                  <p>Plan fixed payments to pay off credit card debt strategically.</p>
                 </div>
               </div>
             </div>
@@ -654,25 +315,64 @@ export default function AmortizationScheduleTemplatePage() {
       {/* WHO IT'S FOR */}
       <div className="section-wrap">
         <section className="card">
-          <div className="row-stacked">
+          <div className="row">
             <div className="row-header">
               <div className="eyebrow">Who it's for</div>
-              <h2>Who Should Use This Loan <span className="serif-accent">Amortization</span> Spreadsheet?</h2>
-              <p className="intro">This spreadsheet solution is ideal for individuals and teams managing loans of any kind.</p>
+              <h2>Who Should Use an Amortization Schedule Template?</h2>
+              <p className="intro">Whether you're a homeowner, borrower, or financial planner, this template helps track and manage loans effectively.</p>
             </div>
             <div className="row-body">
-              <div className="audience-grid">
-                <div className="audience-cell"><h4>Homeowners</h4></div>
-                <div className="audience-cell"><h4>Small businesses</h4></div>
-                <div className="audience-cell"><h4>Financial planners</h4></div>
-                <div className="audience-cell"><h4>Students</h4></div>
-                <div className="audience-cell"><h4>Loan borrowers</h4></div>
-                <div className="audience-cell"><h4>Accountants</h4></div>
-                <div className="audience-cell"><h4>Real estate investors</h4></div>
-                <div className="audience-cell"><h4>Startup founders</h4></div>
-                <div className="audience-cell"><h4>Personal finance managers</h4></div>
+              <ul className="bulleted">
+                <li><strong>Homeowners</strong> with mortgages</li>
+                <li><strong>Car buyers</strong> with auto loans</li>
+                <li><strong>Business owners</strong> with equipment financing</li>
+                <li><strong>Students</strong> managing educational loans</li>
+                <li><strong>Financial advisors</strong> helping clients plan repayment</li>
+                <li><strong>Anyone</strong> with a personal loan or debt to track</li>
+              </ul>
+              <p className="audience-footer">
+                If you have a loan, this template helps you understand and manage it better.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* VS MANUAL CALCULATION */}
+      <div className="section-wrap">
+        <section className="card">
+          <div className="row">
+            <div className="row-header">
+              <div className="eyebrow">The difference</div>
+              <h2>Manual Calculation vs. <span className="serif-accent">Formula Byte Template.</span></h2>
+              <p className="intro">Building amortization schedules manually requires complex formulas and constant updates. Formula Byte generates complete, automated systems instantly.</p>
+            </div>
+            <div className="row-body">
+              <div className="compare">
+                <div className="compare-col">
+                  <div className="compare-label">Manual calculation</div>
+                  <h3>Complex, error-prone</h3>
+                  <ul>
+                    <li>Need to understand amortization formulas</li>
+                    <li>Manual calculation for each payment</li>
+                    <li>Formula errors can cause mistakes</li>
+                    <li>Time-consuming to update for extra payments</li>
+                    <li>Hard to compare different loan scenarios</li>
+                  </ul>
+                </div>
+                <div className="compare-col">
+                  <div className="compare-label">Formula Byte AI</div>
+                  <h3>Automated, accurate</h3>
+                  <ul>
+                    <li>Formulas built automatically</li>
+                    <li>Complete schedule generated in seconds</li>
+                    <li>Error-free calculations guaranteed</li>
+                    <li>Easy to add extra payments</li>
+                    <li>Compare loan options instantly</li>
+                    <li>This is not a calculator — it's a complete tracking system</li>
+                  </ul>
+                </div>
               </div>
-              <div className="audience-footer">Whether you need basic loan tracking or advanced repayment analysis, Formula Byte helps automate amortization spreadsheet creation with AI.</div>
             </div>
           </div>
         </section>
@@ -684,72 +384,31 @@ export default function AmortizationScheduleTemplatePage() {
           <div className="row">
             <div className="row-header">
               <div className="eyebrow">FAQ</div>
-              <h2>Frequently Asked Questions</h2>
-              <p className="intro">Common questions about generating amortization schedules with Formula Byte.</p>
+              <h2>Frequently asked questions.</h2>
+              <p className="intro">Common questions about amortization schedule templates and loan tracking.</p>
             </div>
             <div className="row-body">
               <div className="faq-list">
-                <details className="faq-item" open>
-                  <summary className="faq-q">Can this spreadsheet calculate loan payments automatically?</summary>
-                  <div className="faq-a">Yes. Formula Byte generates amortization schedules with automated payment calculations, principal tracking, and interest analysis.</div>
+                <details className="faq-item">
+                  <summary className="faq-q">What is an amortization schedule template?</summary>
+                  <div className="faq-a">An amortization schedule template is a spreadsheet that shows each loan payment, breaking down how much goes toward principal and interest, and tracks the remaining balance over the loan term.</div>
                 </details>
                 <details className="faq-item">
-                  <summary className="faq-q">Does the template support extra payments?</summary>
-                  <div className="faq-a">Yes. The spreadsheet can calculate additional payments, early payoff timelines, and interest savings.</div>
+                  <summary className="faq-q">How do I calculate loan payments in Excel?</summary>
+                  <div className="faq-a">Use the PMT function: =PMT(rate, nper, pv). Formula Byte automatically includes this formula and calculates payments based on your loan terms.</div>
                 </details>
                 <details className="faq-item">
-                  <summary className="faq-q">Can I use this spreadsheet for mortgage loans?</summary>
-                  <div className="faq-a">Absolutely. Formula Byte can generate mortgage amortization schedules for home financing and real estate loans.</div>
+                  <summary className="faq-q">Can I track extra principal payments?</summary>
+                  <div className="faq-a">Yes. The template can include extra payment columns and show how additional payments reduce your loan term and total interest paid.</div>
                 </details>
                 <details className="faq-item">
-                  <summary className="faq-q">Does the spreadsheet work in Google Sheets?</summary>
-                  <div className="faq-a">Yes. The amortization spreadsheet works with both Microsoft Excel and Google Sheets.</div>
+                  <summary className="faq-q">Does this work for all loan types?</summary>
+                  <div className="faq-a">Yes. Amortization schedules work for mortgages, auto loans, personal loans, business loans, student loans, and most fixed-term installment loans.</div>
                 </details>
                 <details className="faq-item">
-                  <summary className="faq-q">Can I customize the repayment schedule?</summary>
-                  <div className="faq-a">Yes. Loan terms, payment frequency, interest rates, and repayment structures can all be customized.</div>
+                  <summary className="faq-q">Can I use this in Google Sheets?</summary>
+                  <div className="faq-a">Absolutely. The template works in both Microsoft Excel and Google Sheets with compatible formulas and formatting.</div>
                 </details>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* RELATED TEMPLATES */}
-      <div className="section-wrap">
-        <section className="card">
-          <div className="row-stacked">
-            <div className="row-header">
-              <div className="eyebrow">Related templates</div>
-              <h2>Other financial templates you might need.</h2>
-              <p className="intro">Same engine, different financial workflows.</p>
-            </div>
-            <div className="row-body">
-              <div className="related-grid">
-                <a href="/excel-templates/accounting-template/" className="related-card">
-                  <div className="glyph">A</div>
-                  <h4>Accounting Template</h4>
-                  <p>Bookkeeping with ledgers, invoices, and cash flow tracking.</p>
-                  <span className="link">View template →</span>
-                </a>
-                <a href="/excel-templates/profit-and-loss-template/" className="related-card">
-                  <div className="glyph">P</div>
-                  <h4>Profit &amp; Loss</h4>
-                  <p>Monthly and yearly P&amp;L with built-in formulas and margin tracking.</p>
-                  <span className="link">View template →</span>
-                </a>
-                <a href="/excel-templates/income-statement-template/" className="related-card">
-                  <div className="glyph">I</div>
-                  <h4>Income Statement</h4>
-                  <p>Revenue, expenses, and net income — calculated automatically.</p>
-                  <span className="link">View template →</span>
-                </a>
-                <a href="/excel-templates/invoice-template/" className="related-card">
-                  <div className="glyph">V</div>
-                  <h4>Invoice Template</h4>
-                  <p>Professional invoices with auto-numbering, taxes, and totals.</p>
-                  <span className="link">View template →</span>
-                </a>
               </div>
             </div>
           </div>
@@ -760,37 +419,15 @@ export default function AmortizationScheduleTemplatePage() {
       <div className="final-cta-wrap">
         <section className="final-cta">
           <div className="final-cta-inner">
-            <h2>Ready to Build Your AI Loan <span className="accent">Amortization</span> Schedule?</h2>
-            <p>Stop building loan repayment spreadsheets manually.</p>
-            <p>Describe your financing structure, and Formula Byte will generate a professional AI-powered Excel amortization schedule with automated formulas, repayment tracking, interest analysis, and financial forecasting tools in seconds.</p>
-            <p>Create smarter loan repayment spreadsheets with AI today.</p>
+            <h2>Ready to Track Your <span className="accent">Loan Repayment?</span></h2>
+            <p>Generate a complete amortization schedule with automated formulas, payment tracking, and interest calculations in seconds.</p>
             <div className="btn-row">
-              <a href="/auth?template=amortization-schedule" className="btn btn-primary btn-lg">Generate template →</a>
+              <a href="https://dashboard.formulabyte.com/" className="btn btn-primary btn-lg">Generate template →</a>
               <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse all templates</a>
             </div>
           </div>
         </section>
       </div>
- 
-
-      {/* Interactive scripts */}
-      <script dangerouslySetInnerHTML={{
-        __html: `
-          // Chip suggestions
-          (function() {
-            const chips = document.querySelectorAll('.hero-suggest .chip');
-            chips.forEach(chip => {
-              chip.addEventListener('click', () => {
-                const textarea = document.querySelector('.prompt-textarea');
-                if (textarea) {
-                  textarea.value = chip.textContent;
-                  textarea.focus();
-                }
-              });
-            });
-          })();
-        `
-      }} />
     </>
   );
 }

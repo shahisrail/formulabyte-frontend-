@@ -30,7 +30,7 @@ export default function BalanceSheetTemplatePage() {
           </div>
 
           <div className="hero-ctas">
-            <a href="/auth?template=balance-sheet" className="btn btn-primary btn-lg">
+            <a href="https://dashboard.formulabyte.com/" className="btn btn-primary btn-lg">
               Generate template
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -831,14 +831,14 @@ export default function BalanceSheetTemplatePage() {
             <p>Describe your accounting and reporting workflow, and Formula Byte will generate a professional AI-powered Excel balance sheet template with automated formulas, financial dashboards, accounting worksheets, and organized reporting structures in seconds.</p>
             <p>Create smarter financial reporting spreadsheets with AI today.</p>
             <div className="btn-row">
-              <a href="/auth?template=balance-sheet" className="btn btn-primary btn-lg">Generate template →</a>
+              <a href="https://dashboard.formulabyte.com/" className="btn btn-primary btn-lg">Generate template →</a>
               <a href="/excel-templates/" className="btn btn-outline btn-lg">Browse all templates</a>
             </div>
           </div>
         </section>
       </div>
 
- 
+
 
       {/* Interactive scripts */}
       <script dangerouslySetInnerHTML={{
