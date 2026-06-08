@@ -323,7 +323,7 @@ export default function HomePage() {
                   <li>{"Instant visualizations"}</li>
                   <li>{"Context-aware responses"}</li>
                 </ul>
-                <span className={"feature-tile-link"}>{"Try chat analysis \u2192"}</span>
+                <a href="https://dashboard.formulabyte.com/" className={"feature-tile-link"}>{"Try chat analysis \u2192"}</a>
               </div>
               <div className={"feature-tile"}>
                 <div className={"feature-tile-icon"}>{"\u0192"}</div>
@@ -334,7 +334,7 @@ export default function HomePage() {
                   <li>{"SQL query generator"}</li>
                   <li>{"Python & R code"}</li>
                 </ul>
-                <span className={"feature-tile-link"}>{"Start generating \u2192"}</span>
+                <a href="https://dashboard.formulabyte.com/" className={"feature-tile-link"}>{"Start generating \u2192"}</a>
               </div>
               <div className={"feature-tile"}>
                 <div className={"feature-tile-icon"}>{"\u25a6"}</div>
@@ -345,70 +345,70 @@ export default function HomePage() {
                   <li>{"Customizable templates"}</li>
                   <li>{"Scheduled refreshes"}</li>
                 </ul>
-                <span className={"feature-tile-link"}>{"Build a dashboard \u2192"}</span>
+                <a href="https://dashboard.formulabyte.com/" className={"feature-tile-link"}>{"Build a dashboard \u2192"}</a>
               </div>
             </div>
             <hr className={"card-divider"} />
-            <div className={"card-sublabel"}>{"Powerful tools for every workflow"}</div>
+            <h2 className={"card-sublabel"}>{"Powerful tools for every workflow"}</h2>
             <div className={"tools-grid"}>
-              <div className={"tool-card"}>
+              <a href={"/tools/excel-formula-generator"} className={"tool-card"}>
                 <span className={"tool-badge"}>{"Most popular"}</span>
-                <h4>{"Excel & Sheets"}</h4>
+                <h3>{"Excel & Sheets"}</h3>
                 <p>{"Generate complex formulas, pivot tables, and macros in seconds. Clean messy data automatically."}</p>
                 <div className={"tool-tags"}>
                   <span className={"tool-tag"}>{"XLOOKUP"}</span>
                   <span className={"tool-tag"}>{"Pivot tables"}</span>
                   <span className={"tool-tag"}>{"Conditional formatting"}</span>
                 </div>
-              </div>
-              <div className={"tool-card"}>
+              </a>
+              <a href={"/tools/ai-sql-query-generator"} className={"tool-card"}>
                 <span className={"tool-badge"}>{"Essential"}</span>
-                <h4>{"SQL databases"}</h4>
+                <h3>{"SQL databases"}</h3>
                 <p>{"Write optimized queries, joins, and aggregations using plain English. Debug SQL instantly."}</p>
                 <div className={"tool-tags"}>
                   <span className={"tool-tag"}>{"Complex queries"}</span>
                   <span className={"tool-tag"}>{"Multi-joins"}</span>
                   <span className={"tool-tag"}>{"Performance"}</span>
                 </div>
-              </div>
-              <div className={"tool-card"}>
-                <h4>{"Power BI & Tableau"}</h4>
+              </a>
+              <a href={"/tools/ai-dax-code-generator"} className={"tool-card"}>
+                <h3>{"Power BI & Tableau"}</h3>
                 <p>{"Create stunning DAX measures and calculated fields. Build dashboards that tell stories."}</p>
                 <div className={"tool-tags"}>
                   <span className={"tool-tag"}>{"DAX"}</span>
                   <span className={"tool-tag"}>{"Calculated cols"}</span>
                   <span className={"tool-tag"}>{"Visual analytics"}</span>
                 </div>
-              </div>
-              <div className={"tool-card"}>
+              </a>
+              <a href={"/tools/ai-pandas-code-generator"} className={"tool-card"}>
                 <span className={"tool-badge"}>{"Advanced"}</span>
-                <h4>{"Python & R"}</h4>
+                <h3>{"Python & R"}</h3>
                 <p>{"Generate production-ready code for data analysis, machine learning, and visualization."}</p>
                 <div className={"tool-tags"}>
                   <span className={"tool-tag"}>{"Pandas"}</span>
                   <span className={"tool-tag"}>{"NumPy"}</span>
                   <span className={"tool-tag"}>{"ML models"}</span>
                 </div>
-              </div>
-              <div className={"tool-card"}>
-                <h4>{"Web scraping"}</h4>
+              </a>
+              <a href={"/tools"} className={"tool-card"}>
+                <h3>{"Web scraping"}</h3>
                 <p>{"Extract data from any website. Build scrapers without writing a single line of code."}</p>
                 <div className={"tool-tags"}>
                   <span className={"tool-tag"}>{"Auto-select"}</span>
                   <span className={"tool-tag"}>{"Clean data"}</span>
                   <span className={"tool-tag"}>{"Export"}</span>
                 </div>
-              </div>
-              <div className={"tool-card"}>
+              </a>
+              <a href={"/tools/ai-regex-generator"} className={"tool-card"}>
                 <span className={"tool-badge"}>{"New"}</span>
-                <h4>{"Regex & patterns"}</h4>
+                <h3>{"Regex & patterns"}</h3>
                 <p>{"Generate complex regular expressions for validation, extraction, and text processing."}</p>
                 <div className={"tool-tags"}>
                   <span className={"tool-tag"}>{"Validation"}</span>
                   <span className={"tool-tag"}>{"Extraction"}</span>
                   <span className={"tool-tag"}>{"Pattern match"}</span>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -424,60 +424,60 @@ export default function HomePage() {
           </div>
           <div className={"row-body"}>
             <div className={"industry-grid"}>
-              <div className={"industry-card"}>
-                <h4>{"Finance & Accounting"}</h4>
+              <a href="https://dashboard.formulabyte.com/" className={"industry-card"}>
+                <h3>{"Finance & Accounting"}</h3>
                 <p>{"Automate financial reporting, budget analysis, and forecasting in seconds instead of hours."}</p>
                 <ul>
                   <li>{"Automated P&L reports"}</li>
                   <li>{"Budget variance analysis"}</li>
                   <li>{"Cash flow forecasting"}</li>
                 </ul>
-              </div>
-              <div className={"industry-card"}>
-                <h4>{"Marketing Teams"}</h4>
+              </a>
+              <a href="https://dashboard.formulabyte.com/" className={"industry-card"}>
+                <h3>{"Marketing Teams"}</h3>
                 <p>{"Unify campaign data, track ROI, and optimize marketing spend with instant insights."}</p>
                 <ul>
                   <li>{"Cross-channel attribution"}</li>
                   <li>{"Campaign performance dashboards"}</li>
                   <li>{"Customer lifetime value analysis"}</li>
                 </ul>
-              </div>
-              <div className={"industry-card"}>
-                <h4>{"Sales & Revenue"}</h4>
+              </a>
+              <a href="https://dashboard.formulabyte.com/" className={"industry-card"}>
+                <h3>{"Sales & Revenue"}</h3>
                 <p>{"Track pipeline health, forecast revenue, and identify opportunities with AI-powered insights."}</p>
                 <ul>
                   <li>{"Sales pipeline analysis"}</li>
                   <li>{"Revenue forecasting"}</li>
                   <li>{"Territory performance"}</li>
                 </ul>
-              </div>
-              <div className={"industry-card"}>
-                <h4>{"Operations & Supply Chain"}</h4>
+              </a>
+              <a href="https://dashboard.formulabyte.com/" className={"industry-card"}>
+                <h3>{"Operations & Supply Chain"}</h3>
                 <p>{"Optimize inventory, track KPIs, and streamline operations with real-time data analysis."}</p>
                 <ul>
                   <li>{"Inventory optimization"}</li>
                   <li>{"Supplier performance metrics"}</li>
                   <li>{"Operational dashboards"}</li>
                 </ul>
-              </div>
-              <div className={"industry-card"}>
-                <h4>{"HR & People Analytics"}</h4>
+              </a>
+              <a href="https://dashboard.formulabyte.com/" className={"industry-card"}>
+                <h3>{"HR & People Analytics"}</h3>
                 <p>{"Analyze workforce data, track retention, and make data-driven people decisions."}</p>
                 <ul>
                   <li>{"Employee retention analysis"}</li>
                   <li>{"Recruiting funnel metrics"}</li>
                   <li>{"Compensation benchmarking"}</li>
                 </ul>
-              </div>
-              <div className={"industry-card"}>
-                <h4>{"Executive Leadership"}</h4>
+              </a>
+              <a href="https://dashboard.formulabyte.com/" className={"industry-card"}>
+                <h3>{"Executive Leadership"}</h3>
                 <p>{"Get instant answers to business questions without waiting for reports from analysts."}</p>
                 <ul>
                   <li>{"Executive dashboards"}</li>
                   <li>{"Business health monitoring"}</li>
                   <li>{"Strategic planning insights"}</li>
                 </ul>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -543,6 +543,7 @@ export default function HomePage() {
               {" pricing."}
             </h2>
             <p className={"intro"}>{"Choose the perfect plan for your needs. Save 30% with yearly billing."}</p>
+            <a href={"/pricing"} className={"text-link"}>{"View detailed pricing →"}</a>
           </div>
           <div className={"row-body"} style={{"display": "flex", "flexDirection": "column", "alignItems": "center"}}>
             <div className={"pricing-toggle"}>

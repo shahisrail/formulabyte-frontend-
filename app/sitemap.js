@@ -8,6 +8,7 @@ export default function sitemap() {
     { path: "/", priority: 1.0, changeFrequency: "daily" },
     { path: "/tools", priority: 0.9, changeFrequency: "weekly" },
     { path: "/excel-templates", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/pricing", priority: 0.9, changeFrequency: "weekly" },
   ];
 
   // AI Tools pages
