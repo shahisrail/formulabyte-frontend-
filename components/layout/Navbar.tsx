@@ -41,7 +41,7 @@ export default function Navbar() {
             </div>
           </div> */}
 
-          <Link href="/#pricing">Pricing</Link>
+          <Link href="/pricing">Pricing</Link>
           <Link className={pathname === "/about" ? "active" : ""} href="/about">
             About
           </Link>
