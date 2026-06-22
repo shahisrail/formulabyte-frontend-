@@ -224,7 +224,7 @@ body {
   border-radius: 2px;
 }
 .row-stacked .row-header h2 {
-  font-size: clamp(28px, 2.8vw, 36px);
+  font-size: clamp(34px, 3.4vw, 44px);
 }
 .row-stacked .row-body { width: 100%; }
 /* When stacked, the capability grid expands to 3 columns to use the width */
@@ -235,7 +235,7 @@ body {
 /* ─────────── TYPOGRAPHY ─────────── */
 h1, h2, h3, h4 { font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; color: var(--text); }
 h1 { font-size: clamp(40px, 5.4vw, 60px); font-weight: 500; letter-spacing: -0.035em; line-height: 1.03; }
-h2 { font-size: clamp(26px, 2.6vw, 32px); margin-bottom: 14px; letter-spacing: -0.025em; line-height: 1.15; }
+h2 { font-size: clamp(32px, 3.2vw, 42px); margin-bottom: 14px; letter-spacing: -0.025em; line-height: 1.15; }
 h3 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
 h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
 

@@ -4,6 +4,9 @@ import AIQAGeneratorPage from "@/components/pages/AIQAGeneratorPage";
 export const metadata: Metadata = {
   title: "AI Question Answer Generator – Get Answers Free | Formula Byte",
   description: "Ask questions and get instant, accurate answers using AI. No searching, no confusion—just clear, context-aware responses. Try free now.",
+  alternates: {
+    canonical: "https://formulabyte.com/tools/ai-qa-generator",
+  },
 };
 
 export default function Page() {

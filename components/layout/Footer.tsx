@@ -133,6 +133,12 @@ export default function Footer() {
                 <Link href="/contact">Contact</Link>
               </li>
               <li>
+                <Link href="/terms">Terms & Conditions</Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy">Privacy Policy</Link>
+              </li>
+              <li>
                 <Link href="https://dashboard.formulabyte.com/">Log in</Link>
               </li>
               <li>

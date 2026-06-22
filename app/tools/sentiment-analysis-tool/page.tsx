@@ -4,6 +4,9 @@ import SentimentAnalysisToolPage from "@/components/pages/SentimentAnalysisToolP
 export const metadata: Metadata = {
   title: "AI Sentiment Analysis Tool – Analyze Text Free | Formula Byte",
   description: "Analyze text sentiment using AI. Detect emotions, tone, and intent from reviews, feedback, and messages instantly. Try the free sentiment tool.",
+  alternates: {
+    canonical: "https://formulabyte.com/tools/sentiment-analysis-tool",
+  },
 };
 
 export default function Page() {

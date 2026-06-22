@@ -4,6 +4,9 @@ import ExcelFormulaGeneratorPage from "@/components/pages/ExcelFormulaGeneratorP
 export const metadata: Metadata = {
   title: "AI Excel Formula Generator – Create Formulas Free | Formula Byte",
   description: "Generate accurate Excel formulas using AI. Create simple or complex formulas instantly without syntax errors. Copy, paste, and start free.",
+  alternates: {
+    canonical: "https://formulabyte.com/tools/excel-formula-generator",
+  },
 };
 
 export default function Page() {

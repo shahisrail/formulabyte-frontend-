@@ -4,6 +4,9 @@ import BankStatementConverterPage from "@/components/pages/BankStatementConverte
 export const metadata: Metadata = {
   title: "AI Bank Statement Converter – PDF to Excel Free | Formula Byte",
   description: "Convert bank statement PDFs to clean Excel using AI. Extract transactions, balances, and formats accurately. No manual work. Try free now.",
+  alternates: {
+    canonical: "https://formulabyte.com/tools/bank-statement-converter",
+  },
 };
 
 export default function Page() {
