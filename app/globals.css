@@ -320,11 +320,14 @@ footer { padding: 56px 0 32px; }
   border-color: var(--primary);
   transform: translateY(-2px);
 }
-.llm-links a svg {
+.llm-links a img {
   flex-shrink: 0;
   opacity: 0.8;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
-.llm-links a:hover svg {
+.llm-links a:hover img {
   opacity: 1;
 }
 

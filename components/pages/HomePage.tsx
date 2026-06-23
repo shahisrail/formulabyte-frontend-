@@ -640,7 +640,7 @@ export default function HomePage() {
                 <div className={"review-stars"}>{"\u2605\u2605\u2605\u2605\u2605"}</div>
                 <p className={"review-quote"}>{"\"Formula Byte transformed how our team works with data. Within weeks, we cut reporting time by 80% and finally got our leadership the answers they needed in real time.\""}</p>
                 <div className={"review-author"}>
-                  <div className={"review-avatar"}>{"MR"}</div>
+                  <img src="/review.jpg" alt="Maya Rahman" className={"review-avatar"} />
                   <div className={"review-meta"}>
                     <div className={"name"}>{"Maya Rahman"}</div>
                     <div className={"role"}>{"Head of Analytics, fintech startup"}</div>
@@ -651,7 +651,7 @@ export default function HomePage() {
                 <div className={"review-stars"}>{"\u2605\u2605\u2605\u2605\u2605"}</div>
                 <p className={"review-quote"}>{"\"We moved off of messy spreadsheets to a cleaner, more efficient workflow. The AI handles the formula-wrangling so our team can focus on actual analysis.\""}</p>
                 <div className={"review-author"}>
-                  <div className={"review-avatar"}>{"OC"}</div>
+                  <img src="/review2.jpg" alt="Olivia Chen" className={"review-avatar"} />
                   <div className={"review-meta"}>
                     <div className={"name"}>{"Olivia Chen"}</div>
                     <div className={"role"}>{"Operations Manager, retail"}</div>
@@ -662,7 +662,7 @@ export default function HomePage() {
                 <div className={"review-stars"}>{"\u2605\u2605\u2605\u2605\u2605"}</div>
                 <p className={"review-quote"}>{"\"Honestly the fastest path from a vague question to a working chart I've ever used. Our marketing team builds dashboards themselves now \u2014 no SQL needed.\""}</p>
                 <div className={"review-author"}>
-                  <div className={"review-avatar"}>{"DC"}</div>
+                  <img src="/review3.jpg" alt="Daniel Cooper" className={"review-avatar"} />
                   <div className={"review-meta"}>
                     <div className={"name"}>{"Daniel Cooper"}</div>
                     <div className={"role"}>{"Marketing Director, SaaS"}</div>
@@ -673,7 +673,7 @@ export default function HomePage() {
                 <div className={"review-stars"}>{"\u2605\u2605\u2605\u2605\u2605"}</div>
                 <p className={"review-quote"}>{"\"We replaced three separate tools with Formula Byte. The plain-English query layer is the unlock \u2014 anyone on the team can pull their own numbers now.\""}</p>
                 <div className={"review-author"}>
-                  <div className={"review-avatar"}>{"LP"}</div>
+                  <img src="/review4.jpg" alt="Liam Parker" className={"review-avatar"} />
                   <div className={"review-meta"}>
                     <div className={"name"}>{"Liam Parker"}</div>
                     <div className={"role"}>{"Finance Lead, e-commerce"}</div>

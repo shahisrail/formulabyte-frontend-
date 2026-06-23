@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MessageSquare, Sparkles, Bot, Brain } from "lucide-react";
 import { FaFacebook, FaXTwitter, FaPinterest, FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
@@ -27,16 +26,16 @@ export default function Footer() {
               <p>Ask AI About Formula Byte</p>
               <div className="llm-links">
                 <a href="https://chatgpt.com/?prompt=I%E2%80%99m%20researching%20AI%20data%20analysis%20tools%20and%20want%20to%20know%20how%20Formula%20Byte%20turns%20raw%20data%20into%20insights%2C%20automates%20analysis%2C%20and%20helps%20people%20work%20with%20spreadsheets%20without%20writing%20complex%20formulas.%20Summarize%20the%20highlights%20from%20Formula%20Byte%E2%80%99s%20website%3A%20https%3A%2F%2Fformulabyte.com" target="_blank" rel="noopener noreferrer" aria-label="ChatGPT">
-                  <MessageSquare width={18} height={18} />
+                  <img src="/chatgpt.jpg" alt="ChatGPT" width={24} height={24} />
                 </a>
                 <a href="https://www.perplexity.ai/search/new?q=I%E2%80%99m%20researching%20AI%20data%20analysis%20tools%20and%20want%20to%20know%20how%20Formula%20Byte%20turns%20raw%20data%20into%20insights%2C%20automates%20analysis%2C%20and%20helps%20people%20work%20with%20spreadsheets%20without%20writing%20complex%20formulas.%20Summarize%20the%20highlights%20from%20Formula%20Byte%E2%80%99s%20website%3A%20https%3A%2F%2Fformulabyte.com" target="_blank" rel="noopener noreferrer" aria-label="Perplexity">
-                  <Sparkles width={18} height={18} />
+                  <img src="/perplexity.jpg" alt="Perplexity" width={24} height={24} />
                 </a>
                 <a href="https://claude.ai/new?q=I%E2%80%99m%20researching%20AI%20data%20analysis%20tools%20and%20want%20to%20know%20how%20Formula%20Byte%20turns%20raw%20data%20into%20insights%2C%20automates%20analysis%2C%20and%20helps%20people%20work%20with%20spreadsheets%20without%20writing%20complex%20formulas.%20Summarize%20the%20highlights%20from%20Formula%20Byte%E2%80%99s%20website%3A%20https%3A%2F%2Fformulabyte.com" target="_blank" rel="noopener noreferrer" aria-label="Claude">
-                  <Brain width={18} height={18} />
+                  <img src="/claude.jpg" alt="Claude" width={24} height={24} />
                 </a>
                 <a href="https://www.google.com/search?udm=50&aep=11&q=I%E2%80%99m%20researching%20AI%20data%20analysis%20tools%20and%20want%20to%20know%20how%20Formula%20Byte%20turns%20raw%20data%20into%20insights%2C%20automates%20analysis%2C%20and%20helps%20people%20work%20with%20spreadsheets%20without%20writing%20complex%20formulas.%20Summarize%20the%20highlights%20from%20Formula%20Byte%E2%80%99s%20website%3A%20https%3A%2F%2Fformulabyte.com" target="_blank" rel="noopener noreferrer" aria-label="Google AI">
-                  <Bot width={18} height={18} />
+                  <img src="/google.jpg" alt="Google AI" width={24} height={24} />
                 </a>
               </div>
             </div>
